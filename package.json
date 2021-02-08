@@ -1,0 +1,23 @@
+{
+  "name": "stentle-vuepress-site",
+  "version": "0.0.1",
+  "description": "Stentle Documentation Platform",
+  "main": "index.js",
+  "authors": {
+    "name": "stentle",
+    "email": "hackers@stentle.com"
+  },
+  "repository": "/stentle-vuepress-site",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "react-bootstrap": "^1.4.3"
+  }
+}
