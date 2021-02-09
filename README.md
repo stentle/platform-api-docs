@@ -1,16 +1,19 @@
 # Platform Api Documentation
---------------------------------------------------------
 
-| Name | Description | Required | 
+## 
+| Name | Version | Tested  | 
 | ------ | ------ | ------ | 
-| Node | Tested node 14.15.4 | ✔️ |
-| npm | Tested npm 6.14.11| ✔️ |
+| Node | 14.15.4 | ✔️ Tested |
+| npm | 6.14.11| ✔️  Tested | T
 
-## Installation  📂 'info/'
+## 📂 'info'
+Information about installation and project documention configuration check folder:
+```bash
+📂 info
+```
 
-more information check 📂 'info/'
-
-###### Copyright © `stentle` with ❤️ 
+##### Author
+Copyright © `stentle` with ❤️ 
 
 
 

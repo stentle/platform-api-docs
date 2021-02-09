@@ -37,13 +37,9 @@ module.exports = {
     smoothScroll: true,
     nav: [
       {
-        text: 'Guide',
+        text: 'Guide API',
         link: '/guide/',
       },
-      {
-        text: 'Test',
-        link: '/test/'
-      }, 
       {
         text: 'Stentle',
         link: 'https://stentle.com/'
@@ -52,25 +48,25 @@ module.exports = {
     sidebar: {
       '/guide/': [
         {
-          title: 'Guide',
-          collapsable: false,
+          title: 'Guide API',
+          sidebarDepth: 1,
+          //collapsable: false,
+          initialOpenGroupIndex: -1,
           children: [
             '',
-            'customer-controller',
             'product-controller',
+            'product-category-controller',
             'errors',
-            //'controller2',
-            //'controller3',
           ]
-        }
-      ],
-      '/test/': [
+
+        },
         {
-          title: 'Test',
-          collapsable: false,
-          children: [
-            '',
-          ]
+          title: 'DOCS 2',
+          sidebarDepth: 1,
+          children: [ 
+          'Testnav',
+         ],
+          initialOpenGroupIndex: -1 // optional, defaults to 0, defines the index of initially opened subgroup
         }
       ],
     }
