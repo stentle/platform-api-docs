@@ -50,6 +50,7 @@ Sample CURL Call: "TODO"
 - ResourceNotFoundException <Badge text="ResourceNotFoundException" type="error"/> - Error types resource not found
 
 for more infor on error - [Errors ](errors.html) 
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## searchbyEam <Badge text="searchbyEam" /> 
@@ -96,6 +97,7 @@ for more infor on error - [Errors ](errors.html)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
 ## searchVariantByEan <Badge text="searchVariantByEan" /> 
 Method Detail for searchVariantByEan 
 
@@ -136,7 +138,6 @@ Sample CURL Call: "TODO"
 - ResourceNotFoundException <Badge text="ResourceNotFoundException" type="error"/> - Error types resource not found
 
 for more infor on error - [Errors ](errors.html) 
---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## updateVariantPriceByEAN <Badge text="updateVariantPriceByEAN" /> 
 Method Detail for updateVariantPriceByEAN 
@@ -176,11 +177,13 @@ TODO
 ```
 Sample CURL Call: "TODO"
 ``` 
-#### <Badge text="Error" type="warning"/>
+##### <Badge text="Error" type="warning"/>
 - ResourceNotFoundException <Badge text="ResourceNotFoundException" type="error"/> - Error types resource not found
 - InvalidParameterException <Badge text="InvalidParameterException" type="error"/> - When the parameters are not adeguate
 
 for more infor on error - [Errors ](errors.html) 
+
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## searchByCreationDate <Badge text="searchByCreationDate" /> 
@@ -222,7 +225,8 @@ Sample CURL Call: "TODO"
 ##### <Badge text="Error" type="warning"/>
 -None
 
-for more infor on error - [Errors ](errors.html)  
+for more infor on error - [Errors ](errors.html) 
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## countByCreationDate <Badge text="countByCreationDate" /> 
@@ -265,8 +269,6 @@ Sample CURL Call: "TODO"
 -None
 
 for more infor on error - [Errors ](errors.html) 
-
---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## search <Badge text="search" /> 
 Method Detail for search 
