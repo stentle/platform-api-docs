@@ -422,11 +422,65 @@ URL to be used in Postman: "{{URI}}/rest/picnik-rest/products/{id_p}"
 
 ```
 Headers
-TODO
+Content-Type:application/json 
+X-Domain:{{X-DOMAIN}}
+Accept-Language:{{ACCEPT-LANGUAGE}}
+Accept:application/stentle.api-v0.1+json
 ```
 
 #### Payload
-> TODO
+```
+{
+  "names": {
+    "it": {
+      "locale": "it",
+      "value": "Test nome"
+    }
+  },
+ "tagList": [
+      {
+        "id": "58c2bea2be417600010b3d97",
+        "key": "Profumoestate",
+        "description": "Profumoestate"
+      },
+      {
+        "id": "58dbc7cc24aa9a0001986589",
+        "key": "b&w",
+        "description": "black and white"
+      }],
+  "prices": {
+    "sellingPrice": 10.5
+  },
+  "brand": {
+    "id": "{{BRAND_ID}}",
+    "key": "{{BRAND_KEY}}"
+  },
+  "macroCategory": {
+    "key": "{{MACRO}}"
+  },
+  "microCategory": {
+    "key": "{{MICRO}}"
+  },
+  "stories": {
+    "it": {
+      "locale": null,
+      "value": "<p>Questa è una storia di test</p>"
+    }
+  },
+  "notes": {
+    "it": {
+      "locale": null,
+      "value": "<p>Questa è una nota di test</p>"
+    }
+  },
+  "width": 1,
+  "height": 2,
+  "weight": 3,
+  "depth": 4,
+  "manufacturerCode": "1242343223423",
+  "erpCode": "21313232131"
+}
+```
 
 ##### <Badge text="Parameters" type="warning"/>
 | Parameters | Type | Description | Required | Postion |
@@ -448,7 +502,62 @@ TODO
 
 #### <Badge text="CURL Request" type="warning"/>
 ```
-Sample CURL Call: "TODO"
+curl --location --request PUT 'http://localhost:8080/rest/picnik-rest/products/59e0cb773cdea200013ffed7' \
+--header 'Content-Type: application/json' \
+--header 'X-Domain: landoffashion' \
+--header 'Accept-Language: it' \
+--header 'Accept: application/stentle.api-v0.1+json' \
+--header 'Cookie: stentle=YTVlMzBNdE5QeXRxcXpaNStVdSt1Zz09OnZYTjJ3dkczRUVlZHI0WHhhMkpsaGc9PQ' \
+--data-raw '{
+  "names": {
+    "it": {
+      "locale": "it",
+      "value": "Test nome"
+    }
+  },
+ "tagList": [
+      {
+        "id": "58c2bea2be417600010b3d97",
+        "key": "Profumoestate",
+        "description": "Profumoestate"
+      },
+      {
+        "id": "58dbc7cc24aa9a0001986589",
+        "key": "b&w",
+        "description": "black and white"
+      }],
+  "prices": {
+    "sellingPrice": 10.5
+  },
+  "brand": {
+    "id": "{{BRAND_ID}}",
+    "key": "{{BRAND_KEY}}"
+  },
+  "macroCategory": {
+    "key": "{{MACRO}}"
+  },
+  "microCategory": {
+    "key": "{{MICRO}}"
+  },
+  "stories": {
+    "it": {
+      "locale": null,
+      "value": "<p>Questa è una storia di test</p>"
+    }
+  },
+  "notes": {
+    "it": {
+      "locale": null,
+      "value": "<p>Questa è una nota di test</p>"
+    }
+  },
+  "width": 1,
+  "height": 2,
+  "weight": 3,
+  "depth": 4,
+  "manufacturerCode": "1242343223423",
+  "erpCode": "21313232131"
+}'
 ``` 
 ##### <Badge text="error" type="warning"/>
 - ResourceNotFoundException <Badge text="ResourceNotFoundException" type="error"/> - Error types resource not found
@@ -1195,12 +1304,14 @@ URL to be used in Postman: "{{URI}}/rest/picnik-rest/products/{id_p}/document-fi
 
 ```
 Headers
-TODO
+X-Domain:{{X-DOMAIN}}
+Content-Type:multipart/form-data
 ```
 
 #### Payload
-> TODO
-
+```
+fileUpload2: SelectFiles
+```
 ##### <Badge text="Parameters" type="warning"/>
 | Parameters | Type | Description | Required | Postion |
 | ------ | ------ | ------ | ------ | ------ |
@@ -1214,13 +1325,511 @@ TODO
 
 #### <Badge text="CURL Request" type="warning"/>
 ```
-Sample CURL Call: "TODO"
+curl --location -g --request POST 'http://localhost:8080/rest/picnik-rest/products/5f88a4f20a3f0d0001271635/document-file/{{DOCUMENT_ID}}' \
+--header 'X-Domain: landoffashion' \
+--header 'Content-Type: multipart/form-data' \
+--header 'Cookie: stentle=V2Q2QURleWsxQWhjYWZhNEx0QU1Sdz09OmNaa1hwc3ZJZ24yNjhBYlhpemp3SWc9PQ' \
+--form 'fileUpload2=@"/C:/Users/remio/OneDrive/Desktop/1.PNG"'
 ``` 
 
 #### <Badge text="Returns" type="warning"/>
 ```
 {
-  TODO
+    "data": {
+        "id": "5f88a4f20a3f0d0001271635",
+        "creationDate": 1602790642965,
+        "updateDate": 1602790644446,
+        "tenantId": null,
+        "href": null,
+        "version": 9,
+        "name": null,
+        "descriptions": {
+            "it": {
+                "locale": "it",
+                "value": "Zip-around women’s wallet with coin case, credit card slots and RFID anti-fraud protection"
+            }
+        },
+        "erpCode": null,
+        "brand": {
+            "id": "5f7ee55c7c6ab2024549c4a1",
+            "key": "piquadro",
+            "name": "Piquadro",
+            "shortDescription": null,
+            "longDescription": null,
+            "departments": [
+                "fashion"
+            ],
+            "categories": null
+        },
+        "externalCode": null,
+        "externalParentCode": null,
+        "sku": "000000000170",
+        "articleId": "MV-PD4826S108R",
+        "customSkus": null,
+        "attributes": {},
+        "published": true,
+        "publicationDate": 1602790800134,
+        "productDescriptionCompleteness": false,
+        "threshold": 0,
+        "photoGallery": {
+            "images": [
+                {
+                    "id": "6d40e1f7-bb52-4074-9dc6-7f9e2899936b",
+                    "type": "cover",
+                    "imageURL": "https://xxxxx.jpg",
+                    "filename": null,
+                    "active": true,
+                    "sizeType": null,
+                    "tag": null
+                }
+            ],
+            "thumbnails": [],
+            "sequence": 0,
+            "allImages": [
+                {
+                    "id": "6d40e1f7-bb52-4074-9dc6-7f9e2899936b",
+                    "type": "cover",
+                    "imageURL": "https://xxxxx.jpg",
+                    "filename": null,
+                    "active": true,
+                    "sizeType": null,
+                    "tag": null
+                }
+            ]
+        },
+        "videoGallery": null,
+        "documentArchive": {
+            "added": null,
+            "updated": null,
+            "documents": [
+                {
+                    "id": null,
+                    "type": null,
+                    "description": null,
+                    "documentUrl": "http://localhost:8080/rest/picnik-rest/products/5f88a4f20a3f0d0001271635/document-file/test-document-1",
+                    "filename": "test-document-1",
+                    "filenameFromSystem": "1.PNG",
+                    "originalFileName": null
+                }
+            ]
+        },
+        "stories": {
+            "en": {
+                "locale": "en",
+                "value": ""
+            },
+            "it": {
+                "locale": "it",
+                "value": ""
+            }
+        },
+        "loverList": [],
+        "numberOfLovers": 0,
+        "numberOfProductSaving": 0,
+        "numberOfProductSharing": 0,
+        "loved": false,
+        "saved": false,
+        "addedToCart": false,
+        "purchasable": false,
+        "hasCoverPhoto": true,
+        "sales": null,
+        "catalogList": [
+            {
+                "id": "5607f05658162efefd532b28",
+                "creationDate": 1612876552799,
+                "updateDate": 1445683662336,
+                "tenantId": null,
+                "href": null,
+                "name": "base",
+                "multiplier": 1.0,
+                "baseCatalog": true,
+                "countrySearch": [
+                    "IT"
+                ],
+                "countries": [
+                    {
+                        "id": "5139e686247e898c57138523",
+                        "creationDate": 1612876552801,
+                        "updateDate": 1612876552801,
+                        "tenantId": null,
+                        "href": null,
+                        "euroZone": true,
+                        "isoCode": "IT",
+                        "iso3Code": "ITA",
+                        "name": "ITALY",
+                        "localeName": "Italy",
+                        "region": "Europe",
+                        "taxValue": 0.0,
+                        "allowed": true,
+                        "printableName": "Italy"
+                    }
+                ],
+                "regions": null,
+                "currency": {
+                    "id": "55f9a3535f15ead1260c34fe",
+                    "creationDate": 1612876552802,
+                    "updateDate": 1612876552802,
+                    "tenantId": null,
+                    "href": null,
+                    "code": "EUR",
+                    "decimalDigit": null,
+                    "name": "Euro",
+                    "namePlural": "euros",
+                    "rounding": 0.0,
+                    "symbol": "€",
+                    "uiCode": "242",
+                    "isoNumber": "978",
+                    "symbolNative": "€"
+                },
+                "taxValue": 22.0,
+                "taxValues": null
+            },
+            {
+                "id": "5f8848aef6cc1b58e588fee5",
+                "creationDate": 1612876552802,
+                "updateDate": 1450515163233,
+                "tenantId": null,
+                "href": null,
+                "name": "Europe",
+                "multiplier": 1.1,
+                "baseCatalog": false,
+                "countrySearch": [],
+                "countries": null,
+                "regions": [
+                    "Europe"
+                ],
+                "currency": {
+                    "id": "55f9a3535f15ead1260c34fe",
+                    "creationDate": 1612876552804,
+                    "updateDate": 1612876552804,
+                    "tenantId": null,
+                    "href": null,
+                    "code": "EUR",
+                    "decimalDigit": null,
+                    "name": "Euro",
+                    "namePlural": "euros",
+                    "rounding": 0.0,
+                    "symbol": "€",
+                    "uiCode": "242",
+                    "isoNumber": "978",
+                    "symbolNative": "€"
+                },
+                "taxValue": 0.0,
+                "taxValues": null
+            },
+            {
+                "id": "5f8857fc09608a00012270e0",
+                "creationDate": 1602770941008,
+                "updateDate": 1602770941008,
+                "tenantId": null,
+                "href": null,
+                "name": "Ucraina",
+                "multiplier": 10.0,
+                "baseCatalog": false,
+                "countrySearch": [
+                    "UA"
+                ],
+                "countries": [
+                    {
+                        "id": "5139e686247e898c57138599",
+                        "creationDate": 1612876552806,
+                        "updateDate": 1612876552806,
+                        "tenantId": null,
+                        "href": null,
+                        "euroZone": false,
+                        "isoCode": "UA",
+                        "iso3Code": "UKR",
+                        "name": "UKRAINE",
+                        "localeName": "Ukraine",
+                        "region": "Europe",
+                        "taxValue": 0.0,
+                        "allowed": true,
+                        "printableName": "Ukraine"
+                    }
+                ],
+                "regions": null,
+                "currency": {
+                    "id": "55f9a3535f15ead1260c3547",
+                    "creationDate": 1612876552807,
+                    "updateDate": 1612876552807,
+                    "tenantId": null,
+                    "href": null,
+                    "code": "RUB",
+                    "decimalDigit": null,
+                    "name": "Russian Ruble",
+                    "namePlural": "Russian rubles",
+                    "rounding": 0.0,
+                    "symbol": "RUB",
+                    "uiCode": "244",
+                    "isoNumber": "643",
+                    "symbolNative": "руб."
+                },
+                "taxValue": 100.0,
+                "taxValues": null
+            }
+        ],
+        "productCatalogMultipliers": {},
+        "productCatalogPrices": {},
+        "productCatalogScheduledPrices": {},
+        "status": "AUTHORIZED",
+        "slug": "piquadro-woman-000000000170",
+        "customSlugs": null,
+        "statusHistory": [
+            {
+                "status": "DRAFT",
+                "date": 1602790642965
+            },
+            {
+                "status": "AUTHORIZED",
+                "date": 1602790644446
+            }
+        ],
+        "names": {
+            "it": {
+                "locale": "it",
+                "value": "ZIP-AROUND WOMEN'S WALLET"
+            }
+        },
+        "seller": null,
+        "numberOfComments": 0,
+        "declareVariants": [
+            "size",
+            "color"
+        ],
+        "photoAttributes": [
+            "color"
+        ],
+        "manufacturerCode": null,
+        "warehouseArrayList": [],
+        "width": 0.0,
+        "height": 0.0,
+        "weight": 0.0,
+        "depth": 0.0,
+        "parentId": null,
+        "note": null,
+        "story": null,
+        "description": null,
+        "attributeVariants": {},
+        "bannerImage": null,
+        "mpn": null,
+        "unitPrice": null,
+        "unitQuantity": 0,
+        "madeIn": null,
+        "taxes": null,
+        "groupedProductInfo": null,
+        "tagList": [],
+        "notes": {
+            "en": {
+                "locale": "en",
+                "value": "leather"
+            },
+            "it": {
+                "locale": "it",
+                "value": "pelle"
+            }
+        },
+        "prices": {
+            "sellingPrice": 78.0,
+            "sellingPriceNoTax": -1.0,
+            "finalSellingPriceNoTax": -1.0,
+            "acquisitionPrice": 78.0,
+            "acquisitionPriceNoTax": -1.0,
+            "retailPrice": 120.0,
+            "retailPriceNoTax": -1.0,
+            "overriddenFinalPrice": null,
+            "currencyCode": null,
+            "currencySymbol": null,
+            "discount": "35%",
+            "strikedSellingPrice": -1.0,
+            "salesDiscount": "0",
+            "currency": {
+                "id": "55f9a3535f15ead1260c34fe",
+                "creationDate": 1612876552813,
+                "updateDate": 1612876552813,
+                "tenantId": null,
+                "href": null,
+                "code": "EUR",
+                "decimalDigit": null,
+                "name": "Euro",
+                "namePlural": "euros",
+                "rounding": 0.0,
+                "symbol": "€",
+                "uiCode": "242",
+                "isoNumber": "978",
+                "symbolNative": "€"
+            },
+            "finalSellingPrice": -1.0
+        },
+        "ranking": 0,
+        "availabilityTotal": 0.0,
+        "hasVariants": true,
+        "errorList": [],
+        "attributeList": [
+            {
+                "id": "5f886b4a09608a000122721d",
+                "creationDate": 1602775882560,
+                "updateDate": 1602775882144,
+                "tenantId": null,
+                "href": null,
+                "attributeCode": "season",
+                "departments": [
+                    "fashion"
+                ],
+                "key": "fw20",
+                "name": null,
+                "active": true,
+                "attributeLocaleName": null,
+                "localeName": null,
+                "english": {
+                    "name": "Fall-Winter 2020",
+                    "attribute": null
+                },
+                "italian": {
+                    "name": "Autunno-Inverno 2020",
+                    "attribute": null
+                },
+                "russian": {
+                    "name": null,
+                    "attribute": null
+                },
+                "french": {
+                    "name": null,
+                    "attribute": null
+                }
+            },
+            {
+                "id": "5f886b4d09608a0001227251",
+                "creationDate": 1602775885870,
+                "updateDate": 1602775885787,
+                "tenantId": null,
+                "href": null,
+                "attributeCode": "storename",
+                "departments": [
+                    "fashion"
+                ],
+                "key": "piquadro",
+                "name": null,
+                "active": true,
+                "attributeLocaleName": null,
+                "localeName": null,
+                "english": {
+                    "name": "Piquadro",
+                    "attribute": null
+                },
+                "italian": {
+                    "name": "Piquadro",
+                    "attribute": null
+                },
+                "russian": {
+                    "name": null,
+                    "attribute": null
+                },
+                "french": {
+                    "name": null,
+                    "attribute": null
+                }
+            },
+            {
+                "id": "5f886b4b09608a0001227238",
+                "creationDate": 1602775883808,
+                "updateDate": 1602775882993,
+                "tenantId": null,
+                "href": null,
+                "attributeCode": "village",
+                "departments": [
+                    "fashion"
+                ],
+                "key": "mantova",
+                "name": null,
+                "active": false,
+                "attributeLocaleName": null,
+                "localeName": null,
+                "english": {
+                    "name": "Mantova",
+                    "attribute": null
+                },
+                "italian": {
+                    "name": "Mantova",
+                    "attribute": null
+                },
+                "russian": {
+                    "name": null,
+                    "attribute": null
+                },
+                "french": {
+                    "name": null,
+                    "attribute": null
+                }
+            }
+        ],
+        "attributeGroupsView": null,
+        "variantsGroup": null,
+        "infoOtherCollections": null,
+        "productVariant": false,
+        "attributeDescription": null,
+        "microCategory": {
+            "id": "5f88a3a50a3f0d0001271333",
+            "key": "scarpe-e-borse",
+            "type": "CHILD",
+            "gender": "female",
+            "active": true,
+            "imageList": null,
+            "parentId": null,
+            "parentFeed": null,
+            "ranking": 0,
+            "localeName": null,
+            "english": {
+                "url": "scarpe-e-borse",
+                "name": "Shoes and Bags",
+                "nav": null
+            },
+            "italian": {
+                "url": "scarpe-e-borse",
+                "name": "Scarpe e Borse",
+                "nav": null
+            },
+            "parentKey": "donna",
+            "declareVariants": null,
+            "declareAttributes": null,
+            "photoAttributes": null,
+            "taxes": null,
+            "products": null,
+            "sizeScaleCode": null,
+            "department": "fashion"
+        },
+        "macroCategory": {
+            "id": "5f88a3a40a3f0d0001271331",
+            "key": "woman",
+            "type": "ROOT",
+            "gender": "female",
+            "active": true,
+            "imageList": null,
+            "parentId": null,
+            "parentFeed": null,
+            "ranking": 0,
+            "localeName": null,
+            "english": {
+                "url": "donna",
+                "name": "Woman",
+                "nav": null
+            },
+            "italian": {
+                "url": "donna",
+                "name": "Donna",
+                "nav": null
+            },
+            "parentKey": "fashion",
+            "declareVariants": null,
+            "declareAttributes": null,
+            "photoAttributes": null,
+            "taxes": null,
+            "products": null,
+            "sizeScaleCode": null,
+            "department": null
+        },
+        "department": null,
+        "pricesComparison": null
+    }
 }
 ```
 
@@ -1250,11 +1859,14 @@ URL to be used in Postman: "{{URI}}/rest/picnik-rest/products//{id_p}/document-f
 
 ```
 Headers
-TODO
+X-Domain:{{X-DOMAIN}}
+Content-Type:application/x-www-form-urlencoded
 ```
 
 #### Payload
-> TODO
+```
+None
+```
 
 ##### <Badge text="Parameters" type="warning"/>
 | Parameters | Type | Description | Required | Postion |
@@ -1268,13 +1880,510 @@ TODO
 
 #### <Badge text="CURL Request" type="warning"/>
 ```
-Sample CURL Call: "TODO"
+curl --location --request DELETE 'http://localhost:8080/rest/picnik-rest/products/5f88a4f20a3f0d0001271635/document-file/5f88a4f20a3f0d0001271635' \
+--header 'X-Domain: landoffashion' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--header 'Cookie: stentle=V2Q2QURleWsxQWhjYWZhNEx0QU1Sdz09OmNaa1hwc3ZJZ24yNjhBYlhpemp3SWc9PQ'
 ``` 
 
 #### <Badge text="Returns" type="warning"/>
 ```
 {
-  TODO
+    "data": {
+        "id": "5f88a4f20a3f0d0001271635",
+        "creationDate": 1602790642965,
+        "updateDate": 1602790644446,
+        "tenantId": null,
+        "href": null,
+        "version": 10,
+        "name": null,
+        "descriptions": {
+            "it": {
+                "locale": "it",
+                "value": "Zip-around women’s wallet with coin case, credit card slots and RFID anti-fraud protection"
+            }
+        },
+        "erpCode": null,
+        "brand": {
+            "id": "5f7ee55c7c6ab2024549c4a1",
+            "key": "piquadro",
+            "name": "Piquadro",
+            "shortDescription": null,
+            "longDescription": null,
+            "departments": [
+                "fashion"
+            ],
+            "categories": null
+        },
+        "externalCode": null,
+        "externalParentCode": null,
+        "sku": "000000000170",
+        "articleId": "MV-PD4826S108R",
+        "customSkus": null,
+        "attributes": {},
+        "published": true,
+        "publicationDate": 1602790800134,
+        "productDescriptionCompleteness": false,
+        "threshold": 0,
+        "photoGallery": {
+            "images": [
+                {
+                    "id": "6d40e1f7-bb52-4074-9dc6-7f9e2899936b",
+                    "type": "cover",
+                    "imageURL": "https://xxxxx.jpg",
+                    "filename": null,
+                    "active": true,
+                    "sizeType": null,
+                    "tag": null
+                }
+            ],
+            "thumbnails": [],
+            "sequence": 0,
+            "allImages": [
+                {
+                    "id": "6d40e1f7-bb52-4074-9dc6-7f9e2899936b",
+                    "type": "cover",
+                    "imageURL": "https://xxxxx.jpg",
+                    "filename": null,
+                    "active": true,
+                    "sizeType": null,
+                    "tag": null
+                }
+            ]
+        },
+        "videoGallery": null,
+        "documentArchive": {
+            "added": null,
+            "updated": null,
+            "documents": [
+                {
+                    "id": null,
+                    "type": null,
+                    "description": null,
+                    "documentUrl": "http://localhost:8080/rest/picnik-rest/products/5f88a4f20a3f0d0001271635/document-file/test-document-1",
+                    "filename": "test-document-1",
+                    "filenameFromSystem": "1.PNG",
+                    "originalFileName": null
+                }
+            ]
+        },
+        "stories": {
+            "en": {
+                "locale": "en",
+                "value": ""
+            },
+            "it": {
+                "locale": "it",
+                "value": ""
+            }
+        },
+        "loverList": [],
+        "numberOfLovers": 0,
+        "numberOfProductSaving": 0,
+        "numberOfProductSharing": 0,
+        "loved": false,
+        "saved": false,
+        "addedToCart": false,
+        "purchasable": false,
+        "hasCoverPhoto": true,
+        "sales": null,
+        "catalogList": [
+            {
+                "id": "5607f05658162efefd532b28",
+                "creationDate": 1612876638851,
+                "updateDate": 1445683662336,
+                "tenantId": null,
+                "href": null,
+                "name": "base",
+                "multiplier": 1.0,
+                "baseCatalog": true,
+                "countrySearch": [
+                    "IT"
+                ],
+                "countries": [
+                    {
+                        "id": "5139e686247e898c57138523",
+                        "creationDate": 1612876638852,
+                        "updateDate": 1612876638852,
+                        "tenantId": null,
+                        "href": null,
+                        "euroZone": true,
+                        "isoCode": "IT",
+                        "iso3Code": "ITA",
+                        "name": "ITALY",
+                        "localeName": "Italy",
+                        "region": "Europe",
+                        "taxValue": 0.0,
+                        "allowed": true,
+                        "printableName": "Italy"
+                    }
+                ],
+                "regions": null,
+                "currency": {
+                    "id": "55f9a3535f15ead1260c34fe",
+                    "creationDate": 1612876638853,
+                    "updateDate": 1612876638853,
+                    "tenantId": null,
+                    "href": null,
+                    "code": "EUR",
+                    "decimalDigit": null,
+                    "name": "Euro",
+                    "namePlural": "euros",
+                    "rounding": 0.0,
+                    "symbol": "€",
+                    "uiCode": "242",
+                    "isoNumber": "978",
+                    "symbolNative": "€"
+                },
+                "taxValue": 22.0,
+                "taxValues": null
+            },
+            {
+                "id": "5f8848aef6cc1b58e588fee5",
+                "creationDate": 1612876638853,
+                "updateDate": 1450515163233,
+                "tenantId": null,
+                "href": null,
+                "name": "Europe",
+                "multiplier": 1.1,
+                "baseCatalog": false,
+                "countrySearch": [],
+                "countries": null,
+                "regions": [
+                    "Europe"
+                ],
+                "currency": {
+                    "id": "55f9a3535f15ead1260c34fe",
+                    "creationDate": 1612876638854,
+                    "updateDate": 1612876638854,
+                    "tenantId": null,
+                    "href": null,
+                    "code": "EUR",
+                    "decimalDigit": null,
+                    "name": "Euro",
+                    "namePlural": "euros",
+                    "rounding": 0.0,
+                    "symbol": "€",
+                    "uiCode": "242",
+                    "isoNumber": "978",
+                    "symbolNative": "€"
+                },
+                "taxValue": 0.0,
+                "taxValues": null
+            },
+            {
+                "id": "5f8857fc09608a00012270e0",
+                "creationDate": 1602770941008,
+                "updateDate": 1602770941008,
+                "tenantId": null,
+                "href": null,
+                "name": "Ucraina",
+                "multiplier": 10.0,
+                "baseCatalog": false,
+                "countrySearch": [
+                    "UA"
+                ],
+                "countries": [
+                    {
+                        "id": "5139e686247e898c57138599",
+                        "creationDate": 1612876638855,
+                        "updateDate": 1612876638855,
+                        "tenantId": null,
+                        "href": null,
+                        "euroZone": false,
+                        "isoCode": "UA",
+                        "iso3Code": "UKR",
+                        "name": "UKRAINE",
+                        "localeName": "Ukraine",
+                        "region": "Europe",
+                        "taxValue": 0.0,
+                        "allowed": true,
+                        "printableName": "Ukraine"
+                    }
+                ],
+                "regions": null,
+                "currency": {
+                    "id": "55f9a3535f15ead1260c3547",
+                    "creationDate": 1612876638856,
+                    "updateDate": 1612876638856,
+                    "tenantId": null,
+                    "href": null,
+                    "code": "RUB",
+                    "decimalDigit": null,
+                    "name": "Russian Ruble",
+                    "namePlural": "Russian rubles",
+                    "rounding": 0.0,
+                    "symbol": "RUB",
+                    "uiCode": "244",
+                    "isoNumber": "643",
+                    "symbolNative": "руб."
+                },
+                "taxValue": 100.0,
+                "taxValues": null
+            }
+        ],
+        "productCatalogMultipliers": {},
+        "productCatalogPrices": {},
+        "productCatalogScheduledPrices": {},
+        "status": "AUTHORIZED",
+        "slug": "piquadro-woman-000000000170",
+        "customSlugs": null,
+        "statusHistory": [
+            {
+                "status": "DRAFT",
+                "date": 1602790642965
+            },
+            {
+                "status": "AUTHORIZED",
+                "date": 1602790644446
+            }
+        ],
+        "names": {
+            "it": {
+                "locale": "it",
+                "value": "ZIP-AROUND WOMEN'S WALLET"
+            }
+        },
+        "seller": null,
+        "numberOfComments": 0,
+        "declareVariants": [
+            "size",
+            "color"
+        ],
+        "photoAttributes": [
+            "color"
+        ],
+        "manufacturerCode": null,
+        "warehouseArrayList": [],
+        "width": 0.0,
+        "height": 0.0,
+        "weight": 0.0,
+        "depth": 0.0,
+        "parentId": null,
+        "note": null,
+        "story": null,
+        "description": null,
+        "attributeVariants": {},
+        "bannerImage": null,
+        "mpn": null,
+        "unitPrice": null,
+        "unitQuantity": 0,
+        "madeIn": null,
+        "taxes": null,
+        "groupedProductInfo": null,
+        "tagList": [],
+        "notes": {
+            "en": {
+                "locale": "en",
+                "value": "leather"
+            },
+            "it": {
+                "locale": "it",
+                "value": "pelle"
+            }
+        },
+        "prices": {
+            "sellingPrice": 78.0,
+            "sellingPriceNoTax": -1.0,
+            "finalSellingPriceNoTax": -1.0,
+            "acquisitionPrice": 78.0,
+            "acquisitionPriceNoTax": -1.0,
+            "retailPrice": 120.0,
+            "retailPriceNoTax": -1.0,
+            "overriddenFinalPrice": null,
+            "currencyCode": null,
+            "currencySymbol": null,
+            "discount": "35%",
+            "strikedSellingPrice": -1.0,
+            "salesDiscount": "0",
+            "currency": {
+                "id": "55f9a3535f15ead1260c34fe",
+                "creationDate": 1612876638860,
+                "updateDate": 1612876638860,
+                "tenantId": null,
+                "href": null,
+                "code": "EUR",
+                "decimalDigit": null,
+                "name": "Euro",
+                "namePlural": "euros",
+                "rounding": 0.0,
+                "symbol": "€",
+                "uiCode": "242",
+                "isoNumber": "978",
+                "symbolNative": "€"
+            },
+            "finalSellingPrice": -1.0
+        },
+        "ranking": 0,
+        "availabilityTotal": 0.0,
+        "hasVariants": true,
+        "errorList": [],
+        "attributeList": [
+            {
+                "id": "5f886b4a09608a000122721d",
+                "creationDate": 1602775882560,
+                "updateDate": 1602775882144,
+                "tenantId": null,
+                "href": null,
+                "attributeCode": "season",
+                "departments": [
+                    "fashion"
+                ],
+                "key": "fw20",
+                "name": null,
+                "active": true,
+                "attributeLocaleName": null,
+                "localeName": null,
+                "english": {
+                    "name": "Fall-Winter 2020",
+                    "attribute": null
+                },
+                "italian": {
+                    "name": "Autunno-Inverno 2020",
+                    "attribute": null
+                },
+                "russian": {
+                    "name": null,
+                    "attribute": null
+                },
+                "french": {
+                    "name": null,
+                    "attribute": null
+                }
+            },
+            {
+                "id": "5f886b4d09608a0001227251",
+                "creationDate": 1602775885870,
+                "updateDate": 1602775885787,
+                "tenantId": null,
+                "href": null,
+                "attributeCode": "storename",
+                "departments": [
+                    "fashion"
+                ],
+                "key": "piquadro",
+                "name": null,
+                "active": true,
+                "attributeLocaleName": null,
+                "localeName": null,
+                "english": {
+                    "name": "Piquadro",
+                    "attribute": null
+                },
+                "italian": {
+                    "name": "Piquadro",
+                    "attribute": null
+                },
+                "russian": {
+                    "name": null,
+                    "attribute": null
+                },
+                "french": {
+                    "name": null,
+                    "attribute": null
+                }
+            },
+            {
+                "id": "5f886b4b09608a0001227238",
+                "creationDate": 1602775883808,
+                "updateDate": 1602775882993,
+                "tenantId": null,
+                "href": null,
+                "attributeCode": "village",
+                "departments": [
+                    "fashion"
+                ],
+                "key": "mantova",
+                "name": null,
+                "active": false,
+                "attributeLocaleName": null,
+                "localeName": null,
+                "english": {
+                    "name": "Mantova",
+                    "attribute": null
+                },
+                "italian": {
+                    "name": "Mantova",
+                    "attribute": null
+                },
+                "russian": {
+                    "name": null,
+                    "attribute": null
+                },
+                "french": {
+                    "name": null,
+                    "attribute": null
+                }
+            }
+        ],
+        "attributeGroupsView": null,
+        "variantsGroup": null,
+        "infoOtherCollections": null,
+        "productVariant": false,
+        "attributeDescription": null,
+        "microCategory": {
+            "id": "5f88a3a50a3f0d0001271333",
+            "key": "scarpe-e-borse",
+            "type": "CHILD",
+            "gender": "female",
+            "active": true,
+            "imageList": null,
+            "parentId": null,
+            "parentFeed": null,
+            "ranking": 0,
+            "localeName": null,
+            "english": {
+                "url": "scarpe-e-borse",
+                "name": "Shoes and Bags",
+                "nav": null
+            },
+            "italian": {
+                "url": "scarpe-e-borse",
+                "name": "Scarpe e Borse",
+                "nav": null
+            },
+            "parentKey": "donna",
+            "declareVariants": null,
+            "declareAttributes": null,
+            "photoAttributes": null,
+            "taxes": null,
+            "products": null,
+            "sizeScaleCode": null,
+            "department": "fashion"
+        },
+        "macroCategory": {
+            "id": "5f88a3a40a3f0d0001271331",
+            "key": "woman",
+            "type": "ROOT",
+            "gender": "female",
+            "active": true,
+            "imageList": null,
+            "parentId": null,
+            "parentFeed": null,
+            "ranking": 0,
+            "localeName": null,
+            "english": {
+                "url": "donna",
+                "name": "Woman",
+                "nav": null
+            },
+            "italian": {
+                "url": "donna",
+                "name": "Donna",
+                "nav": null
+            },
+            "parentKey": "fashion",
+            "declareVariants": null,
+            "declareAttributes": null,
+            "photoAttributes": null,
+            "taxes": null,
+            "products": null,
+            "sizeScaleCode": null,
+            "department": null
+        },
+        "department": null,
+        "pricesComparison": null
+    }
 }
 ```
 
@@ -1400,11 +2509,15 @@ URL to be used in Postman: "{{URI}}/rest/picnik-rest/products/{id_p}/authorize/{
 
 ```
 Headers
-TODO
+Content-Type:application/json
+X-Domain:{{X-DOMAIN}}
+Accept-Language:{{ACCEPT-LANGUAGE}} 
 ```
 
 #### Payload
-> TODO
+```
+{"productId":"{{PRODUCT_ID}}"}
+```
 
 ##### <Badge text="Parameters" type="warning"/>
 | Parameters | Type | Description | Required | Postion |
@@ -1418,13 +2531,619 @@ TODO
 
 #### <Badge text="CURL Request" type="warning"/>
 ```
-Sample CURL Call: "TODO"
+curl --location --request PUT 'http://localhost:8080/rest/picnik-rest/products/5f88a4f20a3f0d0001271635/authorize/true' \
+--header 'Content-Type: application/json' \
+--header 'X-Domain: landoffashion' \
+--header 'Accept-Language: it' \
+--header 'Cookie: stentle=V2Q2QURleWsxQWhjYWZhNEx0QU1Sdz09OmNaa1hwc3ZJZ24yNjhBYlhpemp3SWc9PQ' \
+--data-raw '{"productId":"59e0cb773cdea200013ffed7"}'
 ``` 
 
 #### <Badge text="Returns" type="warning"/>
 ```
 {
-  TODO
+    "data": {
+        "id": "5f88a4f20a3f0d0001271635",
+        "creationDate": 1602790642965,
+        "updateDate": 1602790644446,
+        "tenantId": null,
+        "href": null,
+        "version": 8,
+        "name": "ZIP-AROUND WOMEN'S WALLET",
+        "descriptions": {
+            "it": {
+                "locale": "it",
+                "value": "Zip-around women’s wallet with coin case, credit card slots and RFID anti-fraud protection"
+            }
+        },
+        "erpCode": null,
+        "brand": {
+            "id": "5f7ee55c7c6ab2024549c4a1",
+            "key": "piquadro",
+            "name": "Piquadro",
+            "shortDescription": null,
+            "longDescription": null,
+            "departments": [
+                "fashion"
+            ],
+            "categories": null
+        },
+        "externalCode": null,
+        "externalParentCode": null,
+        "sku": "000000000170",
+        "articleId": "MV-PD4826S108R",
+        "customSkus": null,
+        "attributes": {},
+        "published": true,
+        "publicationDate": 1602790800134,
+        "productDescriptionCompleteness": false,
+        "threshold": 0,
+        "photoGallery": {
+            "images": [
+                {
+                    "id": "6d40e1f7-bb52-4074-9dc6-7f9e2899936b",
+                    "type": "cover",
+                    "imageURL": "https://xxxxx.jpg",
+                    "filename": null,
+                    "active": true,
+                    "sizeType": null,
+                    "tag": null
+                }
+            ],
+            "thumbnails": [],
+            "sequence": 0,
+            "allImages": [
+                {
+                    "id": "6d40e1f7-bb52-4074-9dc6-7f9e2899936b",
+                    "type": "cover",
+                    "imageURL": "https://xxxxx.jpg",
+                    "filename": null,
+                    "active": true,
+                    "sizeType": null,
+                    "tag": null
+                }
+            ]
+        },
+        "videoGallery": null,
+        "documentArchive": null,
+        "stories": {
+            "en": {
+                "locale": "en",
+                "value": ""
+            },
+            "it": {
+                "locale": "it",
+                "value": ""
+            }
+        },
+        "loverList": [],
+        "numberOfLovers": 0,
+        "numberOfProductSaving": 0,
+        "numberOfProductSharing": 0,
+        "loved": false,
+        "saved": false,
+        "addedToCart": false,
+        "purchasable": false,
+        "hasCoverPhoto": true,
+        "sales": null,
+        "catalogList": [
+            {
+                "id": "5607f05658162efefd532b28",
+                "creationDate": 1612876339143,
+                "updateDate": 1445683662336,
+                "tenantId": null,
+                "href": null,
+                "name": "base",
+                "multiplier": 1.0,
+                "baseCatalog": true,
+                "countrySearch": [
+                    "IT"
+                ],
+                "countries": [
+                    {
+                        "id": "5139e686247e898c57138523",
+                        "creationDate": 1612876339144,
+                        "updateDate": 1612876339144,
+                        "tenantId": null,
+                        "href": null,
+                        "euroZone": true,
+                        "isoCode": "IT",
+                        "iso3Code": "ITA",
+                        "name": "ITALY",
+                        "localeName": "Italy",
+                        "region": "Europe",
+                        "taxValue": 0.0,
+                        "allowed": true,
+                        "printableName": "Italy"
+                    }
+                ],
+                "regions": null,
+                "currency": {
+                    "id": "55f9a3535f15ead1260c34fe",
+                    "creationDate": 1612876339146,
+                    "updateDate": 1612876339146,
+                    "tenantId": null,
+                    "href": null,
+                    "code": "EUR",
+                    "decimalDigit": null,
+                    "name": "Euro",
+                    "namePlural": "euros",
+                    "rounding": 0.0,
+                    "symbol": "€",
+                    "uiCode": "242",
+                    "isoNumber": "978",
+                    "symbolNative": "€"
+                },
+                "taxValue": 22.0,
+                "taxValues": null
+            },
+            {
+                "id": "5f8848aef6cc1b58e588fee5",
+                "creationDate": 1612876339146,
+                "updateDate": 1450515163233,
+                "tenantId": null,
+                "href": null,
+                "name": "Europe",
+                "multiplier": 1.1,
+                "baseCatalog": false,
+                "countrySearch": [],
+                "countries": null,
+                "regions": [
+                    "Europe"
+                ],
+                "currency": {
+                    "id": "55f9a3535f15ead1260c34fe",
+                    "creationDate": 1612876339148,
+                    "updateDate": 1612876339148,
+                    "tenantId": null,
+                    "href": null,
+                    "code": "EUR",
+                    "decimalDigit": null,
+                    "name": "Euro",
+                    "namePlural": "euros",
+                    "rounding": 0.0,
+                    "symbol": "€",
+                    "uiCode": "242",
+                    "isoNumber": "978",
+                    "symbolNative": "€"
+                },
+                "taxValue": 0.0,
+                "taxValues": null
+            },
+            {
+                "id": "5f8857fc09608a00012270e0",
+                "creationDate": 1602770941008,
+                "updateDate": 1602770941008,
+                "tenantId": null,
+                "href": null,
+                "name": "Ucraina",
+                "multiplier": 10.0,
+                "baseCatalog": false,
+                "countrySearch": [
+                    "UA"
+                ],
+                "countries": [
+                    {
+                        "id": "5139e686247e898c57138599",
+                        "creationDate": 1612876339150,
+                        "updateDate": 1612876339150,
+                        "tenantId": null,
+                        "href": null,
+                        "euroZone": false,
+                        "isoCode": "UA",
+                        "iso3Code": "UKR",
+                        "name": "UKRAINE",
+                        "localeName": "Ukraine",
+                        "region": "Europe",
+                        "taxValue": 0.0,
+                        "allowed": true,
+                        "printableName": "Ukraine"
+                    }
+                ],
+                "regions": null,
+                "currency": {
+                    "id": "55f9a3535f15ead1260c3547",
+                    "creationDate": 1612876339153,
+                    "updateDate": 1612876339153,
+                    "tenantId": null,
+                    "href": null,
+                    "code": "RUB",
+                    "decimalDigit": null,
+                    "name": "Russian Ruble",
+                    "namePlural": "Russian rubles",
+                    "rounding": 0.0,
+                    "symbol": "RUB",
+                    "uiCode": "244",
+                    "isoNumber": "643",
+                    "symbolNative": "руб."
+                },
+                "taxValue": 100.0,
+                "taxValues": null
+            }
+        ],
+        "productCatalogMultipliers": {},
+        "productCatalogPrices": {},
+        "productCatalogScheduledPrices": {},
+        "status": "AUTHORIZED",
+        "slug": "piquadro-woman-000000000170",
+        "customSlugs": null,
+        "statusHistory": [
+            {
+                "status": "DRAFT",
+                "date": 1602790642965
+            },
+            {
+                "status": "AUTHORIZED",
+                "date": 1602790644446
+            }
+        ],
+        "names": {
+            "it": {
+                "locale": "it",
+                "value": "ZIP-AROUND WOMEN'S WALLET"
+            }
+        },
+        "seller": null,
+        "numberOfComments": 0,
+        "declareVariants": [
+            "size",
+            "color"
+        ],
+        "photoAttributes": [
+            "color"
+        ],
+        "manufacturerCode": null,
+        "warehouseArrayList": [],
+        "width": 0.0,
+        "height": 0.0,
+        "weight": 0.0,
+        "depth": 0.0,
+        "parentId": "5f88a4f20a3f0d0001271635",
+        "note": "pelle",
+        "story": "",
+        "description": "Zip-around women’s wallet with coin case, credit card slots and RFID anti-fraud protection",
+        "attributeVariants": {},
+        "bannerImage": null,
+        "mpn": null,
+        "unitPrice": null,
+        "unitQuantity": 0,
+        "madeIn": null,
+        "taxes": null,
+        "groupedProductInfo": null,
+        "tagList": [],
+        "notes": {
+            "en": {
+                "locale": "en",
+                "value": "leather"
+            },
+            "it": {
+                "locale": "it",
+                "value": "pelle"
+            }
+        },
+        "prices": {
+            "sellingPrice": 78.0,
+            "sellingPriceNoTax": 63.93,
+            "finalSellingPriceNoTax": 63.93,
+            "acquisitionPrice": 78.0,
+            "acquisitionPriceNoTax": -1.0,
+            "retailPrice": 120.0,
+            "retailPriceNoTax": 98.36,
+            "overriddenFinalPrice": null,
+            "currencyCode": "EUR",
+            "currencySymbol": "€",
+            "discount": "35%",
+            "strikedSellingPrice": -1.0,
+            "salesDiscount": "0",
+            "currency": {
+                "id": "55f9a3535f15ead1260c34fe",
+                "creationDate": 1612876339316,
+                "updateDate": 1612876339316,
+                "tenantId": null,
+                "href": null,
+                "code": "EUR",
+                "decimalDigit": null,
+                "name": "Euro",
+                "namePlural": "euros",
+                "rounding": 0.0,
+                "symbol": "€",
+                "uiCode": "242",
+                "isoNumber": "978",
+                "symbolNative": "€"
+            },
+            "finalSellingPrice": 78.0
+        },
+        "ranking": 0,
+        "availabilityTotal": 0.0,
+        "hasVariants": true,
+        "errorList": [],
+        "attributeList": [
+            {
+                "id": "5f886b4a09608a000122721d",
+                "creationDate": 1602775882560,
+                "updateDate": 1602775882144,
+                "tenantId": null,
+                "href": null,
+                "attributeCode": "season",
+                "departments": [
+                    "fashion"
+                ],
+                "key": "fw20",
+                "name": null,
+                "active": true,
+                "attributeLocaleName": "season",
+                "localeName": "Autunno-Inverno 2020",
+                "english": {
+                    "name": "Fall-Winter 2020",
+                    "attribute": null
+                },
+                "italian": {
+                    "name": "Autunno-Inverno 2020",
+                    "attribute": null
+                },
+                "russian": {
+                    "name": null,
+                    "attribute": null
+                },
+                "french": {
+                    "name": null,
+                    "attribute": null
+                }
+            },
+            {
+                "id": "5f886b4d09608a0001227251",
+                "creationDate": 1602775885870,
+                "updateDate": 1602775885787,
+                "tenantId": null,
+                "href": null,
+                "attributeCode": "storename",
+                "departments": [
+                    "fashion"
+                ],
+                "key": "piquadro",
+                "name": null,
+                "active": true,
+                "attributeLocaleName": "storename",
+                "localeName": "Piquadro",
+                "english": {
+                    "name": "Piquadro",
+                    "attribute": null
+                },
+                "italian": {
+                    "name": "Piquadro",
+                    "attribute": null
+                },
+                "russian": {
+                    "name": null,
+                    "attribute": null
+                },
+                "french": {
+                    "name": null,
+                    "attribute": null
+                }
+            },
+            {
+                "id": "5f886b4b09608a0001227238",
+                "creationDate": 1602775883808,
+                "updateDate": 1602775882993,
+                "tenantId": null,
+                "href": null,
+                "attributeCode": "village",
+                "departments": [
+                    "fashion"
+                ],
+                "key": "mantova",
+                "name": null,
+                "active": false,
+                "attributeLocaleName": "village",
+                "localeName": "Mantova",
+                "english": {
+                    "name": "Mantova",
+                    "attribute": null
+                },
+                "italian": {
+                    "name": "Mantova",
+                    "attribute": null
+                },
+                "russian": {
+                    "name": null,
+                    "attribute": null
+                },
+                "french": {
+                    "name": null,
+                    "attribute": null
+                }
+            }
+        ],
+        "attributeGroupsView": [
+            {
+                "id": "564f33ebfa4d0e5ce8303112",
+                "creationDate": 1612876339245,
+                "updateDate": 1448031211360,
+                "tenantId": null,
+                "href": null,
+                "key": "base-group",
+                "localeTitle": "Gruppo Base",
+                "titles": {
+                    "en": {
+                        "locale": "en",
+                        "value": "Base Group"
+                    },
+                    "it": {
+                        "locale": "it",
+                        "value": "Gruppo Base"
+                    }
+                },
+                "defaultValue": true,
+                "attributeList": [],
+                "attributeListView": [
+                    {
+                        "id": "5f886b4a09608a000122721d",
+                        "creationDate": 1602775882560,
+                        "updateDate": 1602775882144,
+                        "tenantId": null,
+                        "href": null,
+                        "attributeCode": "season",
+                        "departments": [
+                            "fashion"
+                        ],
+                        "key": "fw20",
+                        "name": null,
+                        "active": true,
+                        "attributeLocaleName": "season",
+                        "localeName": "Autunno-Inverno 2020",
+                        "english": {
+                            "name": "Fall-Winter 2020",
+                            "attribute": null
+                        },
+                        "italian": {
+                            "name": "Autunno-Inverno 2020",
+                            "attribute": null
+                        },
+                        "russian": {
+                            "name": null,
+                            "attribute": null
+                        },
+                        "french": {
+                            "name": null,
+                            "attribute": null
+                        }
+                    },
+                    {
+                        "id": "5f886b4d09608a0001227251",
+                        "creationDate": 1602775885870,
+                        "updateDate": 1602775885787,
+                        "tenantId": null,
+                        "href": null,
+                        "attributeCode": "storename",
+                        "departments": [
+                            "fashion"
+                        ],
+                        "key": "piquadro",
+                        "name": null,
+                        "active": true,
+                        "attributeLocaleName": "storename",
+                        "localeName": "Piquadro",
+                        "english": {
+                            "name": "Piquadro",
+                            "attribute": null
+                        },
+                        "italian": {
+                            "name": "Piquadro",
+                            "attribute": null
+                        },
+                        "russian": {
+                            "name": null,
+                            "attribute": null
+                        },
+                        "french": {
+                            "name": null,
+                            "attribute": null
+                        }
+                    },
+                    {
+                        "id": "5f886b4b09608a0001227238",
+                        "creationDate": 1602775883808,
+                        "updateDate": 1602775882993,
+                        "tenantId": null,
+                        "href": null,
+                        "attributeCode": "village",
+                        "departments": [
+                            "fashion"
+                        ],
+                        "key": "mantova",
+                        "name": null,
+                        "active": false,
+                        "attributeLocaleName": "village",
+                        "localeName": "Mantova",
+                        "english": {
+                            "name": "Mantova",
+                            "attribute": null
+                        },
+                        "italian": {
+                            "name": "Mantova",
+                            "attribute": null
+                        },
+                        "russian": {
+                            "name": null,
+                            "attribute": null
+                        },
+                        "french": {
+                            "name": null,
+                            "attribute": null
+                        }
+                    }
+                ],
+                "sequence": 4
+            }
+        ],
+        "variantsGroup": null,
+        "infoOtherCollections": null,
+        "productVariant": false,
+        "attributeDescription": null,
+        "microCategory": {
+            "id": "5f88a3a50a3f0d0001271333",
+            "key": "scarpe-e-borse",
+            "type": "CHILD",
+            "gender": "female",
+            "active": true,
+            "imageList": null,
+            "parentId": null,
+            "parentFeed": null,
+            "ranking": 0,
+            "localeName": "Scarpe e Borse",
+            "english": {
+                "url": "scarpe-e-borse",
+                "name": "Shoes and Bags",
+                "nav": null
+            },
+            "italian": {
+                "url": "scarpe-e-borse",
+                "name": "Scarpe e Borse",
+                "nav": null
+            },
+            "parentKey": "donna",
+            "declareVariants": null,
+            "declareAttributes": null,
+            "photoAttributes": null,
+            "taxes": null,
+            "products": null,
+            "sizeScaleCode": null,
+            "department": "fashion"
+        },
+        "macroCategory": {
+            "id": "5f88a3a40a3f0d0001271331",
+            "key": "woman",
+            "type": "ROOT",
+            "gender": "female",
+            "active": true,
+            "imageList": null,
+            "parentId": null,
+            "parentFeed": null,
+            "ranking": 0,
+            "localeName": "Donna",
+            "english": {
+                "url": "donna",
+                "name": "Woman",
+                "nav": null
+            },
+            "italian": {
+                "url": "donna",
+                "name": "Donna",
+                "nav": null
+            },
+            "parentKey": "fashion",
+            "declareVariants": null,
+            "declareAttributes": null,
+            "photoAttributes": null,
+            "taxes": null,
+            "products": null,
+            "sizeScaleCode": null,
+            "department": null
+        },
+        "department": null,
+        "pricesComparison": null
+    }
 }
 ```
 
