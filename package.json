@@ -10,10 +10,14 @@
   "repository": "/stentle-vuepress-site",
   "scripts": {
     "dev": "vuepress dev src",
+    "preinstall": "npx npm-force-resolutions",
     "build": "vuepress build src"
   },
   "license": "MIT",
   "devDependencies": {
     "vuepress": "^1.5.3"
+  },
+  "resolutions": {
+    "watchpack": "1.6.1"
   }
 }

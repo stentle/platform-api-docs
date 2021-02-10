@@ -41,6 +41,14 @@ module.exports = {
         link: '/guide/',
       },
       {
+        text: 'v1.0.0',
+        link: '/1.0.0/',
+      },
+      {
+        text: 'v2.0.0',
+        link: '/2.0.0/',
+      },
+      {
         text: 'Stentle',
         link: 'https://stentle.com/'
       }
@@ -58,17 +66,98 @@ module.exports = {
             'product-category-controller',
             'errors',
           ]
-
         },
         {
           title: 'DOCS 2',
           sidebarDepth: 1,
           children: [ 
           'Testnav',
-         ],
+          ],
           initialOpenGroupIndex: -1 // optional, defaults to 0, defines the index of initially opened subgroup
         }
       ],
+      '/1.0.0/':[
+        {
+          title: 'v1.0.0',
+          sidebarDepth: 1,
+          initialOpenGroupIndex: -1,
+          children: [            
+            {
+              title: 'Product',
+              sidebarDepth: 1,
+              children:[
+                '/1.0.0/product/',
+                '/1.0.0/product/create',
+                '/1.0.0/product/update',
+                '/1.0.0/product/delete',
+                '/1.0.0/product/query'
+              ]
+            },
+            {
+              title: 'Attribute',
+              sidebarDepth: 1,
+              children:[
+                '/1.0.0/attribute/',
+                '/1.0.0/attribute/create',
+                '/1.0.0/attribute/update',
+                '/1.0.0/attribute/delete',
+                '/1.0.0/attribute/query'
+              ]
+            },
+            {
+              title: 'Ancillarie',
+              sidebarDepth: 1,
+              children:[
+                '/1.0.0/ancillarie/',
+                '/1.0.0/ancillarie/create',
+                '/1.0.0/ancillarie/update',
+                '/1.0.0/ancillarie/delete',
+                '/1.0.0/ancillarie/query'
+              ]
+            },
+            {
+              title: 'Category',
+              sidebarDepth: 1,
+              children:[
+                '/1.0.0/category/',
+                '/1.0.0/category/create',
+                '/1.0.0/category/update',
+                '/1.0.0/category/delete',
+                {
+                  title: 'Query',
+                  sidebarDepth: 1,
+                  children:[
+                    '/1.0.0/category/query',
+                    '/1.0.0/category/query-search-category',
+                    '/1.0.0/category/query-get-category-by-id'
+                  ]
+                }
+              ]
+            },
+            {
+              title: 'EAN',
+              sidebarDepth: 1,
+              children:[
+                '/1.0.0/ean/',
+                '/1.0.0/ean/create',
+                '/1.0.0/ean/update',
+                '/1.0.0/ean/delete',
+                '/1.0.0/ean/query'
+              ]
+            },
+            'errors'
+          ]
+           // optional, defaults to 0, defines the index of initially opened subgroup
+        }
+      ],
+      '/2.0.0/':[
+        {
+          title: 'v2.0.0',
+          sidebarDepth: 1,
+          initialOpenGroupIndex: -1,
+          children: []
+        }
+      ]
     }
   },
 

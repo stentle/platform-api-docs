@@ -4,6 +4,7 @@ heroImage: https://stentle.com/wp-content/themes/stentle/dist/images/logo-stentl
 tagline: &#34;Stentle Stentle Documentation Endpoints 📱💻🖥️
 actionText: Quick Start 🗎🖋️ →
 actionLink: /guide/
+
 #features:
 #- title: a seamless experience
 #  details: Many solutions for the customer:to discover products, buy them and book them online and live the store space in a personalized way. An app for the retailer:to facilitate upselling, make checkout, order and stock management easier.
