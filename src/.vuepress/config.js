@@ -164,13 +164,14 @@ module.exports = {
                   sidebarDepth: 1,
                   children:[
                     '/1.0.0/ean/query',
-                    '/1.0.0/ean/query-search-by-ean'
+                    '/1.0.0/ean/query-search-by-ean',
+                    '/1.0.0/ean/query-search-variant-by-ean'
                   ]
                 }
               ]
             },
-            {
-              title: 'template',
+   /*         {
+               title: 'template',
               sidebarDepth: 1,
               children:[
                 '/1.0.0/template/',
@@ -180,7 +181,7 @@ module.exports = {
                 '/1.0.0/template/query',
                 '/1.0.0/template/other'
               ]
-            },
+            }, */
             'errors'
           ]
            // optional, defaults to 0, defines the index of initially opened subgroup

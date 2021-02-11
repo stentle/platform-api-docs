@@ -1,11 +1,10 @@
-# Update
-
-Update variant price by EAN
+# Search Variant By Ean
+Query to search by variant by ean
 
 ## URL
 ### Http Verb <Badge text="GET" vertical="middle"/>
 ```
-{{URI}}/rest/picnik-rest/products/updatevariantpricebyean/{ean}/{cat}/{pri}
+{{URI}}/rest/picnik-rest/products/searchbyean/{ean}
 ``` 
 
 ## Headers
@@ -29,13 +28,11 @@ TODO
 ### URL Parameters
 | Parameters | Type | Description | Required | Postion |
 | ------ | ------ | ------ | ------ | ------ |
-| ean | String | unique identifier of the product | True | PathVariable |
-| CatalogId | String | unique identifier of the catalog where to search in | True | PathVariable |
-| Price | double | the price to be set at the product | True | PathVariable |
+| ean | String | unique identifier of product | True | RequestParam |
 
 ### URL Parameters Presentation
 ```
-{{URI}}/rest/picnik-rest/products/updatevariantpricebyean/{ean}/{cat}/{pri}
+{{URI}}/rest/picnik-rest/products/searchbyean/{ean}
 ``` 
 
 ## Response
@@ -74,11 +71,4 @@ CURL call example. Search data by ean.
     TODO
 }
 ```
-- InvalidParameterException <Badge text="InvalidParameterException" type="error"/> - When the parameters are not adeguate
-```
-{
-    TODO
-}
-```
-
 for more info on error - [Errors ](/1.0.0/errors.html) 
