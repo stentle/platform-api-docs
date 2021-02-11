@@ -1,9 +1,9 @@
-# Update
+# Get Specific Attribute
 
-Update Attribute endpoint
+Get Attribute By ID endpoint
 
- ## URL
- ### Http Verb <Badge text="PUT" vertical="middle"/>
+## URL
+### Http Verb <Badge text="GET" vertical="middle"/>
 
 ```
 {{URI}}/rest/picnik-rest/attributes/{{ATTRIBUTE_ID}}
@@ -18,52 +18,47 @@ Content-Type:application/json
 ## Payload
 | Parameters | Type | Description | Required | Postion |
 | ------ | ------ | ------ | ------ | ------ |
-| updatedAttribute | Attribute | Attribute object with data to be inserted | True | RequestBody |
+| NONE | ------ | ------ | ------ | ------ |
 
 ### Payload Example
 ```
 {
-    "attributeCode": "tempo-di-riscaldamento-per-raggiungere-il-60%-del-flusso-luminoso",
-    "departments": [
-        "electronic"
-    ],
-    "id": "58c17b9a4c2acf0001e5d4c7",
-    "italian": {
-        "attribute": "Tempo di riscaldamento per raggiungere il 60% del flusso luminoso",
-        "name": "Raggiunge istantaneamente la massima intensità luminosa"
-    }
+ NONE
 }
 ```
 
 #### Query String Parameters
 | Parameters | Type | Description | Required | Postion |
 | ------ | ------ | ------ | ------ | ------ |
-| attributeID | String | Attribute id of the record to be updated with the following data | True | RequestBody |
+| attribute_id | String |id of the atribute to be updated | True | PathVariable |
 
 ### URL Parameters Presentation
-{{URI}}/rest/picnik-rest/attributes/{{ATTRIBUTE_ID}}
+{{URI}}/rest/picnik-rest/attributes/5f886b4a09608a000122720e
 
 
 ## Response
-| Level1 | Level 2| Type | Description |
+| Level1 | Level 2| Type | Description ||
 | ------ | ------ | ------ | ------ | ------ |
-| data | ------ | ------ | Attribute | Object of type Attribute |
-|| id | ------ | String | Unique Identifier of the Object Attribute |
-|| creationDate | ------ | TODO |  |
-|| updateDate | ------ | TODO |  |
-|| tenantId | ------ | TODO |  |
-|| href | ------ | TODO | |
-|| attributeCode | ------ | TODO | |
-|| departments | ------ | TODO |  |
-|| key | ------ | TODO |  |
-|| name | ------ | TODO |  |
-|| active | ------ | TODO | |
-|| attributeLocaleName | ------ | TODO  | |
-|| localeName | ------ | TODO | |
-|| english | ------ | Language Object | Object of type Language |
-|| italian | ------ | Language Object | Object of type Language |
-|| russian | ------ | Language Object | Object of type Language |
-|| french | ------ | Language Object | Object of type Language |
+| data | ------ | TODO | ------ | ------ |
+|| id | TODO | ------ | ------ |
+|| creationDate | TODO | ------ | ------ |
+|| tenantId | TODO | ------ | ------ |
+|| href | TODO | ------ | ------ |
+|| attributeCode | TODO | ------ | ------ |
+|| departments | TODO | ------ | ------ |
+|| key | TODO | ------ | ------ |
+|| name | TODO | ------ | ------ |
+|| active | TODO | ------ | ------ |
+|| attributeLocaleName | TODO | ------ | ------ |
+|| localeName | TODO | ------ | ------ |
+|| localeName | TODO | ------ | ------ |
+|| localeName | TODO | ------ | ------ |
+|| localeName | TODO | ------ | ------ |
+|| localeName | TODO | ------ | ------ |
+|| localeName | TODO | ------ | ------ |
+|| localeName | TODO | ------ | ------ |
+|| english | languageObject | ------ | ------ |
+|| ...... | languageObject | ------ | ------ |
 
 
 ### Response Example
@@ -107,23 +102,12 @@ Content-Type:application/json
 ## CURL
 CURL call example. Creating a category.
 ```
-curl --location --request PUT 'http://localhost:8080/rest/picnik-rest/attributes/5f886b4a09608a000122720e' \
+curl --location --request GET 'http://localhost:8080/rest/picnik-rest/attributes/5f886b4a09608a000122720e' \
 --header 'X-Domain: landoffashion' \
 --header 'Accept-Language: it' \
---header 'Content-Type: application/json' \
---header 'Cookie: stentle=a0pvREtPSS81MVkvWml1QmpQTXRpdz09Om9ZOTk0ekRlSXMvUDNEQUhBdjB1RWc9PQ' \
---data-raw '{
-    "attributeCode": "tempo-di-riscaldamento-per-raggiungere-il-60%-del-flusso-luminoso",
-    "departments": [
-        "electronic"
-    ],
-    "id": "58c17b9a4c2acf0001e5d4c7",
-    "italian": {
-        "attribute": "Tempo di riscaldamento per raggiungere il 60% del flusso luminoso",
-        "name": "Raggiunge istantaneamente la massima intensità luminosa"
-    }
-}'
-```
+--header 'Content-Type: application/json'
+``` 
+
 
 ### CURL Response Example
 ```
@@ -163,14 +147,5 @@ curl --location --request PUT 'http://localhost:8080/rest/picnik-rest/attributes
 }
 ```
 ## Errors
-- ResourceUpdateException <Badge text="ResourceUpdateException" type="error"/> - Resource Update Exception
-```
-{
-    "type": "0",
-    "title": "Generic error",
-    "status": 500,
-    "detail": "Internal Server Error",
-    "trace": ....
-}
-```
+
 for more info on error - [Errors ](/1.0.0/errors.html) 

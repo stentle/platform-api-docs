@@ -101,7 +101,15 @@ module.exports = {
                 '/1.0.0/attribute/create',
                 '/1.0.0/attribute/update',
                 '/1.0.0/attribute/delete',
-                '/1.0.0/attribute/query'
+                {
+                  title: 'Query',
+                  sidebarDepth: 1,
+                  children:[
+                    '/1.0.0/attribute/query',
+                    '/1.0.0/attribute/query-search-attributes',
+                    '/1.0.0/attribute/query-get-specific-attribute'
+                  ]
+                }
               ]
             },
             {
@@ -151,7 +159,14 @@ module.exports = {
                 '/1.0.0/ean/create',
                 '/1.0.0/ean/update',
                 '/1.0.0/ean/delete',
-                '/1.0.0/ean/query'
+                {
+                  title: 'Query',
+                  sidebarDepth: 1,
+                  children:[
+                    '/1.0.0/ean/query',
+                    '/1.0.0/ean/query-search-by-ean'
+                  ]
+                }
               ]
             },
             {

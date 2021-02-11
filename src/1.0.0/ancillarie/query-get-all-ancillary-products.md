@@ -1,6 +1,5 @@
 # Get All Ancillary Products
-
-Query Get All Ancillary Products
+Query get all ancillary products data on database
 
 
 ## URL

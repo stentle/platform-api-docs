@@ -1,5 +1,5 @@
 # Get Ancillary Details
-Search categories
+Query to get ancillary product details
 
 
 ## URL

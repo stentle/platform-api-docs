@@ -15,7 +15,7 @@ X-Domain:{{X-DOMAIN}}
 Accept-Language:{{ACCEPT-LANGUAGE}}
 Content-Type:application/json
 ```
-#### Payload
+## Payload
 | Parameters | Type | Description | Required | Postion |
 | ------ | ------ | ------ | ------ | ------ |
 | TODO | ------ | ------ | ------ | ------ |
@@ -46,7 +46,7 @@ Content-Type:application/json
 }
 ```
 
-### CURL
+## CURL
 CURL call example. Creating a category.
 ```
 TODO
@@ -58,13 +58,11 @@ TODO
     TODO
 }
 ```
-##### <Badge text="error" type="warning"/>
+## Errors
 - ResourceCreationException <Badge text="ResourceCreationException" type="error"/> - Creation Error Type
 ```
 {
     TODO
 }
 ```
-
-
-for more infor on error - [Errors ](errors.html) 
+for more info on error - [Errors ](/1.0.0/errors.html) 
