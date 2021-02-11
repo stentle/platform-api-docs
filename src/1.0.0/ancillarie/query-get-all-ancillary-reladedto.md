@@ -26,6 +26,115 @@ X-Domain:{{X-DOMAIN}}
 {{URI}}/rest/picnik-rest/ancillary/?relatedTo={{PRODUCT_ID}}&cartId={{CART_ID}}"
 ``` 
 
+## Response
+| Level1 | Level 2| Type | Description |
+| ------ | ------ | ------ | ------ | ------ |
+| data ||Object| Response content|
+||id|string| ancillary product Id|
+||name|String|name of product|
+||description|String|descritpoin|
+||cluster|String||
+||ranking|Intiger||
+||composable|boolean||
+||image|||
+||priceText|double||
+||isIncluded|boolean||
+||pricingRule|String||
+||...|...|....|
+
+... means that the response data continue and respites themself 
+
+### Response Example
+```
+{
+    "airport": [
+        {
+            "id": "5e4be68ddd4f6c000102b388",
+            "name": "Verona",
+            "description": "\"Oh Romeo Romeo\" partiamo da qui Romeo",
+            "cluster": "airport",
+            "ranking": 4,
+            "composable": false,
+            "image": "https://utravel.s3.amazonaws.com/ancillary-airport-verona.svg",
+            "priceText": "100",
+            "isIncluded": false,
+            "pricingRule": "FIXED_PER_PERSON"
+        },
+        {
+            "id": "5e4be74edd4f6c000102b3b0",
+            "name": "Bologna",
+            "description": "Voliamo alto sopra le due torri",
+            "cluster": "airport",
+            "ranking": 5,
+            "composable": false,
+            "image": "https://utravel.s3.amazonaws.com/ancillary-airport-bologna.svg",
+            "priceText": "100",
+            "isIncluded": false,
+            "pricingRule": "FIXED_PRICE"
+        },
+        {
+            "id": "5e4be7aadd4f6c000102b3c4",
+            "name": "Torino",
+            "description": "Giochiamo in casa nostra",
+            "cluster": "airport",
+            "ranking": 6,
+            "composable": false,
+            "image": "https://utravel.s3.amazonaws.com/ancillary-airport-torino.svg",
+            "priceText": "100",
+            "isIncluded": false,
+            "pricingRule": "FIXED_PER_PERSON"
+        },
+        {
+            "id": "5e4be7eedd4f6c000102b3d2",
+            "name": "Napoli",
+            "description": "“Vide 'o mare quant'è bello” soprattutto in aereo",
+            "cluster": "airport",
+            "ranking": 7,
+            "composable": false,
+            "image": "https://utravel.s3.amazonaws.com/ancillary-airport-napoli.svg",
+            "priceText": "100",
+            "isIncluded": false,
+            "pricingRule": "FIXED_PER_PERSON"
+        },
+        {
+            "id": "5e4be825dd4f6c000102b3df",
+            "name": "Bari",
+            "description": "Vieni a volare in Puglia",
+            "cluster": "airport",
+            "ranking": 8,
+            "composable": false,
+            "image": "https://utravel.s3.amazonaws.com/ancillary-airport-bari.svg",
+            "priceText": "100",
+            "isIncluded": false,
+            "pricingRule": "FIXED_PER_PERSON"
+        },
+        {
+            "id": "5e4be9e2dd4f6c000102b43b",
+            "name": "Catania",
+            "description": "Arancino o arancina? Tranquilli, vi facciamo volare tutti!",
+            "cluster": "airport",
+            "ranking": 9,
+            "composable": false,
+            "image": "https://utravel.s3.amazonaws.com/ancillary-airport-catania.svg",
+            "priceText": "100",
+            "isIncluded": false,
+            "pricingRule": "FIXED_PER_PERSON"
+        },
+        {
+            "id": "5e4beb7fdd4f6c000102b491",
+            "name": "Cagliari",
+            "description": "Eja, hai capito bene!",
+            "cluster": "airport",
+            "ranking": 10,
+            "composable": false,
+            "image": "https://utravel.s3.amazonaws.com/ancillary-airport-cagliari.svg",
+            "priceText": "100",
+            "isIncluded": false,
+            "pricingRule": "FIXED_PER_PERSON"
+        }
+    ]
+}
+```
 
 ## CURL
 ```

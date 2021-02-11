@@ -120,6 +120,8 @@ Content-Type:application/json
 ||...|...|....|
 ||coverPhotoUrl|||
 
+... means that the response data continue and respites themself 
+
 ### Response Example
 ```
 {
