@@ -13,7 +13,7 @@ Select Specific product endpoint
 Headers
 TODO
 ```
-#### Payload
+## Payload
 | Parameters | Type | Description | Required | Postion |
 | ------ | ------ | ------ | ------ | ------ |
 | None | ------ | ------ | ------ | ------ | 
@@ -42,7 +42,7 @@ None
     TODO
 }
 ```
-### CURL
+## CURL
 CURL call example. Creating a category.
 ```
 TODO
@@ -55,8 +55,7 @@ TODO
 }
 ```
 
-### Errors
-
+## Errors
 - ResourceNotFound <Badge text="ResourceNotFound" type="error"/> - The resource was not found
 
 ```
@@ -69,5 +68,4 @@ TODO
 }
 ```
 
-
-for more infor on error - [Errors ](errors.html) 
+for more info on error - [Errors ](/1.0.0/errors.html) 

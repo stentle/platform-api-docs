@@ -18,7 +18,7 @@ Accept-Language:{{ACCEPT-LANGUAGE}}
 Content-Type:application/json
 ```
 
-#### Payload
+## Payload
 | Parameters | Type | Description | Required | Postion |
 | ------ | ------ | ------ | ------ | ------ |
 | product | Product | product to be created | True | RequestBody | 
@@ -119,7 +119,7 @@ Content-Type:application/json
 }
 ```
 
-### CURL
+## CURL
 CURL call example. Creating a category.
 ```
 curl --location --request PUT 'http://localhost:8080/rest/picnik-rest/products/59e0cb773cdea200013ffed7' \
@@ -187,7 +187,7 @@ curl --location --request PUT 'http://localhost:8080/rest/picnik-rest/products/5
 }
 ```
 
-### Errors
+## Errors
 
 - ResourceCreationException <Badge text="ResourceCreationException" type="error"/> - Creation Error Type
 
@@ -225,4 +225,4 @@ curl --location --request PUT 'http://localhost:8080/rest/picnik-rest/products/5
 }
 ```
 
-for more infor on error - [Errors ](errors.html) 
+for more info on error - [Errors ](/1.0.0/errors.html) 

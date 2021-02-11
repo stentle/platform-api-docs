@@ -13,7 +13,7 @@ Delete product endpoint
 Headers
 TODO
 ```
-#### Payload
+## Payload
 | Parameters | Type | Description | Required | Postion |
 | ------ | ------ | ------ | ------ | ------ |
 | None | ------ | ------ | ------ | ------ | 
@@ -46,7 +46,7 @@ None
 }
 ```
 
-### CURL
+## CURL
 CURL call example. Creating a category.
 ```
 TODO
@@ -59,7 +59,7 @@ TODO
 }
 ```
 
-### Errors
+## Errors
 
 - ResourceDeleteException <Badge text="ResourceDeleteException" type="error"/> - Creation Error Type
 
@@ -85,5 +85,4 @@ TODO
 }
 ```
 
-
-for more infor on error - [Errors ](errors.html) 
+for more info on error - [Errors ](/1.0.0/errors.html) 
