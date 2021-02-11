@@ -112,7 +112,16 @@ module.exports = {
                 '/1.0.0/ancillarie/create',
                 '/1.0.0/ancillarie/update',
                 '/1.0.0/ancillarie/delete',
-                '/1.0.0/ancillarie/query'
+                {
+                  title: 'Query',
+                  sidebarDepth: 1,
+                  children:[
+                    '/1.0.0/ancillarie/query',
+                    '/1.0.0/ancillarie/query-get-ancillary-product-detail',
+                    '/1.0.0/ancillarie/query-get-all-ancillary-products',
+                    '/1.0.0/ancillarie/query-get-all-ancillary-reladedto'
+                  ]
+                }
               ]
             },
             {

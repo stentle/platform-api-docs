@@ -12,14 +12,13 @@ Create ancillary product endpoint
 ## Headers
 ```
 X-Domain:{{X-DOMAIN}}
-Accept-Language:{{ACCEPT-LANGUAGE}}
 Content-Type:application/json
 ```
 ## Payload
 | Parameters | Type | Description | Required |
 | ------ | ------ | ------ | ------ | ------ |
-| ancillaryProduct | AncillaryProduct | unique identifier of the ancillary product | True |
-| principal | Principal | parameter to check user auth and rights | True |
+| ancillaryProduct | Object | unique identifier of the ancillary product | True |
+
 
 ### Payload Example
 ```
@@ -118,7 +117,8 @@ Content-Type:application/json
 ||photoGallery|Object||
 ||videoGallery|string||
 ||documentArchive|string||
-||continue|continue|Continue|
+||...|...|....|
+||coverPhotoUrl|||
 
 ### Response Example
 ```
@@ -544,14 +544,15 @@ curl --location --request POST 'http://localhost:8080/rest/picnik-rest/ancillary
 ```
 
 ## Errors
-IllegalArgumentException <Badge text="IllegalArgumentException" type="error"/> - Error types illegal Argument
-::: warning IllegalArgumentException
+::: warning 
 ```
-"type": "0",
-"title": "Generic error",
-"status": 401,
-"detail": "Unauthorized"
-"stackTrace": ....
+{
+    "type": "0",
+    "title": "Generic error",
+    "status": 401,
+    "detail": "Unauthorized"
+    "stackTrace": ....
+}
 ```
 :::
 
