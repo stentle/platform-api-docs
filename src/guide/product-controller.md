@@ -53,8 +53,8 @@ for more infor on error - [Errors ](errors.html)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## searchbyEam <Badge text="searchbyEam" /> 
-Method Detail for searchbyEam 
+## searchbyEan <Badge text="searchbyEan" /> 
+Method Detail for searchbyEan 
 
 
 ```
