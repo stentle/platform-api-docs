@@ -18,27 +18,31 @@ Accept-Language:{{ACCEPT-LANGUAGE}}
 ## Payload
 | Parameters | Type | Description | Required |
 | ------ | ------ | ------ | ------ | ------ |
-| pageNumber | Integer | identifier of the page number | True |
-| limit | Integer | identifier of the limit page number | True |
-| active | boolean | TODO | False |
-| hideChildless | boolean | TODO | False |
-| key | String | name of product category | False |
-| type | String | TODO | False |
-| gender | String | Gender male/female | False |
-| parentKey | String | name of parent key | False |
-| department | String | department of product category | False |
-| parentId | String | unique name of parent id | False |
+| None |  |  |  |
 
+### Payload Example
+```
+{
+None
+}
+```
+### URL Parameters
+| Parameters | Type | Description | Required | Postion |
+| ------ | ------ | ------ | ------ | ------ |
+| pageNumber | Integer | identifier of the page number | True | RequestParam |
+| limit | Integer | identifier of the limit page number | True | RequestParam |
 
+### URL Parameters Presentation
+```
+{{URI}}/rest/picnik-rest/categories?pageNumber=?&limit=?
+```
 
 ## CURL
-
 ```
 curl --location --request GET 'http://localhost:8080/rest/picnik-rest/categories?pageNumber=1&limit=10' \
 --header 'X-Domain: utravel' \
 --header 'Accept-Language: en'
 ```
-TODO missing payload
 
 ### CURL Response Example
 ```

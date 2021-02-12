@@ -47,7 +47,6 @@ TODO
 }
 ```
 
-
 ## CURL
 CURL call example. Search data by ean.
 ```

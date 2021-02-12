@@ -18,10 +18,10 @@ TODO
 | NONE | ------ | ------ | ------ | ------ |
 
 
-### CURL Response Example
+### Payload Example
 ```
 {
-    TODO
+ NONE
 }
 ```
 
