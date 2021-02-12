@@ -170,18 +170,36 @@ module.exports = {
                 }
               ]
             },
-   /*         {
-               title: 'template',
+            {
+              title: 'Import Product',
               sidebarDepth: 1,
               children:[
-                '/1.0.0/template/',
-                '/1.0.0/template/create',
-                '/1.0.0/template/update',
-                '/1.0.0/template/delete',
-                '/1.0.0/template/query',
-                '/1.0.0/template/other'
+                '/1.0.0/import_product/',
+                '/1.0.0/import_product/create',
+                '/1.0.0/import_product/update',
+                '/1.0.0/import_product/delete',
+                {
+                  title: 'Query',
+                  sidebarDepth: 1,
+                  children:[
+                    '/1.0.0/import_product/query',
+                    '/1.0.0/import_product/query-get-status-by-UUID',
+                    '/1.0.0/import_product/query-error-file-by-UUID'
+                  ]
+                }
               ]
-            }, */
+            },
+            {
+              title: 'Export Product',
+              sidebarDepth: 1,
+              children:[
+                '/1.0.0/export_product/',
+                '/1.0.0/export_product/create',
+                '/1.0.0/export_product/update',
+                '/1.0.0/export_product/delete',
+                '/1.0.0/export_product/query'
+              ]
+            },
             'errors'
           ]
            // optional, defaults to 0, defines the index of initially opened subgroup
