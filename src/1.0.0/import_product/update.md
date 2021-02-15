@@ -43,30 +43,14 @@ X-Country-Code: {{X-COUNTRY-CODE}}
 | Level1 | Level 2| Type | Description |
 | ------ | ------ | ------ | ------ | 
 | data ||Object| Response content|
-|| id | String | id of the record | 
-|| path | TODO | ------ |
-|| filePath | TODO | ------ |
-|| ftpPath | String | Path of the uploaded CSV (original) file in the FTP server |
-|| errors | Object | Contains the errors of the uploaded csv. importErrors, parsingErrors |
-|| status | String | The status of the uploaded file |
-|| uuid | String | UUID to track the status of the uploaded file |
-|| creationDate | number | creation time of the record |
+|| UUID | String | UUID to track the status of the uploaded file | 
+
 
 ### Response Example
 ::: details Response
 ```json
 {
-    "id": "6022c24436d1a00001804ea3",
-    "path": null,
-    "filePath": null,
-    "ftpPath": "landoffashion/land-of-fashion-franciacorta-01/ed2b1f9e-f1cd-4107-a158-022d4b986b8b_Anda_attributes.csv",
-    "errors": {
-        "importErrors": null,
-        "parsingErrors": null
-    },
-    "status": "UPLOADED",
-    "uuid": "ed2b1f9e-f1cd-4107-a158-022d4b986b8b",
-    "creationDate": 1612890692392
+    "ed2b1f9e-f1cd-4107-a158-022d4b986b8b"
 }
 ```
 :::
