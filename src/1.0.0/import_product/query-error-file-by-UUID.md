@@ -14,18 +14,6 @@ Get the error status for an imported CSV File
 X-Domain:{{X-DOMAIN}}
 ```
 
-## Payload
-| Parameters | Type | Description | Required |
-| ------ | ------ | ------ | ------ | 
-| TODO | ------ | ------ | ------ | 
-
-### Payload Example
-```
-{
- TODO
-}
-```
-
 #### Query String Parameters
 | Parameters | Type | Description | Required |
 | ------ | ------ | ------ | ------ |

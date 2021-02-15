@@ -239,7 +239,7 @@ curl --location --request GET 'http://localhost:8080/rest/picnik-rest/products/s
 :::
 
 ## Errors
-- ResourceNotFoundException <Badge text="ResourceNotFoundException" type="error"/> - Error types resource not found
+- Error types resource not found
 ```
 {
     "type": "3",

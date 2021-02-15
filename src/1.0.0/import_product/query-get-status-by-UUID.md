@@ -14,18 +14,6 @@ Get the status of CSV
 X-Domain:{{X-DOMAIN}}
 ```
 
-## Payload
-| Parameters | Type | Description | Required |
-| ------ | ------ | ------ | ------ | 
-| TODO | ------ | ------ | ------ |
-
-### Payload Example
-```
-{
- TODO
-}
-```
-
 #### Query String Parameters
 | Parameters | Type | Description | Required |
 | ------ | ------ | ------ | ------ | ------ |
@@ -77,9 +65,19 @@ curl --location -g --request GET 'http://localhost:8080/rest/picnik-rest/csv/sta
 ``` 
 
 ### CURL Response Example
-```
+```json
 {
-TODO
+    "id": "6022c24436d1a00001804ea3",
+    "path": null,
+    "filePath": null,
+    "ftpPath": "landoffashion/land-of-fashion-franciacorta-01/ed2b1f9e-f1cd-4107-a158-022d4b986b8b_Anda_attributes.csv",
+    "errors": {
+        "importErrors": null,
+        "parsingErrors": null
+    },
+    "status": "UPLOADED",
+    "uuid": "ed2b1f9e-f1cd-4107-a158-022d4b986b8b",
+    "creationDate": 1612890692392
 }
 ```
 ## Errors
