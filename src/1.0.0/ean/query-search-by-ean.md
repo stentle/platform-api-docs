@@ -12,14 +12,6 @@ Query to search by ean
 ```
 X-Domain:{{X-DOMAIN}}
 ```
-## Payload
-| Parameters | Type | Description | Required |
-| ------ | ------ | ------ | ------ | 
-|None| ------ | ------ | ------ |
-### Payload Example
-```
- none
-```
 
 ### URL Parameters
 | Parameters | Type | Description | Required | 

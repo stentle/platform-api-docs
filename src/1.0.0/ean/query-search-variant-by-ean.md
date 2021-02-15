@@ -12,17 +12,6 @@ Query to search by variant by ean
 X-Domain:{{X-DOMAIN}}
 ```
 
-## Payload
-| Parameters | Type | Description | Required |
-| ------ | ------ | ------ | ------ | 
-| None | ------ | ------ | ------ | 
-
-
-### Payload Example
-```
- None
-```
-
 ### URL Parameters
 | Parameters | Type | Description | Required |
 | ------ | ------ | ------ | ------ |
@@ -218,7 +207,7 @@ curl --location --request GET 'http://localhost:8080/rest/picnik-rest/products/s
 :::
 
 ## Errors
-- ResourceNotFoundException <Badge text="ResourceNotFoundException" type="error"/> - Error types resource not found
+- Error types resource not found
 ```
 {
     "type": "3",
