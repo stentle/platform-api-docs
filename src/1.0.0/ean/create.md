@@ -23,7 +23,7 @@ Update a variant catalog price by ean in case the object `varaint_catalog_price`
     }
 ```
 ::: 
-*Details of the Object that will be created or updated
+\* Details of the Object that will be created or updated
 
 ## URL
 ### Http Verb <Badge text="GET" vertical="middle"/>
@@ -56,13 +56,13 @@ X-Domain:{{X-DOMAIN}}
 ||id|String|Unique varinat Id|
 ||creationDate|Date|date created|
 ||sku|String|last time date was updated|
-||parentId|String||
+||parentId|String|parent identifier|
 ||price|Object| value & currency|
 ||prices|Object| identification prices of the product|
 ||attributeVariants|Object| identification attribute variants of a product|
 ||macroCategoryInfo|Object| unique info for a macro category of product|
 ||microCategoryInfo|Object| unique info for a micro category of product|
-||availability|double||
+||availability|double|product availability|
 ||description|Object| description of the product in EN & IT|
 ||names|Object| name of a product in EN & IT|
 ||ean|String| ean of product|
@@ -72,12 +72,12 @@ X-Domain:{{X-DOMAIN}}
 ||weight|Double|weight|
 ||macroCategory|String| info for a macro category|
 ||microCategory|String| info for a micro category|
-||sellingPrice|Double| Selling price|
-||reatilPrice|Double| Selling price|
+||sellingPrice|Double| selling price|
+||reatilPrice|Double| selling price|
 ||unitQuantity|Double| unit quantity|
-||attributeList|Object||
+||attributeList|Object|product attributes list (to be verified)|
 ||ranking|Double|ranking|
-||isVariant|Boolean||
+||isVariant|Boolean|true is the product as a variant|
 
 ### Response Example
 ::: details Example
