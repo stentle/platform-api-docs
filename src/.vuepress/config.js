@@ -1,10 +1,10 @@
-const { description } = require('../../package')
+const {description} = require('../../package')
 
 module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Documentation Platform',
+  title: 'Platform API Documentation',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -36,25 +36,25 @@ module.exports = {
     activeHeaderLinks: true,
     smoothScroll: true,
     nav: [
-      {
+/*       {
         text: 'Guide API',
         link: '/guide/',
-      },
+      }, */
       {
         text: 'v1.0.0',
         link: '/1.0.0/',
       },
-      {
+/*       {
         text: 'v2.0.0',
         link: '/2.0.0/',
-      },
+      }, */
       {
         text: 'Stentle',
         link: 'https://stentle.com/'
       }
     ],
     sidebar: {
-      '/guide/': [
+/*       '/guide/': [
         {
           title: 'Guide API',
           sidebarDepth: 1,
@@ -75,7 +75,7 @@ module.exports = {
           ],
           initialOpenGroupIndex: -1 // optional, defaults to 0, defines the index of initially opened subgroup
         }
-      ],
+      ], */
       '/1.0.0/':[
         {
           title: 'v1.0.0',
@@ -205,14 +205,14 @@ module.exports = {
            // optional, defaults to 0, defines the index of initially opened subgroup
         }
       ],
-      '/2.0.0/':[
+/*       '/2.0.0/':[
         {
           title: 'v2.0.0',
           sidebarDepth: 1,
           initialOpenGroupIndex: -1,
           children: []
         }
-      ]
+      ] */
     }
   },
 

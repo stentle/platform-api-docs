@@ -1,9 +1,8 @@
 ---
 home: true
 heroImage: https://stentle.com/wp-content/themes/stentle/dist/images/logo-stentle-az.png
-tagline: &#34;Stentle Stentle Documentation Endpoints 📱💻🖥️
-actionText: Quick Start 🗎🖋️ →
-actionLink: /guide/
+actionText: Quick Start
+actionLink: /1.0.0/
 
 #features:
 #- title: a seamless experience
@@ -12,7 +11,7 @@ actionLink: /guide/
 #  details: A platform designed around the needs of the customer and the retailer, to integrate paths, channels and touchpoints, making every moment of the interaction inside and outside the shop, unique and relevant.
 #- title: real time data
 #  details: Monitor customer behaviours to identify their preferences and adjust strategies. Make their time spent in the store more enjoyable by personalising the customer experience with the help of the tools and data, in real time.
-footer: Copyright © stentle with ❤️ 
+footer: Copyright © 2021 
 ---
 
 
