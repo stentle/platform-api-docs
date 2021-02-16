@@ -87,10 +87,10 @@ module.exports = {
               sidebarDepth: 1,
               children:[
                 '/1.0.0/product/',
-                '/1.0.0/product/create',
-                '/1.0.0/product/update',
-                '/1.0.0/product/delete',
-                '/1.0.0/product/query'
+                /*'/1.0.0/product/create',*/
+                '/1.0.0/product/update'
+                /*'/1.0.0/product/delete',
+                '/1.0.0/product/query'*/
               ]
             },
             {
@@ -186,7 +186,7 @@ module.exports = {
                 }
               ]
             },
-            {
+            /*{
               title: 'Export Product',
               sidebarDepth: 1,
               children:[
@@ -196,7 +196,7 @@ module.exports = {
                 '/1.0.0/export_product/delete',
                 '/1.0.0/export_product/query'
               ]
-            },
+            },*/
             'errors'
           ]
            // optional, defaults to 0, defines the index of initially opened subgroup

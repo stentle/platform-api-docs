@@ -1,3 +1,3 @@
 # Description
 
-Here EAN description
+EAN section
