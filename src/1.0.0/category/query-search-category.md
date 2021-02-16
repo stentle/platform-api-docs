@@ -15,27 +15,12 @@ X-Domain:{{X-DOMAIN}}
 Accept-Language:{{ACCEPT-LANGUAGE}}
 ```
 
-## Payload
-| Parameters | Type | Description | Required |
-| ------ | ------ | ------ | ------ | ------ |
-| None |  |  |  |
-
-### Payload Example
-```
-{
-None
-}
-```
-### URL Parameters
+## Query String
 | Parameters | Type | Description | Required | Postion |
 | ------ | ------ | ------ | ------ | ------ |
 | pageNumber | Integer | identifier of the page number | True | RequestParam |
 | limit | Integer | identifier of the limit page number | True | RequestParam |
 
-### URL Parameters Presentation
-```
-{{URI}}/rest/picnik-rest/categories?pageNumber=?&limit=?
-```
 
 ## CURL
 ```
