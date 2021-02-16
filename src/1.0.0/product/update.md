@@ -82,7 +82,7 @@ Content-Type:application/json
 | ------ | ------ | ------ | ------ | ------ |
 | id_p | String | product id | True | PathVariable | 
 
-### URL Parameters Presentation
+### URL Parameters
 "{{URI}}/rest/picnik-rest/products/{id_p}"
 
 
@@ -183,7 +183,28 @@ curl --location --request PUT 'http://localhost:8080/rest/picnik-rest/products/5
 ### CURL Response Example
 ```
 {
-  TODO
+    "data": {
+        "id": "602141e3b3cb1f0001bfe040",
+        "key": "traveltest",
+        "type": "DEPARTMENT",
+        "gender": null,
+        "active": null,
+        "imageList": null,
+        "parentId": null,
+        "parentFeed": null,
+        "ranking": 0,
+        "localeName": "traveltest1",
+        "english": null,
+        "italian": null,
+        "parentKey": null,
+        "declareVariants": null,
+        "declareAttributes": null,
+        "photoAttributes": null,
+        "taxes": null,
+        "products": null,
+        "sizeScaleCode": null,
+        "department": null
+    }
 }
 ```
 

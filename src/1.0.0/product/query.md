@@ -13,22 +13,15 @@ Select Specific product endpoint
 Headers
 TODO
 ```
-## Payload
-| Parameters | Type | Description | Required | Postion |
-| ------ | ------ | ------ | ------ | ------ |
-| None | ------ | ------ | ------ | ------ | 
 
-### Payload Example
-```
-None
-```
+
 ##### <Badge text="Parameters" type="warning"/>
 | Parameters | Type | Description | Required | Postion |
 | ------ | ------ | ------ | ------ | ------ |
 | idp | String | unique identifier of product | True | PathVariable |
 
 
-### URL Parameters Presentation
+### URL Parameters
 "{{URI}}/rest/picnik-rest/products/{id_p}"
 
 ## Response
