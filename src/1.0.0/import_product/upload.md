@@ -1,6 +1,6 @@
-# Update
+# Upload
 
-Upload a csv to import 
+Uploads a csv file with products details
 
 ## URL
 ### Http Verb <Badge text="POST" vertical="middle"/>
@@ -16,28 +16,26 @@ Accept-Language:{{ACCEPT-LANGUAGE}}
 X-Country-Code: {{X-COUNTRY-CODE}}
 ```
 
+## CSV File Format
+| Parameters | Type | Description | Required | 
+| ------ | ------ | ------ | ------ | 
+| TODO | | | | 
+
 ## Payload
 | Parameters | Type | Description | Required | 
 | ------ | ------ | ------ | ------ | 
 | file | form-data | need a path to the csv file | True | 
 
-### Payload Example
+### CSV File Example
 ```
-{
- file: fileExample.csv
-}
+TODO
 ```
 
-#### Query String Parameters
+## Query String
 | Parameters | Type | Description | Required |
 | ------ | ------ | ------ | ------ | ------ |
-| folder | attribute | Reference of the folder to take CSV file | True |
+| folder | String | destination folder of the uploaded file | True |
 
-### URL Parameters Presentation
-'folder=?' is the destination folder of the uploaded file
-```
-{{URI}}/rest/picnik-rest/csv?folder=attribute
-```
 
 ## Response
 | Level1 | Level 2| Type | Description |

@@ -174,9 +174,7 @@ module.exports = {
               sidebarDepth: 1,
               children:[
                 '/1.0.0/import_product/',
-                '/1.0.0/import_product/create',
-                '/1.0.0/import_product/update',
-                '/1.0.0/import_product/delete',
+                '/1.0.0/import_product/upload',
                 {
                   title: 'Query',
                   sidebarDepth: 1,

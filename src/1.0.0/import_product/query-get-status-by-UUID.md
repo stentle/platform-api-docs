@@ -14,15 +14,11 @@ Get the status of CSV
 X-Domain:{{X-DOMAIN}}
 ```
 
-#### Query String Parameters
+## URL Parameters
 | Parameters | Type | Description | Required |
 | ------ | ------ | ------ | ------ | ------ |
 | UUID | String | Reference of the uploaded CSV file | True |
 
-### URL Parameters Presentation
-```
-{{URI}}/rest/picnik-rest/csv/file/{{UUID}}
-```
 
 ## Response
 | Level1 | Level 2| Type | Description |
