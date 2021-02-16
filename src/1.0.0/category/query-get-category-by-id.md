@@ -23,10 +23,6 @@ Content-Type:application/json
 | ------ | ------ | ------ | ------ | ------ |
 | CATEGORY_ID | String | unique category ID | True |
 
-### URL Parameters Presentation
-```
-{{URI}}/rest/picnik-rest/categories/{{CATEGORY_ID}}
-```
 
 ## Response
 | Level1 | Level 2| Type | Description |
