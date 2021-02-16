@@ -1,6 +1,6 @@
-# Create
+# Delete
 
-Create Attribute endpoint
+Delete Attribute endpoint
 
 Not Available
 

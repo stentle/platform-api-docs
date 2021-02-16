@@ -15,17 +15,6 @@ X-Domain:{{X-DOMAIN}}
 Accept-Language:{{ACCEPT-LANGUAGE}}
 Content-Type:application/json
 ```
-## Payload
-| Parameters | Type | Description | Required | Postion |
-| ------ | ------ | ------ | ------ | ------ |
-| None | ------ | ------ | ------ | ------ |
-
-### Payload Example
-```
-{
- None
-}
-```
 
 #### Query String Parameters
 | Parameters | Type | Description | Required | Postion |
@@ -35,7 +24,7 @@ Content-Type:application/json
 | attributeCode | String | code of the attribute to search | False | RequestParam|
 | department | String | department code | False | RequestParam|
 
-### URL Parameters Presentation
+### URL Parameters
 ```
 {{URI}}/rest/picnik-rest/attributes?limit={{LIMIT_PER_PAGE}}&pageNumber={{PAGE_NUMBER}}
 ```

@@ -15,24 +15,13 @@ X-Domain:{{X-DOMAIN}}
 Accept-Language:{{ACCEPT-LANGUAGE}}
 Content-Type:application/json
 ```
-## Payload
-| Parameters | Type | Description | Required | Postion |
-| ------ | ------ | ------ | ------ | ------ |
-| NONE | ------ | ------ | ------ | ------ |
-
-### Payload Example
-```
-{
- NONE
-}
-```
 
 #### Query String Parameters
 | Parameters | Type | Description | Required | Postion |
 | ------ | ------ | ------ | ------ | ------ |
 | attribute_id | String |id of the atribute to be updated | True | PathVariable |
 
-### URL Parameters Presentation
+### URL Parameters
 {{URI}}/rest/picnik-rest/attributes/5f886b4a09608a000122720e
 
 
