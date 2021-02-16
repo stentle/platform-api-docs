@@ -157,7 +157,6 @@ module.exports = {
               children:[
                 '/1.0.0/ean/',
                 '/1.0.0/ean/create',
-                '/1.0.0/ean/update',
                 '/1.0.0/ean/delete',
                 {
                   title: 'Query',
@@ -204,7 +203,7 @@ module.exports = {
           ]
            // optional, defaults to 0, defines the index of initially opened subgroup
         }
-      ],
+      ]
 /*       '/2.0.0/':[
         {
           title: 'v2.0.0',
