@@ -13,45 +13,41 @@ Query to search by ean
 X-Domain:{{X-DOMAIN}}
 ```
 
-### URL Parameters
+## Query String
 | Parameters | Type | Description | Required | 
 | ------ | ------ | ------ | ------ | 
-| ean | String | unique identifier of varinat| True |
+| ean | String | unique identifier of variant| True |
 
-### URL Parameters
-```
-{{URI}}/rest/picnik-rest/products/searchByEan=?ean={ean}
-``` 
 
 ## Response
 | Level1 | Level 2| Type | Description |
 | ------ | ------ | ------ | ------ | 
-| data ||Object| Response content|
-||id|String|Unique varinat Id|
+| data ||Object| response content|
+||id|String|unique variant id|
 ||creationDate|Date|date created|
-||sku|String|last time date was updated|
-||parentId|String||
+||sku|String| stock keeping unit (article/product)|
+||parentId|String| parent identifier|
 ||price|Object| value & currency|
 ||prices|Object| identification prices of the product|
 ||attributeVariants|Object| identification attribute variants of a product|
 ||macroCategoryInfo|Object| unique info for a macro category of product|
 ||microCategoryInfo|Object| unique info for a micro category of product|
-||availability|double||
+||availability|double| product availability|
 ||description|Object| description of the product in EN & IT|
 ||names|Object| name of a product in EN & IT|
 ||ean|String| ean of product|
-||height|Double|height|
-||width|Double|width|
-||depth|Double|depth|
-||weight|Double|weight|
+||height|Double| height|
+||width|Double| width|
+||depth|Double| depth|
+||weight|Double| weight|
 ||macroCategory|String| info for a macro category|
 ||microCategory|String| info for a micro category|
-||sellingPrice|Double| Selling price|
-||reatilPrice|Double| Selling price|
+||sellingPrice|Double| selling price|
+||reatilPrice|Double| selling price|
 ||unitQuantity|Double| unit quantity|
-||attributeList|Object||
-||ranking|Double|ranking|
-||isVariant|Boolean||
+||attributeList|Object| product attribute list|
+||ranking|Double| ranking|
+||isVariant|Boolean| true if it is a variant|
 
 ### Response Example
 ::: details Response

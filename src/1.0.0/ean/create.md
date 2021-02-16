@@ -36,24 +36,20 @@ Update a variant catalog price by ean in case the object `varaint_catalog_price`
 X-Domain:{{X-DOMAIN}}
 ```
 
-### URL Parameters
+## URL Parameters
 | Parameters | Type | Description | Required |
 | ------ | ------ | ------ | ------ |
 | ean | String | unique identifier of the product | True | 
 | CatalogId | String | unique identifier of the catalog where to search in | True |
 | Price | double | the price to be set at the product | True | 
 
-### URL Parameters
-```
-{{URI}}/rest/picnik-rest/products/updatevariantpricebyean/{ean}/{cat}/{pri}
-``` 
 
 ## Response
 
 | Level1 | Level 2| Type | Description |
 | ------ | ------ | ------ | ------ | 
 | data ||Object| Response content|
-||id|String|Unique varinat Id|
+||id|String|unique varinat Id|
 ||creationDate|Date|date created|
 ||sku|String|last time date was updated|
 ||parentId|String|parent identifier|

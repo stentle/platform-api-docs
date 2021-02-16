@@ -12,43 +12,40 @@ Query to search by variant by ean
 X-Domain:{{X-DOMAIN}}
 ```
 
-### URL Parameters
+## URL Parameters
+
 | Parameters | Type | Description | Required |
 | ------ | ------ | ------ | ------ |
-| ean | String | unique identifier of varinat | True |
+| ean | String | unique identifier of variant | True |
 
-### URL Parameters
-```
-{{URI}}/rest/picnik-rest/products/searchbyean/{ean}
-``` 
 
 ## Response
 | Level1 | Level 2| Type | Description |
 | ------ | ------ | ------ | ------ | ------ |
-| data ||Object| Response content|
-||id|String|Unique varinat Id|
-||creationDate|Date|date created|
-||sku|String|last time date was updated|
-||parentId|String||
+| data ||Object| response content|
+||id|String| unique varinat id|
+||creationDate|Date| date created|
+||sku|String| stock keeping unit (article/product)|
+||parentId|String| parent identifier|
 ||price|Object| value & currency|
 ||prices|Object| identification prices of product|
 ||attributeVariants|Object| identification attribute variants of a product|
 ||macroCategoryInfo|Object| unique info for a macro category of product|
 ||microCategoryInfo|Object| unique info for a micro category of product|
-||availability|Double||
+||availability|Double| product availability|
 ||names|Object| name of product in EN & IT|
 ||ean|String| ean of product|
-||height|Double|height|
-||width|Double|width|
-||depth|Double|depth|
-||weight|Double|weight|
+||height|Double| height|
+||width|Double| width|
+||depth|Double| depth|
+||weight|Double| weight|
 ||macroCategory|String| info for a macro category|
 ||microCategory|String| info for a micro category|
-||sellingPrice|Double| Selling price|
-||reatilPrice|Double| Selling price|
+||sellingPrice|Double| selling price|
+||reatilPrice|Double| selling price|
 ||unitQuantity|Double| unit quantity|
-||ranking|Double|ranking|
-||isVariant|Boolean||
+||ranking|Double| ranking|
+||isVariant|Boolean| true if it is a variant|
 
 ### Response Example
 ::: details Example
