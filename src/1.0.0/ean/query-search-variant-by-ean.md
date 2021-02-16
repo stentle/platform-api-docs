@@ -17,7 +17,7 @@ X-Domain:{{X-DOMAIN}}
 | ------ | ------ | ------ | ------ |
 | ean | String | unique identifier of varinat | True |
 
-### URL Parameters Presentation
+### URL Parameters
 ```
 {{URI}}/rest/picnik-rest/products/searchbyean/{ean}
 ``` 
