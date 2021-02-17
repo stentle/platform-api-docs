@@ -17,25 +17,41 @@ X-Country-Code: {{X-COUNTRY-CODE}}
 ```
 
 ## CSV File Format
-| Parameters | Type | Description | Required | 
+The files data can be set for the following entities
+1. Attributes
+2. Categories
+3. Products
+4. Stock
+
+| File | Type | Description | Required | 
 | ------ | ------ | ------ | ------ | 
-| TODO | | | | 
+| file | *.csv file | Data will be upload in database| Yes | 
+ 
+\* name of file to test data
+
+### CSV File Example
+1. Attributes
+Example data file structure 
+
+| Level1 | Level 2| Type | Description |
+| ------ | ------ | ------ | ------ | 
+| File || csv| content data|
+|| attribute-code | String | | 
+|| key | String | | 
+|| active | Boolean | |
+|| departments | String | |
+|| name| Object | Description in EN and IT |
 
 ## Payload
 | Parameters | Type | Description | Required | 
 | ------ | ------ | ------ | ------ | 
-| file | form-data | need a path to the csv file | True | 
+| file | form-data | need a path to the csv file | Yes | 
 
-### CSV File Example
-```
-TODO
-```
 
 ## Query String
 | Parameters | Type | Description | Required |
 | ------ | ------ | ------ | ------ | ------ |
-| folder | String | destination folder of the uploaded file | True |
-
+| folder | String | destination folder of the uploaded file | Yes |
 
 ## Response
 | Level1 | Level 2| Type | Description |

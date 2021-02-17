@@ -39,9 +39,9 @@ X-Domain:{{X-DOMAIN}}
 ## URL Parameters
 | Parameters | Type | Description | Required |
 | ------ | ------ | ------ | ------ |
-| ean | String | unique identifier of the product | True | 
-| CatalogId | String | unique identifier of the catalog where to search in | True |
-| Price | double | the price to be set at the product | True | 
+| ean | String | unique identifier of the product | Yes | 
+| CatalogId | String | unique identifier of the catalog where to search in | Yes |
+| Price | double | the price to be set at the product | Yes | 
 
 
 ## Response
@@ -232,7 +232,6 @@ curl --location --request GET 'http://localhost:8080/rest/picnik-rest/products/u
 ## Errors
 - When the parameters are not adeguate
 ```
-{
 {
     "type": "3",
     "title": "Resource not found",

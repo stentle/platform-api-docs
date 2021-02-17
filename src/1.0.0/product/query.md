@@ -15,14 +15,10 @@ TODO
 ```
 
 
-##### <Badge text="Parameters" type="warning"/>
-| Parameters | Type | Description | Required | Postion |
-| ------ | ------ | ------ | ------ | ------ |
-| idp | String | unique identifier of product | True | PathVariable |
-
-
-### URL Parameters
-"{{URI}}/rest/picnik-rest/products/{id_p}"
+## URL Parameters
+| Parameters | Type | Description | Required | 
+| ------ | ------ | ------ | ------ | 
+| idp | String | unique identifier of product | Yes | 
 
 ## Response
 | Level1 | Level 2| Type | Description |
@@ -49,7 +45,7 @@ TODO
 ```
 
 ## Errors
-- ResourceNotFound <Badge text="ResourceNotFound" type="error"/> - The resource was not found
+- The resource was not found
 
 ```
 {

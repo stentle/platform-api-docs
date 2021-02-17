@@ -16,29 +16,20 @@ Accept-Language:{{ACCEPT-LANGUAGE}}
 Content-Type:application/json
 ```
 
-#### Query String Parameters
-| Parameters | Type | Description | Required | Postion |
-| ------ | ------ | ------ | ------ | ------ |
-| pageNumber | int | pagination parameter | True | RequestParam |
-| pageSize | int | pagination parameter | False | RequestParam |
-| attributeCode | String | code of the attribute to search | False | RequestParam|
-| department | String | department code | False | RequestParam|
+## URL Parameters
+| Parameters | Type | Description | Required | 
+| ------ | ------ | ------ | ------ | 
+| pageNumber | int | pagination parameter | Yes | 
+| pageSize | int | pagination parameter | Yes |
+| attributeCode | String | code of the attribute to search | Yes | 
+| department | String | department code | |
 
-### URL Parameters
-```
-{{URI}}/rest/picnik-rest/attributes?limit={{LIMIT_PER_PAGE}}&pageNumber={{PAGE_NUMBER}}
-```
 
 ## Response
 | Level1 | Level 2| Type | Description |
-| ------ | ------ | ------ | ------ | ------ |
-| data | ------ | TODO | ------ | ------ |
+| ------ | ------ | ------ | ------ | 
+| data ||Object| Response content|
 || TODO | TODO | ------ | ------ |
-|| startIndex | TODO | ------ | ------ |
-|| itemsPerPage | TODO | ------ | ------ |
-|| currentItemCount | TODO | ------ | ------ |
-|| items | TODO | ------ | ------ |
-
 
 ### Response Example
 ```
@@ -62,7 +53,7 @@ Sample CURL Call: "TODO"
 ```
 
 ## Errors
-- ResourceNotFoundException <Badge text="ResourceNotFoundException" type="error"/> - Error types resource not found
+- Error types resource not found
 ```
 {
     TODO

@@ -15,16 +15,11 @@ X-Domain:{{X-DOMAIN}}
 ```
 
 ## URL Parameters
-| Parameters | Type | Description | Required | Postion |
+| Parameters | Type | Description | Required | 
 | ------ | ------ | ------ | ------ | ------ |
-| ancillaryProductId | String | unique identifier of the ancillary product id | True | RequestParam |
-| cartId | String | unique identifier of the cart id | True | PathVaribale |
-| language | String | unique identifier of language, defaultValue = "it" | False | RequestHeader |
-
-### URL Parameters Presentation
-```
-{{URI}}/rest/picnik-rest/ancillary/?relatedTo={{PRODUCT_ID}}&cartId={{CART_ID}}"
-``` 
+| ancillaryProductId | String | unique identifier of the ancillary product id | Yes | 
+| cartId | String | unique identifier of the cart id | Yes | 
+| language | String | unique identifier of language, defaultValue = "it" | |
 
 ## Response
 | Level1 | Level 2| Type | Description |
@@ -42,10 +37,11 @@ X-Domain:{{X-DOMAIN}}
 ||pricingRule|String||
 ||...|...|....|
 
-... means that the response data continue and respites themself 
+... means that the response data continue and repeat himself
 
 ### Response Example
-```
+::: details Example
+```json
 {
     "airport": [
         {
@@ -135,6 +131,7 @@ X-Domain:{{X-DOMAIN}}
     ]
 }
 ```
+:::
 
 ## CURL
 ```
@@ -144,7 +141,8 @@ curl --location --request GET 'http://localhost:8080/rest/picnik-rest/ancillary/
 ```
 
 ### CURL Response Example
-```
+::: details Example
+```json
 {
     "airport": [
         {
@@ -234,6 +232,7 @@ curl --location --request GET 'http://localhost:8080/rest/picnik-rest/ancillary/
     ]
 }
 ```
+:::
 
 ## Errors
 for more info on error - [Errors ](/1.0.0/errors.html)

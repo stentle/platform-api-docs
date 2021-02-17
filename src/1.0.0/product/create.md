@@ -16,9 +16,9 @@ Accept-Language:{{ACCEPT-LANGUAGE}}
 Content-Type:application/json
 ```
 ### Payload
-| Parameters | Type | Description | Required | Postion |
-| ------ | ------ | ------ | ------ | ------ |
-| product | Product | product to be created | True | RequestBody | 
+| Parameters | Type | Description | Required | 
+| ------ | ------ | ------ | ------ | 
+| product | Product | product to be created | Yes |
 
 ### Payload Example
 ```
@@ -26,13 +26,6 @@ Content-Type:application/json
  TODO
 }
 ```
-
-#### Query String Parameters
--None
-
-### URL Parameters Presentation
-"{{URI}}/rest/picnik-rest/products"
-
 
 ## Response
 | Level1 | Level 2| Type | Description |
@@ -59,19 +52,19 @@ TODO
 }
 ```
 ## Errors
-- ResourceCreationException <Badge text="ResourceCreationException" type="error"/> - Creation Error Type
+- Creation Error Type
 ```
 {
     TODO
 }
 ```
-- ResourceNotFoundException <Badge text="ResourceCreationException" type="error"/> - Not found exception
+- Not found exception
 ```
 {
    TODO
 }
 ```
-- InputValidationException <Badge text="InputValidationException" type="error"/> - Invalid data Exception
+- Invalid data Exception
 ```
 {
    TODO

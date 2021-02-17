@@ -14,29 +14,12 @@ Delete ancillary product endpoint
 X-Domain:{{X-DOMAIN}}
 ```
 
-## Payload
+## URL Parameters
 | Parameters | Type | Description | Required |
 | ------ | ------ | ------ | ------ | ------ |
-| id | String | unique identifier of the ancillary product id | True | 
-| language | String | unique identifier of language, defaultValue = "it" | False |
-
-### Payload Example
-Define just the Id ancillary product we want to delete in the URL
-```
-{}
-```
-
-### URL Parameters
-| Parameters | Type | Description | Required |
-| ------ | ------ | ------ | ------ | ------ |
-| id | String | unique identifier of the ancillary product id | True | 
-| language | String | unique identifier of language, defaultValue = "it" | False |
-
-### URL Parameters Presentation
-```
-{{URI}}/rest/picnik-rest/ancillary/{id}
-``` 
-
+| id | String | unique identifier of the ancillary product id | Yes | 
+| language | String | unique identifier of language, defaultValue = "it" | |
+ 
 ## Response
 As response we get a number one means a 200 server response that the ancillary product has been deleted successfully.
 
@@ -64,12 +47,11 @@ CURL response number one means a 200 server response that the ancillary product 
 }
 ```
 ## Errors
-::: warning 
+
 ```
 {
    TODO
 }
 ```
-:::
 
 for more info on error - [Errors ](/1.0.0/errors.html)

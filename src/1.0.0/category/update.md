@@ -2,10 +2,6 @@
 
 Update category endpoint
 
-
-
-
-
  ## URL
  ### Http Verb <Badge text="PUT" vertical="middle"/>
 ```
@@ -23,11 +19,11 @@ Content-Type: application/json
 ## Payload
 | Parameters | Type | Description | Required | 
 | ------ | ------ | ------ | ------ | ------ |
-| id | String | unique parameter category ID | True |
-| key | String | TODO | True |
-| type | String | TODO| True |
-| gender | String | TODO | True |
-| active | Boolean | TODO | True |
+| id | String | unique parameter category ID | Yes |
+| key | String | TODO | Yes |
+| type | String | TODO| Yes |
+| gender | String | TODO | Yes |
+| active | Boolean | TODO | Yes |
 | imageList | Array | TODO ||
 | parentId | String | TODO ||
 
@@ -71,8 +67,8 @@ Content-Type: application/json
 ||department|string||
 
 ### Response Example
-
-```
+::: details Example
+```json
 {
     "data": {
         "id": "555210b1a44d28823dda21ce",
@@ -101,6 +97,7 @@ Content-Type: application/json
     }
 }
 ```
+::: 
 
 ## CURL
 
@@ -128,7 +125,8 @@ curl --location --request PUT 'http://localhost:8080/rest/picnik-rest/categories
 ```
 
 ### CURL Response Example
-```
+::: details Example
+```json
 {
     "data": {
         "id": "555210b1a44d28823dda21ce",
@@ -157,6 +155,8 @@ curl --location --request PUT 'http://localhost:8080/rest/picnik-rest/categories
     }
 }
 ```
+:::
+
 
 ## Errors
 for more info on error - [Errors ](/1.0.0/errors.html) 

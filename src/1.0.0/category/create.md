@@ -20,11 +20,10 @@ Content-Type:application/json
 ## Payload
 | Parameters | Type | Description | Required | 
 | ------ | ------ | ------ | ------ | ------ |
-| _id | String | unique parameter category ID | True |
-| key | String | TODO | True |
-| type | String | TODO| True |
-| declare_variants | Array | TODO | True |
-| photo_attributes | Array | TODO | True |
+| _id | String | unique parameter category ID | Yes |
+| key | String | TODO | Yes |
+| type | String | TODO| Yes |
+| declare_variants | Array | TODO | Yes |
 
 ### Payload Example
 ```
@@ -68,7 +67,8 @@ Content-Type:application/json
 ||department|string||
 
 ### Response Example
-```
+::: details Example
+```json
 {
     "data": {
         "id": "602141e3b3cb1f0001bfe040",
@@ -94,6 +94,7 @@ Content-Type:application/json
     }
 }
 ```
+:::
 
 ## CURL
 
@@ -120,7 +121,8 @@ curl --location --request POST 'http://localhost:8080/rest/picnik-rest/categorie
 ```
 
 ### CURL Response Example
-```
+::: details Example
+```json
 {
     "data": {
         "id": "602141e3b3cb1f0001bfe040",
@@ -146,6 +148,7 @@ curl --location --request POST 'http://localhost:8080/rest/picnik-rest/categorie
     }
 }
 ```
+:::
 
 ## Errors
 for more info on error - [Errors ](/1.0.0/errors.html)

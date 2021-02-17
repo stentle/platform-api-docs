@@ -16,7 +16,7 @@ X-Domain:{{X-DOMAIN}}
 ## Query String
 | Parameters | Type | Description | Required | 
 | ------ | ------ | ------ | ------ | 
-| ean | String | unique identifier of variant| True |
+| ean | String | unique identifier of variant| Yes |
 
 
 ## Response
@@ -50,7 +50,7 @@ X-Domain:{{X-DOMAIN}}
 ||isVariant|Boolean| true if it is a variant|
 
 ### Response Example
-::: details Response
+::: details Example
 ```json
 {
     "data": {

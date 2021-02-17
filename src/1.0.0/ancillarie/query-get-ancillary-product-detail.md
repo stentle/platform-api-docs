@@ -16,12 +16,8 @@ X-Domain:{{X-DOMAIN}}
 ### URL Parameters
 | Parameters | Type | Description | Required |
 | ------ | ------ | ------ | ------ | ------ |
-| ancillaryProductId | String | unique identifier of the ancillary product id | True |
+| ancillaryProductId | String | unique identifier of the ancillary product id | Yes |
 
-### URL Parameters Presentation
-```
-{{URI}}/rest/picnik-rest/ancillary/{id}
-```
 
 ## Response
 | Level1 | Level 2| Type | Description |
@@ -49,10 +45,11 @@ X-Domain:{{X-DOMAIN}}
 ||coverPhotoUrl|url||
 ||...|...|...|
 
-... means that the response data continue and respites themself 
+... means that the response data continue and repeat himself
 
 ### Response Example
-```
+::: details Example
+```json
 {
     "id": "5e4a6eeef79ecb0001a41990",
     "creationDate": 1585819393542,
@@ -590,6 +587,7 @@ X-Domain:{{X-DOMAIN}}
     "coverPhotoUrl": "https://utravel.s3.amazonaws.com/ancillary-assicurazione-spesemediche.svg"
 }
 ```
+:::
 ## CURL
 CURL call example. Retrieving an ancillary product details with id.
 
@@ -600,7 +598,8 @@ curl --location --request GET 'http://localhost:8080/rest/picnik-rest/ancillary/
 ```
 
 ### CURL Response Example
-```
+::: details Example
+```json
 {
     "id": "5e4a6eeef79ecb0001a41990",
     "creationDate": 1585819393542,
@@ -1138,6 +1137,7 @@ curl --location --request GET 'http://localhost:8080/rest/picnik-rest/ancillary/
     "coverPhotoUrl": "https://utravel.s3.amazonaws.com/ancillary-assicurazione-spesemediche.svg"
 }
 ```
+:::
 
 ## Errors
 

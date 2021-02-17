@@ -14,15 +14,10 @@ Query get all ancillary products data on database
 X-Domain:{{X-DOMAIN}}
 ```
 
-### URL Parameters
-| Parameters | Type | Description | Required | Postion |
+## URL Parameters
+| Parameters | Type | Description | Required |
 | ------ | ------ | ------ | ------ | ------ |
-| language | String | unique identifier of language, defaultValue = "it" | False | RequestHeader |
-
-### URL Parameters Presentation
-```
-{{URI}}/rest/picnik-rest/ancillary/all
-``` 
+| language | String | unique identifier of language, defaultValue = "it" | |
 
 ## Response
 | Level1 | Level 2| Type | Description |
@@ -50,10 +45,11 @@ X-Domain:{{X-DOMAIN}}
 ||coverPhotoUrl|url||
 ||...|...|...|
 
-... means that the response data continue and respites themself 
+... means that the response data continue and repeat himself
 
 ### Response Example
-```
+::: details Example
+```json
 {
         "id": "5e28687b84b38d00016a83ee",
         "creationDate": 1592899247320,
@@ -598,6 +594,7 @@ X-Domain:{{X-DOMAIN}}
       }
 }
 ```
+:::
 
 
 ## CURL
@@ -609,8 +606,8 @@ curl --location --request GET 'http://localhost:8080/rest/picnik-rest/ancillary/
 ```
 
 ### CURL Response Example
-
-```
+::: details Example
+```json
 [
     {
         "id": "5e28687b84b38d00016a83ee",
@@ -15972,6 +15969,7 @@ curl --location --request GET 'http://localhost:8080/rest/picnik-rest/ancillary/
     }
 ]
 ```
+:::
 
 ## Errors
 

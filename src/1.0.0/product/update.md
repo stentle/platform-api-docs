@@ -8,7 +8,7 @@ Update product endpoints
  ### Http Verb <Badge text="POST" vertical="middle"/>
 
 ```
-{{URI}}/rest/picnik-rest/products
+{{URI}}/rest/picnik-rest/products/{id_p}
 ``` 
 
 ## Headers
@@ -19,9 +19,9 @@ Content-Type:application/json
 ```
 
 ## Payload
-| Parameters | Type | Description | Required | Postion |
+| Parameters | Type | Description | Required | 
 | ------ | ------ | ------ | ------ | ------ |
-| product | Product | product to be created | True | RequestBody | 
+| product | Product | product to be created | Yes | 
 
 ### Payload Example
 ```
@@ -77,14 +77,10 @@ Content-Type:application/json
 }
 ```
 
-#### Query String Parameters
-| Parameters | Type | Description | Required | Postion |
-| ------ | ------ | ------ | ------ | ------ |
-| id_p | String | product id | True | PathVariable | 
-
-### URL Parameters
-"{{URI}}/rest/picnik-rest/products/{id_p}"
-
+## URL Parameters
+| Parameters | Type | Description | Required |
+| ------ | ------ | ------ | ------ | 
+| id_p | String | product id | Yes |  
 
 ## Response
 | Level1 | Level 2| Type | Description |
@@ -92,7 +88,8 @@ Content-Type:application/json
 |TODO| ------ | ------ | ------ | ------ |
 
 ### Response Example
-```
+::: details Example
+```json
 {
     "data": {
         "id": "602141e3b3cb1f0001bfe040",
@@ -118,6 +115,8 @@ Content-Type:application/json
     }
 }
 ```
+:::
+
 
 ## CURL
 CURL call example. Creating a category.
@@ -181,7 +180,8 @@ curl --location --request PUT 'http://localhost:8080/rest/picnik-rest/products/5
 ```
 
 ### CURL Response Example
-```
+::: details Example
+```json
 {
     "data": {
         "id": "602141e3b3cb1f0001bfe040",
@@ -207,10 +207,23 @@ curl --location --request PUT 'http://localhost:8080/rest/picnik-rest/products/5
     }
 }
 ```
+:::
+
 
 ## Errors
 
-- ResourceCreationException <Badge text="ResourceCreationException" type="error"/> - Creation Error Type
+- Creation Error Type
+
+```
+{
+    "type": "0",
+    "title": "Generic error",
+    "status": 401,
+    "detail": "Unauthorized",
+    "stackTrace": .....
+}
+```
+- Not found exception
 
 ```
 {
@@ -222,19 +235,7 @@ curl --location --request PUT 'http://localhost:8080/rest/picnik-rest/products/5
 }
 ```
 
-- ResourceNotFoundException <Badge text="ResourceCreationException" type="error"/> - Not found exception
-
-```
-{
-    "type": "0",
-    "title": "Generic error",
-    "status": 401,
-    "detail": "Unauthorized",
-    "stackTrace": .....
-}
-```
-
-- InputValidationException <Badge text="InputValidationException" type="error"/> - Invalid data Exception
+- Invalid data Exception
 
 ```
 {

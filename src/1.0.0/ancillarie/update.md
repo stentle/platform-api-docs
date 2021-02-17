@@ -18,18 +18,7 @@ Content-Type:application/json
 ## Payload
 | Parameters | Type | Description | Required |
 | ------ | ------ | ------ | ------ | ------ |
-| id | String | unique identifier of the ancillary product id | True | 
-| ancillaryProduct | Object | unique identifier of the ancillary product | True |
-
-### URL Parameters
-| Parameters | Type | Description | Required |
-| ------ | ------ | ------ | ------ | ------ |
-| id | String | unique identifier of the ancillary product id | True | 
-
-### URL Parameters Presentation
-```
-{{URI}}/rest/picnik-rest/ancillary/{id}
-``` 
+| ancillaryProduct | Object | unique identifier of the ancillary product | Yes |
 
 ### Payload Example
 ```
@@ -104,9 +93,12 @@ Content-Type:application/json
 	}
 }
 ```
+## URL Parameters
+| Parameters | Type | Description | Required |
+| ------ | ------ | ------ | ------ | ------ |
+| id | String | unique identifier of the ancillary product id | True | 
 
 ## Response
-```
 | Level1 | Level 2| Type | Description |
 | ------ | ------ | ------ | ------ | ------ |
 | data ||Object| Response content|
@@ -132,9 +124,10 @@ Content-Type:application/json
 ||documentArchive|string||
 ||...|...|....|
 ||coverPhotoUrl|||
-```
+
 ### Response Example
-```
+::: details Example
+```json
 {
     "id": "5e28643984b38d00016a83ea",
     "creationDate": 1612879648524,
@@ -304,6 +297,7 @@ Content-Type:application/json
     "coverPhotoUrl": null
 }
 ```
+:::
 ## CURL
 CURL call example. Update a ancillary product.
 ```
@@ -384,7 +378,8 @@ curl --location --request POST 'http://localhost:8080/rest/picnik-rest/ancillary
 ```
 
 ### CURL Response Example
-```
+::: details Example
+```json
 {
     "id": "5e28643984b38d00016a83ea",
     "creationDate": 1612879648524,
@@ -554,6 +549,7 @@ curl --location --request POST 'http://localhost:8080/rest/picnik-rest/ancillary
     "coverPhotoUrl": null
 }
 ```
+:::
 ## Errors
 
 for more info on error - [Errors ](/1.0.0/errors.html)

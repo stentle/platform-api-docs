@@ -16,9 +16,9 @@ Accept-Language:{{ACCEPT-LANGUAGE}}
 Content-Type:application/json
 ```
 ## Payload
-| Parameters | Type | Description | Required | Postion |
-| ------ | ------ | ------ | ------ | ------ |
-| updatedAttribute | Attribute | Attribute object with data to be inserted | True | RequestBody |
+| Parameters | Type | Description | Required | 
+| ------ | ------ | ------ | ------ | 
+| updatedAttribute | Attribute | Attribute object with data to be inserted | Yes | 
 
 ### Payload Example
 ```
@@ -35,19 +35,15 @@ Content-Type:application/json
 }
 ```
 
-#### Query String Parameters
-| Parameters | Type | Description | Required | Postion |
-| ------ | ------ | ------ | ------ | ------ |
-| attributeID | String | Attribute id of the record to be updated with the following data | True | RequestBody |
-
-### URL Parameters Presentation
-{{URI}}/rest/picnik-rest/attributes/{{ATTRIBUTE_ID}}
-
+## URL Parameters
+| Parameters | Type | Description | Required | 
+| ------ | ------ | ------ | ------ | 
+| attributeID | String | Attribute id of the record to be updated with the following data | Yes |
 
 ## Response
 | Level1 | Level 2| Type | Description |
-| ------ | ------ | ------ | ------ | ------ |
-| data | ------ | ------ | Attribute | Object of type Attribute |
+| ------ | ------ | ------ | ------ | 
+| data ||Object| Response content|
 || id | ------ | String | Unique Identifier of the Object Attribute |
 || creationDate | ------ | TODO |  |
 || updateDate | ------ | TODO |  |
@@ -67,7 +63,8 @@ Content-Type:application/json
 
 
 ### Response Example
-```
+::: details Example
+```json
 {
     "data": {
         "id": "5f886b4a09608a000122720e",
@@ -103,6 +100,7 @@ Content-Type:application/json
     }
 }
 ```
+:::
 
 ## CURL
 CURL call example. Creating a category.
@@ -126,7 +124,8 @@ curl --location --request PUT 'http://localhost:8080/rest/picnik-rest/attributes
 ```
 
 ### CURL Response Example
-```
+::: details Example
+```json
 {
     "data": {
         "id": "5f886b4a09608a000122720e",
@@ -162,8 +161,10 @@ curl --location --request PUT 'http://localhost:8080/rest/picnik-rest/attributes
     }
 }
 ```
+:::
+
 ## Errors
-- ResourceUpdateException <Badge text="ResourceUpdateException" type="error"/> - Resource Update Exception
+- Resource Update Exception
 ```
 {
     "type": "0",

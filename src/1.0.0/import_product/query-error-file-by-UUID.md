@@ -18,8 +18,7 @@ X-Domain:{{X-DOMAIN}}
 
 | Parameters | Type | Description | Required |
 | ------ | ------ | ------ | ------ |
-| UUID | String | Reference of the uploaded CSV file | True |
-
+| UUID | String | Reference of the uploaded CSV file | Yes |
 
 ## Response
 | Level1 | Level 2| Type | Description |

@@ -14,15 +14,10 @@ Headers
 TODO
 ```
 
-##### <Badge text="Parameters" type="warning"/>
-| Parameters | Type | Description | Required | Postion |
+## URL Parameters
+| Parameters | Type | Description | Required |
 | ------ | ------ | ------ | ------ | ------ |
-| idProduct | String | unique identifier of product | True | PathVariable |
-
-### URL Parameters
-"{{URI}}/rest/picnik-rest/products/{id_p}"
-
-
+| idProduct | String | unique identifier of product | Yes |
 
 ## Response
 | Level1 | Level 2| Type | Description |
@@ -51,7 +46,7 @@ TODO
 
 ## Errors
 
-- ResourceDeleteException <Badge text="ResourceDeleteException" type="error"/> - Creation Error Type
+- Creation Error Type
 
 ```
 {
@@ -63,7 +58,7 @@ TODO
 }
 ```
 
-- ResourceNotFoundException <Badge text="ResourceCreationException" type="error"/> - Not found exception
+- Not found exception
 
 ```
 {

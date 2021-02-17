@@ -16,9 +16,9 @@ Accept-Language:{{ACCEPT-LANGUAGE}}
 Content-Type:application/json
 ```
 ## Payload
-| Parameters | Type | Description | Required | Postion |
-| ------ | ------ | ------ | ------ | ------ |
-| TODO | ------ | ------ | ------ | ------ |
+| Parameters | Type | Description | Required | 
+| ------ | ------ | ------ | ------ | 
+| TODO | ------ | ------ | ------ | 
 
 ### Payload Example
 ```
@@ -27,17 +27,11 @@ Content-Type:application/json
 }
 ```
 
-#### Query String Parameters
--None
-
-### URL Parameters Presentation
-"{{URI}}/rest/picnik-rest/attributes"
-
-
 ## Response
 | Level1 | Level 2| Type | Description |
-| ------ | ------ | ------ | ------ | ------ |
-| TODO | ------ | ------ | ------ | ------ |
+| ------ | ------ | ------ | ------ | 
+| data ||Object| Response content|
+|| TODO | TODO | ------ | ------ |
 
 ### Response Example
 ```
@@ -59,7 +53,7 @@ TODO
 }
 ```
 ## Errors
-- ResourceCreationException <Badge text="ResourceCreationException" type="error"/> - Creation Error Type
+- Creation Error Type
 ```
 {
     TODO

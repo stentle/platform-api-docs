@@ -16,7 +16,7 @@ X-Domain:{{X-DOMAIN}}
 
 | Parameters | Type | Description | Required |
 | ------ | ------ | ------ | ------ |
-| ean | String | unique identifier of variant | True |
+| ean | String | unique identifier of variant | Yes |
 
 
 ## Response

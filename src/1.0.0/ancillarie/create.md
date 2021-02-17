@@ -17,7 +17,7 @@ Content-Type:application/json
 ## Payload
 | Parameters | Type | Description | Required |
 | ------ | ------ | ------ | ------ | ------ |
-| ancillaryProduct | Object | unique identifier of the ancillary product | True |
+| ancillaryProduct | Object | unique identifier of the ancillary product | Yes |
 
 
 ### Payload Example
@@ -120,10 +120,11 @@ Content-Type:application/json
 ||...|...|....|
 ||coverPhotoUrl|||
 
-... means that the response data continue and respites themself 
+... means that the response data continue and repeat himself
 
 ### Response Example
-```
+::: details Example
+```json
 {
     "id": "60229563b3cb1f0001bfe041",
     "creationDate": 1612879202932,
@@ -293,6 +294,7 @@ Content-Type:application/json
     "coverPhotoUrl": null
 }
 ```
+:::
 
 ## CURL
 CURL call example. Creating a ancillary product.
@@ -374,7 +376,8 @@ curl --location --request POST 'http://localhost:8080/rest/picnik-rest/ancillary
 ```
 
 ### CURL Response Example
-```
+::: details Example
+```json
 {
     "id": "60229563b3cb1f0001bfe041",
     "creationDate": 1612879202932,
@@ -544,9 +547,10 @@ curl --location --request POST 'http://localhost:8080/rest/picnik-rest/ancillary
     "coverPhotoUrl": null
 }
 ```
+:::
 
 ## Errors
-::: warning 
+- Not found exception
 ```
 {
     "type": "0",
@@ -556,6 +560,4 @@ curl --location --request POST 'http://localhost:8080/rest/picnik-rest/ancillary
     "stackTrace": ....
 }
 ```
-:::
-
 for more info on error - [Errors ](/1.0.0/errors.html)

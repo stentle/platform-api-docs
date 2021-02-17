@@ -16,19 +16,16 @@ Accept-Language:{{ACCEPT-LANGUAGE}}
 Content-Type:application/json
 ```
 
-#### Query String Parameters
-| Parameters | Type | Description | Required | Postion |
+## URL Parameters
+| Parameters | Type | Description | Required | 
 | ------ | ------ | ------ | ------ | ------ |
-| attribute_id | String |id of the atribute to be updated | True | PathVariable |
-
-### URL Parameters
-{{URI}}/rest/picnik-rest/attributes/5f886b4a09608a000122720e
+| attribute_id | String |id of the atribute to be updated | Yes |
 
 
 ## Response
-| Level1 | Level 2| Type | Description ||
-| ------ | ------ | ------ | ------ | ------ |
-| data | ------ | TODO | ------ | ------ |
+| Level1 | Level 2| Type | Description |
+| ------ | ------ | ------ | ------ | 
+| data ||Object| Response content|
 || id | TODO | ------ | ------ |
 || creationDate | TODO | ------ | ------ |
 || tenantId | TODO | ------ | ------ |
@@ -51,7 +48,8 @@ Content-Type:application/json
 
 
 ### Response Example
-```
+::: details Example
+```json
 {
     "data": {
         "id": "5f886b4a09608a000122720e",
@@ -87,6 +85,7 @@ Content-Type:application/json
     }
 }
 ```
+:::
 
 ## CURL
 CURL call example. Creating a category.
@@ -99,7 +98,8 @@ curl --location --request GET 'http://localhost:8080/rest/picnik-rest/attributes
 
 
 ### CURL Response Example
-```
+::: details Example
+```json
 {
     "data": {
         "id": "5f886b4a09608a000122720e",
@@ -135,6 +135,7 @@ curl --location --request GET 'http://localhost:8080/rest/picnik-rest/attributes
     }
 }
 ```
+:::
 ## Errors
 
 for more info on error - [Errors ](/1.0.0/errors.html) 
