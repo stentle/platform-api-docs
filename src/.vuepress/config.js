@@ -98,9 +98,9 @@ module.exports = {
               sidebarDepth: 1,
               children:[
                 '/1.0.0/attribute/',
-                '/1.0.0/attribute/create',
+                //'/1.0.0/attribute/create',
                 '/1.0.0/attribute/update',
-                '/1.0.0/attribute/delete',
+                //'/1.0.0/attribute/delete',
                 {
                   title: 'Query',
                   sidebarDepth: 1,
@@ -139,7 +139,7 @@ module.exports = {
                 '/1.0.0/category/',
                 '/1.0.0/category/create',
                 '/1.0.0/category/update',
-                '/1.0.0/category/delete',
+                //'/1.0.0/category/delete',
                 {
                   title: 'Query',
                   sidebarDepth: 1,
@@ -157,7 +157,7 @@ module.exports = {
               children:[
                 '/1.0.0/ean/',
                 '/1.0.0/ean/create',
-                '/1.0.0/ean/delete',
+                //'/1.0.0/ean/delete',
                 {
                   title: 'Query',
                   sidebarDepth: 1,
@@ -174,6 +174,7 @@ module.exports = {
               sidebarDepth: 1,
               children:[
                 '/1.0.0/import_product/',
+                '/1.0.0/import_product/bulk-upsert',
                 '/1.0.0/import_product/upload',
                 {
                   title: 'Query',
