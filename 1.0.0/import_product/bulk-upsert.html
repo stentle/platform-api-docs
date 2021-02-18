@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bulk Upsert | Platform API Documentation</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="      ">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.6646c2fa.css" as="style"><link rel="preload" href="/assets/js/app.1955ec5a.js" as="script"><link rel="preload" href="/assets/js/2.6e2a4d54.js" as="script"><link rel="preload" href="/assets/js/46.90328c41.js" as="script"><link rel="preload" href="/assets/js/3.094ac905.js" as="script"><link rel="prefetch" href="/assets/js/10.67d49031.js"><link rel="prefetch" href="/assets/js/11.d6e39f3c.js"><link rel="prefetch" href="/assets/js/12.8ef8ccc5.js"><link rel="prefetch" href="/assets/js/13.f14b4052.js"><link rel="prefetch" href="/assets/js/14.ccb5a153.js"><link rel="prefetch" href="/assets/js/15.9e9df4d9.js"><link rel="prefetch" href="/assets/js/16.f760b5a6.js"><link rel="prefetch" href="/assets/js/17.465e0959.js"><link rel="prefetch" href="/assets/js/18.eb8f6417.js"><link rel="prefetch" href="/assets/js/19.64d0507c.js"><link rel="prefetch" href="/assets/js/20.c77431b6.js"><link rel="prefetch" href="/assets/js/21.9067e378.js"><link rel="prefetch" href="/assets/js/22.ed11955a.js"><link rel="prefetch" href="/assets/js/23.838d4e8e.js"><link rel="prefetch" href="/assets/js/24.c38196b1.js"><link rel="prefetch" href="/assets/js/25.30a43d8a.js"><link rel="prefetch" href="/assets/js/26.ece6c74c.js"><link rel="prefetch" href="/assets/js/27.55ca0dbd.js"><link rel="prefetch" href="/assets/js/28.2e417a08.js"><link rel="prefetch" href="/assets/js/29.8c7542ab.js"><link rel="prefetch" href="/assets/js/30.dfc0a988.js"><link rel="prefetch" href="/assets/js/31.01f448b3.js"><link rel="prefetch" href="/assets/js/32.86d72c60.js"><link rel="prefetch" href="/assets/js/33.97294a65.js"><link rel="prefetch" href="/assets/js/34.819d0381.js"><link rel="prefetch" href="/assets/js/35.967a7b9d.js"><link rel="prefetch" href="/assets/js/36.4fa5712c.js"><link rel="prefetch" href="/assets/js/37.0e58b6a2.js"><link rel="prefetch" href="/assets/js/38.c29551cb.js"><link rel="prefetch" href="/assets/js/39.9237bdd7.js"><link rel="prefetch" href="/assets/js/4.7d348c81.js"><link rel="prefetch" href="/assets/js/40.af1f1e70.js"><link rel="prefetch" href="/assets/js/41.40221e95.js"><link rel="prefetch" href="/assets/js/42.0d6932ab.js"><link rel="prefetch" href="/assets/js/43.97215424.js"><link rel="prefetch" href="/assets/js/44.13bb204f.js"><link rel="prefetch" href="/assets/js/45.43dfa1cc.js"><link rel="prefetch" href="/assets/js/47.94e37ce3.js"><link rel="prefetch" href="/assets/js/48.71eeb18d.js"><link rel="prefetch" href="/assets/js/49.ab75bb2a.js"><link rel="prefetch" href="/assets/js/5.5b800f59.js"><link rel="prefetch" href="/assets/js/50.85eb5b29.js"><link rel="prefetch" href="/assets/js/51.2c3d6953.js"><link rel="prefetch" href="/assets/js/52.1290949f.js"><link rel="prefetch" href="/assets/js/53.9e351072.js"><link rel="prefetch" href="/assets/js/54.56824e53.js"><link rel="prefetch" href="/assets/js/55.dc2fb80a.js"><link rel="prefetch" href="/assets/js/56.7e7ab4bc.js"><link rel="prefetch" href="/assets/js/57.25e4fd53.js"><link rel="prefetch" href="/assets/js/58.06666584.js"><link rel="prefetch" href="/assets/js/59.21f65e74.js"><link rel="prefetch" href="/assets/js/6.c8b7a84a.js"><link rel="prefetch" href="/assets/js/60.bebed099.js"><link rel="prefetch" href="/assets/js/61.9548e8cd.js"><link rel="prefetch" href="/assets/js/62.740982ff.js"><link rel="prefetch" href="/assets/js/63.96517b39.js"><link rel="prefetch" href="/assets/js/64.43300bc3.js"><link rel="prefetch" href="/assets/js/65.4ddb4fd2.js"><link rel="prefetch" href="/assets/js/66.448799fe.js"><link rel="prefetch" href="/assets/js/67.534fe3d9.js"><link rel="prefetch" href="/assets/js/68.b486d114.js"><link rel="prefetch" href="/assets/js/69.84742da7.js"><link rel="prefetch" href="/assets/js/7.c15ad905.js"><link rel="prefetch" href="/assets/js/70.46f80c0f.js"><link rel="prefetch" href="/assets/js/71.be0bf28e.js"><link rel="prefetch" href="/assets/js/8.bf868cc9.js"><link rel="prefetch" href="/assets/js/9.8ff87b77.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.6646c2fa.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="https://stentle.com/wp-content/themes/stentle/dist/images/logo-stentle-az.png" alt="Platform API Documentation" class="logo"> <span class="site-name can-hide">Platform API Documentation</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/1.0.0/" class="nav-link router-link-active">
+  v1.0.0
+</a></div><div class="nav-item"><a href="https://stentle.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Stentle
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/1.0.0/" class="nav-link router-link-active">
+  v1.0.0
+</a></div><div class="nav-item"><a href="https://stentle.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Stentle
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>v1.0.0</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Product</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Attribute</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Ancillarie</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Category</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>EAN</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>Import Product</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/1.0.0/import_product/" aria-current="page" class="sidebar-link">Description</a></li><li><a href="/1.0.0/import_product/bulk-upsert.html" aria-current="page" class="active sidebar-link">Bulk Upsert</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/1.0.0/import_product/bulk-upsert.html#url" class="sidebar-link">URL</a></li><li class="sidebar-sub-header"><a href="/1.0.0/import_product/bulk-upsert.html#headers" class="sidebar-link">Headers</a></li><li class="sidebar-sub-header"><a href="/1.0.0/import_product/bulk-upsert.html#payload" class="sidebar-link">Payload</a></li><li class="sidebar-sub-header"><a href="/1.0.0/import_product/bulk-upsert.html#response" class="sidebar-link">Response</a></li><li class="sidebar-sub-header"><a href="/1.0.0/import_product/bulk-upsert.html#curl" class="sidebar-link">CURL</a></li><li class="sidebar-sub-header"><a href="/1.0.0/import_product/bulk-upsert.html#errors" class="sidebar-link">Errors</a></li></ul></li><li><a href="/1.0.0/import_product/upload.html" class="sidebar-link">Upload</a></li><li><section class="sidebar-group collapsable is-sub-group depth-2"><p class="sidebar-heading"><span>Query</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><a href="/1.0.0/errors.html" class="sidebar-link">Errors</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="bulk-upsert"><a href="#bulk-upsert" class="header-anchor">#</a> Bulk Upsert</h1> <p>Bulk Upsert of products details</p> <h2 id="url"><a href="#url" class="header-anchor">#</a> URL</h2> <h3 id="http-verb"><a href="#http-verb" class="header-anchor">#</a> Http Verb <span class="badge tip" style="vertical-align:middle;" data-v-15b7b770>POST</span></h3> <div class="language- extra-class"><pre class="language-text"><code>{{URI}}/rest/picnik-rest/imported-products
+</code></pre></div><h2 id="headers"><a href="#headers" class="header-anchor">#</a> Headers</h2> <div class="language- extra-class"><pre class="language-text"><code>X-Domain:{{X-DOMAIN}}
+Accept-Language:{{ACCEPT-LANGUAGE}}
+Content-Type:application/json
+</code></pre></div><h2 id="payload"><a href="#payload" class="header-anchor">#</a> Payload</h2> <table><thead><tr><th>Parameters</th> <th>Type</th> <th>Description</th> <th>Required</th></tr></thead> <tbody><tr><td>productImporterRequestDto</td> <td>ProductImporterRequestDto</td> <td>List of ProductImport DTO elements</td> <td>Yes</td></tr></tbody></table> <h3 id="payload-example"><a href="#payload-example" class="header-anchor">#</a> Payload Example</h3> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;updatePriceStrategy&quot;: true,
+  &quot;evaluateAcquisitionPrice&quot;: false,
+  &quot;priceStrategy&quot;: &quot;PRICE_STOCK&quot;,
+  &quot;availabilityStrategy&quot;: &quot;STOCK_AND_PRODUCT&quot;,
+  &quot;productImportDtoList&quot;: [
+    {
+      &quot;rowNumber&quot;: 1,
+      &quot;product&quot;: {
+        &quot;article&quot;: &quot;FR-D847AH000LTC9999-ex1&quot;,
+        &quot;description&quot;: &quot;Stivaletto donna short. IT 02-16 10:50&quot;,
+        &quot;name&quot;: &quot;D ASHEELY          XX&quot;,
+        &quot;descriptions&quot;: {
+          &quot;it&quot;: &quot;Stivaletto donna short.  02-16 10:50&quot;
+        },
+        &quot;names&quot;: {
+          &quot;it&quot;: &quot;D ASHEELY   IT XX&quot;
+        },
+        &quot;attributes&quot;: {
+          &quot;sizeScale&quot;: &quot;BD&quot;,
+          &quot;color&quot;: &quot;pink&quot;,
+          &quot;size&quot;: &quot;10&quot;,
+          &quot;season&quot;: &quot;fw19/20&quot;,
+          &quot;storename&quot;: &quot;baldinini&quot;,
+          &quot;village&quot;: &quot;franciacorta&quot;
+        },
+        &quot;ean&quot;: &quot;FR-8058279585171-ex1&quot;,
+        &quot;brand&quot;: &quot;champion&quot;,
+        &quot;stories&quot;: {
+          &quot;en&quot;: &quot;story en&quot;,
+          &quot;it&quot;: &quot;story xx&quot;
+        },
+        &quot;notes&quot;: {
+          &quot;en&quot;: &quot;100% Leather Goat Nubuk Care and cleaning: specific products in store&quot;,
+          &quot;it&quot;: &quot;notes changed&quot;
+        },
+        &quot;images&quot;: [
+          {
+            &quot;imageUrl&quot;: &quot;http://abc-xxxx.com&quot;,
+            &quot;type&quot;: &quot;cover&quot;,
+            &quot;active&quot;: false
+          },
+          {
+            &quot;imageUrl&quot;: &quot;http://abc-xxxx-2.com&quot;,
+            &quot;type&quot;: &quot;details&quot;,
+            &quot;active&quot;: false
+          },
+          {
+            &quot;imageUrl&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;details&quot;,
+            &quot;active&quot;: false
+          }
+        ],
+        &quot;macroCategory&quot;: &quot;man&quot;,
+        &quot;microCategory&quot;: &quot;scarpe-e-borse-man&quot;,
+        &quot;acquisitionPrice&quot;: 77,
+        &quot;currency&quot;: &quot;EUR&quot;,
+        &quot;sellingPrice&quot;: 88,
+        &quot;retailPrice&quot;: 200.99,
+        &quot;unitQuantity&quot;: 0,
+        &quot;ranking&quot;: -1,
+        &quot;isVariant&quot;: false
+      },
+      &quot;stocks&quot;: [
+        {
+          &quot;stockQuantity&quot;: 9,
+          &quot;warehouse&quot;: {
+            &quot;id&quot;: null,
+            &quot;name&quot;: null,
+            &quot;company&quot;: null,
+            &quot;type&quot;: null,
+            &quot;slug&quot;: &quot;land-of-fashion-franciacorta-01&quot;
+          }
+        }
+      ],
+      &quot;merchant&quot;: null
+    },
+    {
+      &quot;rowNumber&quot;: 2,
+      &quot;product&quot;: {
+        &quot;article&quot;: &quot;FR-D847AH000LTC9999-ex1&quot;,
+        &quot;description&quot;: &quot;Stivaletto donna short. IT 02-16 10:50&quot;,
+        &quot;name&quot;: &quot;D ASHEELY&quot;,
+        &quot;descriptions&quot;: {
+          &quot;it&quot;: &quot;Stivaletto donna short.  02-16 10:50&quot;
+        },
+        &quot;names&quot;: {
+          &quot;it&quot;: &quot;D ASHEELY&quot;
+        },
+        &quot;attributes&quot;: {
+          &quot;sizeScale&quot;: &quot;EU&quot;,
+          &quot;color&quot;: &quot;black&quot;,
+          &quot;size&quot;: &quot;36&quot;,
+          &quot;season&quot;: &quot;fw19&quot;,
+          &quot;storename&quot;: &quot;geox&quot;,
+          &quot;village&quot;: &quot;franciacorta_x&quot;
+        },
+        &quot;ean&quot;: &quot;FR-8058279585188-ex1&quot;,
+        &quot;brand&quot;: &quot;geox&quot;,
+        &quot;stories&quot;: {
+          &quot;en&quot;: &quot;&quot;,
+          &quot;it&quot;: &quot;&quot;
+        },
+        &quot;notes&quot;: {
+          &quot;en&quot;: &quot;100% Leather Goat Nubuk Care and cleaning: specific products in store&quot;,
+          &quot;it&quot;: &quot;CAPRA NABUCATA \nCura e pulizia: prodotti specifici in Store&quot;
+        },
+        &quot;images&quot;: [
+          {
+            &quot;imageUrl&quot;: &quot;http://abc.com&quot;,
+            &quot;type&quot;: &quot;cover&quot;,
+            &quot;active&quot;: false
+          },
+          {
+            &quot;imageUrl&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;details&quot;,
+            &quot;active&quot;: false
+          },
+          {
+            &quot;imageUrl&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;details&quot;,
+            &quot;active&quot;: false
+          }
+        ],
+        &quot;macroCategory&quot;: &quot;woman&quot;,
+        &quot;microCategory&quot;: &quot;scarpe-e-borse-woman&quot;,
+        &quot;acquisitionPrice&quot;: 88,
+        &quot;currency&quot;: &quot;EUR&quot;,
+        &quot;sellingPrice&quot;: 99,
+        &quot;retailPrice&quot;: 100.99,
+        &quot;unitQuantity&quot;: 0,
+        &quot;ranking&quot;: -1,
+        &quot;isVariant&quot;: false
+      },
+      &quot;stocks&quot;: [
+        {
+          &quot;stockQuantity&quot;: 3,
+          &quot;warehouse&quot;: {
+            &quot;id&quot;: null,
+            &quot;name&quot;: null,
+            &quot;company&quot;: null,
+            &quot;type&quot;: null,
+            &quot;slug&quot;: &quot;land-of-fashion-franciacorta-01&quot;
+          }
+        }
+      ],
+      &quot;merchant&quot;: null
+    }
+  ],
+  &quot;headersList&quot;: {
+    &quot;Cookie&quot;: [
+      &quot;stentle=QUkzc3pBQVVKT29HNUN2cW8zV0xqZz09OnBaalZLSzFXTC9FZDM5U1lnb2NRQXc9PQ;Path=/rest;Expires=Wed, 03-Mar-2021 14:22:10 GMT;Max-Age=1209600;HttpOnly&quot;
+    ],
+    &quot;file&quot;: [
+      &quot;17c38f2c-fa57-4dbf-b4ec-202372ec4409_lof_geox_products_fov_2_change_value_row1_2.xlsx&quot;
+    ],
+    &quot;uuid&quot;: [
+      &quot;17c38f2c-fa57-4dbf-b4ec-202372ec4409&quot;
+    ],
+    &quot;tenant&quot;: [
+      &quot;landoffashion/land-of-fashion-franciacorta-01&quot;
+    ]
+  },
+  &quot;uuid&quot;: {
+    &quot;present&quot;: true
+  },
+  &quot;itemList&quot;: [
+    {
+      &quot;rowNumber&quot;: 1,
+      &quot;product&quot;: {
+        &quot;article&quot;: &quot;FR-D847AH000LTC9999-ex1&quot;,
+        &quot;description&quot;: &quot;Stivaletto donna short. IT 02-16 10:50&quot;,
+        &quot;name&quot;: &quot;D ASHEELY          XX&quot;,
+        &quot;descriptions&quot;: {
+          &quot;it&quot;: &quot;Stivaletto donna short.  02-16 10:50&quot;
+        },
+        &quot;names&quot;: {
+          &quot;it&quot;: &quot;D ASHEELY   IT XX&quot;
+        },
+        &quot;attributes&quot;: {
+          &quot;sizeScale&quot;: &quot;BD&quot;,
+          &quot;color&quot;: &quot;pink&quot;,
+          &quot;size&quot;: &quot;10&quot;,
+          &quot;season&quot;: &quot;fw19/20&quot;,
+          &quot;storename&quot;: &quot;baldinini&quot;,
+          &quot;village&quot;: &quot;franciacorta&quot;
+        },
+        &quot;ean&quot;: &quot;FR-8058279585171-ex1&quot;,
+        &quot;brand&quot;: &quot;champion&quot;,
+        &quot;stories&quot;: {
+          &quot;en&quot;: &quot;story en&quot;,
+          &quot;it&quot;: &quot;story xx&quot;
+        },
+        &quot;notes&quot;: {
+          &quot;en&quot;: &quot;100% Leather Goat Nubuk Care and cleaning: specific products in store&quot;,
+          &quot;it&quot;: &quot;notes changed&quot;
+        },
+        &quot;images&quot;: [
+          {
+            &quot;imageUrl&quot;: &quot;http://abc-xxxx.com&quot;,
+            &quot;type&quot;: &quot;cover&quot;,
+            &quot;active&quot;: false
+          },
+          {
+            &quot;imageUrl&quot;: &quot;http://abc-xxxx-2.com&quot;,
+            &quot;type&quot;: &quot;details&quot;,
+            &quot;active&quot;: false
+          },
+          {
+            &quot;imageUrl&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;details&quot;,
+            &quot;active&quot;: false
+          }
+        ],
+        &quot;macroCategory&quot;: &quot;man&quot;,
+        &quot;microCategory&quot;: &quot;scarpe-e-borse-man&quot;,
+        &quot;acquisitionPrice&quot;: 77,
+        &quot;currency&quot;: &quot;EUR&quot;,
+        &quot;sellingPrice&quot;: 88,
+        &quot;retailPrice&quot;: 200.99,
+        &quot;unitQuantity&quot;: 0,
+        &quot;ranking&quot;: -1,
+        &quot;isVariant&quot;: false
+      },
+      &quot;stocks&quot;: [
+        {
+          &quot;stockQuantity&quot;: 9,
+          &quot;warehouse&quot;: {
+            &quot;id&quot;: null,
+            &quot;name&quot;: null,
+            &quot;company&quot;: null,
+            &quot;type&quot;: null,
+            &quot;slug&quot;: &quot;land-of-fashion-franciacorta-01&quot;
+          }
+        }
+      ],
+      &quot;merchant&quot;: null
+    },
+    {
+      &quot;rowNumber&quot;: 2,
+      &quot;product&quot;: {
+        &quot;article&quot;: &quot;FR-D847AH000LTC9999-ex1&quot;,
+        &quot;description&quot;: &quot;Stivaletto donna short. IT 02-16 10:50&quot;,
+        &quot;name&quot;: &quot;D ASHEELY&quot;,
+        &quot;descriptions&quot;: {
+          &quot;it&quot;: &quot;Stivaletto donna short.  02-16 10:50&quot;
+        },
+        &quot;names&quot;: {
+          &quot;it&quot;: &quot;D ASHEELY&quot;
+        },
+        &quot;attributes&quot;: {
+          &quot;sizeScale&quot;: &quot;EU&quot;,
+          &quot;color&quot;: &quot;black&quot;,
+          &quot;size&quot;: &quot;36&quot;,
+          &quot;season&quot;: &quot;fw19&quot;,
+          &quot;storename&quot;: &quot;geox&quot;,
+          &quot;village&quot;: &quot;franciacorta_x&quot;
+        },
+        &quot;ean&quot;: &quot;FR-8058279585188-ex1&quot;,
+        &quot;brand&quot;: &quot;geox&quot;,
+        &quot;stories&quot;: {
+          &quot;en&quot;: &quot;&quot;,
+          &quot;it&quot;: &quot;&quot;
+        },
+        &quot;notes&quot;: {
+          &quot;en&quot;: &quot;100% Leather Goat Nubuk Care and cleaning: specific products in store&quot;,
+          &quot;it&quot;: &quot;CAPRA NABUCATA \nCura e pulizia: prodotti specifici in Store&quot;
+        },
+        &quot;images&quot;: [
+          {
+            &quot;imageUrl&quot;: &quot;http://abc.com&quot;,
+            &quot;type&quot;: &quot;cover&quot;,
+            &quot;active&quot;: false
+          },
+          {
+            &quot;imageUrl&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;details&quot;,
+            &quot;active&quot;: false
+          },
+          {
+            &quot;imageUrl&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;details&quot;,
+            &quot;active&quot;: false
+          }
+        ],
+        &quot;macroCategory&quot;: &quot;woman&quot;,
+        &quot;microCategory&quot;: &quot;scarpe-e-borse-woman&quot;,
+        &quot;acquisitionPrice&quot;: 88,
+        &quot;currency&quot;: &quot;EUR&quot;,
+        &quot;sellingPrice&quot;: 99,
+        &quot;retailPrice&quot;: 100.99,
+        &quot;unitQuantity&quot;: 0,
+        &quot;ranking&quot;: -1,
+        &quot;isVariant&quot;: false
+      },
+      &quot;stocks&quot;: [
+        {
+          &quot;stockQuantity&quot;: 3,
+          &quot;warehouse&quot;: {
+            &quot;id&quot;: null,
+            &quot;name&quot;: null,
+            &quot;company&quot;: null,
+            &quot;type&quot;: null,
+            &quot;slug&quot;: &quot;land-of-fashion-franciacorta-01&quot;
+          }
+        }
+      ],
+      &quot;merchant&quot;: null
+    }
+  ]
+}
+</code></pre></div><h2 id="response"><a href="#response" class="header-anchor">#</a> Response</h2> <table><thead><tr><th>Level1</th> <th>Level 2</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>data</td> <td></td> <td>Object</td> <td>Response content</td></tr> <tr><td></td> <td>ResponseEntity ImportResponse</td> <td>List of ImportResponse</td> <td>List of responses for every element</td></tr></tbody></table> <h3 id="response-example"><a href="#response-example" class="header-anchor">#</a> Response Example</h3> <details class="custom-block details"><summary>Example</summary> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;fail&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;row-num,error-details,title.it,title,price,currency,brand,description.it,description,article-id,ean,stock-quantity,macro-category,micro-category,stories.en,stories.it,notes.en,notes.it,attribute.sizeScale,attribute.color,attribute.size,attribute.season,attribute.storename,attribute.village,image-url,image-url-2,image-url-3,image-url-4,image-url-5,image-url-6,image-url-7,image-url-8,image-url-9,image-url-10,image-url-11,image-url-12,image-url-13,image-url-14,image-url-15,image-url-16,image-url-17,image-url-18,image-url-19,image-url-20,cost&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;1,\&quot;[micro-Category,Invalid field micro-Category value 'scarpe-e-borse-man', brand,Invalid field brand value 'champion', sizeScale,Invalid attribute with key 'sizeScale' and value 'BD', storename,Invalid attribute with key 'storename' and value 'baldinini']\&quot;,\&quot;D ASHEELY   IT XX\&quot;,\&quot;D ASHEELY          XX\&quot;,\&quot;88.0\&quot;,\&quot;EUR\&quot;,\&quot;champion\&quot;,\&quot;Stivaletto donna short.  02-16 10:50\&quot;,\&quot;Stivaletto donna short. IT 02-16 10:50\&quot;,\&quot;FR-D847AH000LTC9999-ex1\&quot;,\&quot;FR-8058279585171-ex1\&quot;,\&quot;9.0\&quot;,\&quot;man\&quot;,\&quot;scarpe-e-borse-man\&quot;,\&quot;story en\&quot;,\&quot;story xx\&quot;,\&quot;100% Leather Goat Nubuk Care and cleaning: specific products in store\&quot;,\&quot;notes changed\&quot;,\&quot;BD\&quot;,\&quot;pink\&quot;,\&quot;10\&quot;,\&quot;fw19/20\&quot;,\&quot;baldinini\&quot;,\&quot;franciacorta\&quot;,\&quot;http://abc-xxxx.com\&quot;,\&quot;http://abc-xxxx-2.com\&quot;,\&quot;\&quot;,&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;2,\&quot;[micro-Category,Invalid field micro-Category value 'scarpe-e-borse-woman', brand,Invalid field brand value 'geox', storename,Invalid attribute with key 'storename' and value 'geox', village,Invalid attribute with key 'village' and value 'franciacorta_x']\&quot;,\&quot;D ASHEELY\&quot;,\&quot;D ASHEELY\&quot;,\&quot;99.0\&quot;,\&quot;EUR\&quot;,\&quot;geox\&quot;,\&quot;Stivaletto donna short.  02-16 10:50\&quot;,\&quot;Stivaletto donna short. IT 02-16 10:50\&quot;,\&quot;FR-D847AH000LTC9999-ex1\&quot;,\&quot;FR-8058279585188-ex1\&quot;,\&quot;3.0\&quot;,\&quot;woman\&quot;,\&quot;scarpe-e-borse-woman\&quot;,\&quot;\&quot;,\&quot;\&quot;,\&quot;100% Leather Goat Nubuk Care and cleaning: specific products in store\&quot;,\&quot;CAPRA NABUCATA \nCura e pulizia: prodotti specifici in Store\&quot;,\&quot;EU\&quot;,\&quot;black\&quot;,\&quot;36\&quot;,\&quot;fw19\&quot;,\&quot;geox\&quot;,\&quot;franciacorta_x\&quot;,\&quot;http://abc.com\&quot;,\&quot;\&quot;,\&quot;\&quot;,&quot;</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;success&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div></details> <h2 id="curl"><a href="#curl" class="header-anchor">#</a> CURL</h2> <p>CURL call example. Get the status of CSV.</p> <div class="language- extra-class"><pre class="language-text"><code>curl --location --request POST 'http://localhost:8080/rest/picnik-rest/imported-products' \
+--header 'X-Domain: landoffashion' \
+--header 'Accept-Language: it' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: stentle=ODV3SUhLWU4xS0JlL004SWdSSGZaQT09OmN6OGN0L1FPNllIcDl0dEtxdmhsNEE9PQ' \
+--data-raw '{
+  &quot;updatePriceStrategy&quot;: true,
+  &quot;evaluateAcquisitionPrice&quot;: false,
+  &quot;priceStrategy&quot;: &quot;PRICE_STOCK&quot;,
+  &quot;availabilityStrategy&quot;: &quot;STOCK_AND_PRODUCT&quot;,
+  &quot;productImportDtoList&quot;: [
+    {
+      &quot;rowNumber&quot;: 1,
+      &quot;product&quot;: {
+        &quot;article&quot;: &quot;FR-D847AH000LTC9999-ex1&quot;,
+        &quot;description&quot;: &quot;Stivaletto donna short. IT 02-16 10:50&quot;,
+        &quot;name&quot;: &quot;D ASHEELY          XX&quot;,
+        &quot;descriptions&quot;: {
+          &quot;it&quot;: &quot;Stivaletto donna short.  02-16 10:50&quot;
+        },
+        &quot;names&quot;: {
+          &quot;it&quot;: &quot;D ASHEELY   IT XX&quot;
+        },
+        &quot;attributes&quot;: {
+          &quot;sizeScale&quot;: &quot;BD&quot;,
+          &quot;color&quot;: &quot;pink&quot;,
+          &quot;size&quot;: &quot;10&quot;,
+          &quot;season&quot;: &quot;fw19/20&quot;,
+          &quot;storename&quot;: &quot;baldinini&quot;,
+          &quot;village&quot;: &quot;franciacorta&quot;
+        },
+        &quot;ean&quot;: &quot;FR-8058279585171-ex1&quot;,
+        &quot;brand&quot;: &quot;champion&quot;,
+        &quot;stories&quot;: {
+          &quot;en&quot;: &quot;story en&quot;,
+          &quot;it&quot;: &quot;story xx&quot;
+        },
+        &quot;notes&quot;: {
+          &quot;en&quot;: &quot;100% Leather Goat Nubuk Care and cleaning: specific products in store&quot;,
+          &quot;it&quot;: &quot;notes changed&quot;
+        },
+        &quot;images&quot;: [
+          {
+            &quot;imageUrl&quot;: &quot;http://abc-xxxx.com&quot;,
+            &quot;type&quot;: &quot;cover&quot;,
+            &quot;active&quot;: false
+          },
+          {
+            &quot;imageUrl&quot;: &quot;http://abc-xxxx-2.com&quot;,
+            &quot;type&quot;: &quot;details&quot;,
+            &quot;active&quot;: false
+          },
+          {
+            &quot;imageUrl&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;details&quot;,
+            &quot;active&quot;: false
+          }
+        ],
+        &quot;macroCategory&quot;: &quot;man&quot;,
+        &quot;microCategory&quot;: &quot;scarpe-e-borse-man&quot;,
+        &quot;acquisitionPrice&quot;: 77,
+        &quot;currency&quot;: &quot;EUR&quot;,
+        &quot;sellingPrice&quot;: 88,
+        &quot;retailPrice&quot;: 200.99,
+        &quot;unitQuantity&quot;: 0,
+        &quot;ranking&quot;: -1,
+        &quot;isVariant&quot;: false
+      },
+      &quot;stocks&quot;: [
+        {
+          &quot;stockQuantity&quot;: 9,
+          &quot;warehouse&quot;: {
+            &quot;id&quot;: null,
+            &quot;name&quot;: null,
+            &quot;company&quot;: null,
+            &quot;type&quot;: null,
+            &quot;slug&quot;: &quot;land-of-fashion-franciacorta-01&quot;
+          }
+        }
+      ],
+      &quot;merchant&quot;: null
+    },
+    {
+      &quot;rowNumber&quot;: 2,
+      &quot;product&quot;: {
+        &quot;article&quot;: &quot;FR-D847AH000LTC9999-ex1&quot;,
+        &quot;description&quot;: &quot;Stivaletto donna short. IT 02-16 10:50&quot;,
+        &quot;name&quot;: &quot;D ASHEELY&quot;,
+        &quot;descriptions&quot;: {
+          &quot;it&quot;: &quot;Stivaletto donna short.  02-16 10:50&quot;
+        },
+        &quot;names&quot;: {
+          &quot;it&quot;: &quot;D ASHEELY&quot;
+        },
+        &quot;attributes&quot;: {
+          &quot;sizeScale&quot;: &quot;EU&quot;,
+          &quot;color&quot;: &quot;black&quot;,
+          &quot;size&quot;: &quot;36&quot;,
+          &quot;season&quot;: &quot;fw19&quot;,
+          &quot;storename&quot;: &quot;geox&quot;,
+          &quot;village&quot;: &quot;franciacorta_x&quot;
+        },
+        &quot;ean&quot;: &quot;FR-8058279585188-ex1&quot;,
+        &quot;brand&quot;: &quot;geox&quot;,
+        &quot;stories&quot;: {
+          &quot;en&quot;: &quot;&quot;,
+          &quot;it&quot;: &quot;&quot;
+        },
+        &quot;notes&quot;: {
+          &quot;en&quot;: &quot;100% Leather Goat Nubuk Care and cleaning: specific products in store&quot;,
+          &quot;it&quot;: &quot;CAPRA NABUCATA \nCura e pulizia: prodotti specifici in Store&quot;
+        },
+        &quot;images&quot;: [
+          {
+            &quot;imageUrl&quot;: &quot;http://abc.com&quot;,
+            &quot;type&quot;: &quot;cover&quot;,
+            &quot;active&quot;: false
+          },
+          {
+            &quot;imageUrl&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;details&quot;,
+            &quot;active&quot;: false
+          },
+          {
+            &quot;imageUrl&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;details&quot;,
+            &quot;active&quot;: false
+          }
+        ],
+        &quot;macroCategory&quot;: &quot;woman&quot;,
+        &quot;microCategory&quot;: &quot;scarpe-e-borse-woman&quot;,
+        &quot;acquisitionPrice&quot;: 88,
+        &quot;currency&quot;: &quot;EUR&quot;,
+        &quot;sellingPrice&quot;: 99,
+        &quot;retailPrice&quot;: 100.99,
+        &quot;unitQuantity&quot;: 0,
+        &quot;ranking&quot;: -1,
+        &quot;isVariant&quot;: false
+      },
+      &quot;stocks&quot;: [
+        {
+          &quot;stockQuantity&quot;: 3,
+          &quot;warehouse&quot;: {
+            &quot;id&quot;: null,
+            &quot;name&quot;: null,
+            &quot;company&quot;: null,
+            &quot;type&quot;: null,
+            &quot;slug&quot;: &quot;land-of-fashion-franciacorta-01&quot;
+          }
+        }
+      ],
+      &quot;merchant&quot;: null
+    }
+  ],
+  &quot;headersList&quot;: {
+    &quot;Cookie&quot;: [
+      &quot;stentle=QUkzc3pBQVVKT29HNUN2cW8zV0xqZz09OnBaalZLSzFXTC9FZDM5U1lnb2NRQXc9PQ;Path=/rest;Expires=Wed, 03-Mar-2021 14:22:10 GMT;Max-Age=1209600;HttpOnly&quot;
+    ],
+    &quot;file&quot;: [
+      &quot;17c38f2c-fa57-4dbf-b4ec-202372ec4409_lof_geox_products_fov_2_change_value_row1_2.xlsx&quot;
+    ],
+    &quot;uuid&quot;: [
+      &quot;17c38f2c-fa57-4dbf-b4ec-202372ec4409&quot;
+    ],
+    &quot;tenant&quot;: [
+      &quot;landoffashion/land-of-fashion-franciacorta-01&quot;
+    ]
+  },
+  &quot;uuid&quot;: {
+    &quot;present&quot;: true
+  },
+  &quot;itemList&quot;: [
+    {
+      &quot;rowNumber&quot;: 1,
+      &quot;product&quot;: {
+        &quot;article&quot;: &quot;FR-D847AH000LTC9999-ex1&quot;,
+        &quot;description&quot;: &quot;Stivaletto donna short. IT 02-16 10:50&quot;,
+        &quot;name&quot;: &quot;D ASHEELY          XX&quot;,
+        &quot;descriptions&quot;: {
+          &quot;it&quot;: &quot;Stivaletto donna short.  02-16 10:50&quot;
+        },
+        &quot;names&quot;: {
+          &quot;it&quot;: &quot;D ASHEELY   IT XX&quot;
+        },
+        &quot;attributes&quot;: {
+          &quot;sizeScale&quot;: &quot;BD&quot;,
+          &quot;color&quot;: &quot;pink&quot;,
+          &quot;size&quot;: &quot;10&quot;,
+          &quot;season&quot;: &quot;fw19/20&quot;,
+          &quot;storename&quot;: &quot;baldinini&quot;,
+          &quot;village&quot;: &quot;franciacorta&quot;
+        },
+        &quot;ean&quot;: &quot;FR-8058279585171-ex1&quot;,
+        &quot;brand&quot;: &quot;champion&quot;,
+        &quot;stories&quot;: {
+          &quot;en&quot;: &quot;story en&quot;,
+          &quot;it&quot;: &quot;story xx&quot;
+        },
+        &quot;notes&quot;: {
+          &quot;en&quot;: &quot;100% Leather Goat Nubuk Care and cleaning: specific products in store&quot;,
+          &quot;it&quot;: &quot;notes changed&quot;
+        },
+        &quot;images&quot;: [
+          {
+            &quot;imageUrl&quot;: &quot;http://abc-xxxx.com&quot;,
+            &quot;type&quot;: &quot;cover&quot;,
+            &quot;active&quot;: false
+          },
+          {
+            &quot;imageUrl&quot;: &quot;http://abc-xxxx-2.com&quot;,
+            &quot;type&quot;: &quot;details&quot;,
+            &quot;active&quot;: false
+          },
+          {
+            &quot;imageUrl&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;details&quot;,
+            &quot;active&quot;: false
+          }
+        ],
+        &quot;macroCategory&quot;: &quot;man&quot;,
+        &quot;microCategory&quot;: &quot;scarpe-e-borse-man&quot;,
+        &quot;acquisitionPrice&quot;: 77,
+        &quot;currency&quot;: &quot;EUR&quot;,
+        &quot;sellingPrice&quot;: 88,
+        &quot;retailPrice&quot;: 200.99,
+        &quot;unitQuantity&quot;: 0,
+        &quot;ranking&quot;: -1,
+        &quot;isVariant&quot;: false
+      },
+      &quot;stocks&quot;: [
+        {
+          &quot;stockQuantity&quot;: 9,
+          &quot;warehouse&quot;: {
+            &quot;id&quot;: null,
+            &quot;name&quot;: null,
+            &quot;company&quot;: null,
+            &quot;type&quot;: null,
+            &quot;slug&quot;: &quot;land-of-fashion-franciacorta-01&quot;
+          }
+        }
+      ],
+      &quot;merchant&quot;: null
+    },
+    {
+      &quot;rowNumber&quot;: 2,
+      &quot;product&quot;: {
+        &quot;article&quot;: &quot;FR-D847AH000LTC9999-ex1&quot;,
+        &quot;description&quot;: &quot;Stivaletto donna short. IT 02-16 10:50&quot;,
+        &quot;name&quot;: &quot;D ASHEELY&quot;,
+        &quot;descriptions&quot;: {
+          &quot;it&quot;: &quot;Stivaletto donna short.  02-16 10:50&quot;
+        },
+        &quot;names&quot;: {
+          &quot;it&quot;: &quot;D ASHEELY&quot;
+        },
+        &quot;attributes&quot;: {
+          &quot;sizeScale&quot;: &quot;EU&quot;,
+          &quot;color&quot;: &quot;black&quot;,
+          &quot;size&quot;: &quot;36&quot;,
+          &quot;season&quot;: &quot;fw19&quot;,
+          &quot;storename&quot;: &quot;geox&quot;,
+          &quot;village&quot;: &quot;franciacorta_x&quot;
+        },
+        &quot;ean&quot;: &quot;FR-8058279585188-ex1&quot;,
+        &quot;brand&quot;: &quot;geox&quot;,
+        &quot;stories&quot;: {
+          &quot;en&quot;: &quot;&quot;,
+          &quot;it&quot;: &quot;&quot;
+        },
+        &quot;notes&quot;: {
+          &quot;en&quot;: &quot;100% Leather Goat Nubuk Care and cleaning: specific products in store&quot;,
+          &quot;it&quot;: &quot;CAPRA NABUCATA \nCura e pulizia: prodotti specifici in Store&quot;
+        },
+        &quot;images&quot;: [
+          {
+            &quot;imageUrl&quot;: &quot;http://abc.com&quot;,
+            &quot;type&quot;: &quot;cover&quot;,
+            &quot;active&quot;: false
+          },
+          {
+            &quot;imageUrl&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;details&quot;,
+            &quot;active&quot;: false
+          },
+          {
+            &quot;imageUrl&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;details&quot;,
+            &quot;active&quot;: false
+          }
+        ],
+        &quot;macroCategory&quot;: &quot;woman&quot;,
+        &quot;microCategory&quot;: &quot;scarpe-e-borse-woman&quot;,
+        &quot;acquisitionPrice&quot;: 88,
+        &quot;currency&quot;: &quot;EUR&quot;,
+        &quot;sellingPrice&quot;: 99,
+        &quot;retailPrice&quot;: 100.99,
+        &quot;unitQuantity&quot;: 0,
+        &quot;ranking&quot;: -1,
+        &quot;isVariant&quot;: false
+      },
+      &quot;stocks&quot;: [
+        {
+          &quot;stockQuantity&quot;: 3,
+          &quot;warehouse&quot;: {
+            &quot;id&quot;: null,
+            &quot;name&quot;: null,
+            &quot;company&quot;: null,
+            &quot;type&quot;: null,
+            &quot;slug&quot;: &quot;land-of-fashion-franciacorta-01&quot;
+          }
+        }
+      ],
+      &quot;merchant&quot;: null
+    }
+  ]
+}'
+</code></pre></div><h3 id="curl-response-example"><a href="#curl-response-example" class="header-anchor">#</a> CURL Response Example</h3> <details class="custom-block details"><summary>Example</summary> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;fail&quot;: [
+        &quot;row-num,error-details,title.it,title,price,currency,brand,description.it,description,article-id,ean,stock-quantity,macro-category,micro-category,stories.en,stories.it,notes.en,notes.it,attribute.sizeScale,attribute.color,attribute.size,attribute.season,attribute.storename,attribute.village,image-url,image-url-2,image-url-3,image-url-4,image-url-5,image-url-6,image-url-7,image-url-8,image-url-9,image-url-10,image-url-11,image-url-12,image-url-13,image-url-14,image-url-15,image-url-16,image-url-17,image-url-18,image-url-19,image-url-20,cost&quot;,
+        &quot;1,\&quot;[micro-Category,Invalid field micro-Category value 'scarpe-e-borse-man', brand,Invalid field brand value 'champion', sizeScale,Invalid attribute with key 'sizeScale' and value 'BD', storename,Invalid attribute with key 'storename' and value 'baldinini']\&quot;,\&quot;D ASHEELY   IT XX\&quot;,\&quot;D ASHEELY          XX\&quot;,\&quot;88.0\&quot;,\&quot;EUR\&quot;,\&quot;champion\&quot;,\&quot;Stivaletto donna short.  02-16 10:50\&quot;,\&quot;Stivaletto donna short. IT 02-16 10:50\&quot;,\&quot;FR-D847AH000LTC9999-ex1\&quot;,\&quot;FR-8058279585171-ex1\&quot;,\&quot;9.0\&quot;,\&quot;man\&quot;,\&quot;scarpe-e-borse-man\&quot;,\&quot;story en\&quot;,\&quot;story xx\&quot;,\&quot;100% Leather Goat Nubuk Care and cleaning: specific products in store\&quot;,\&quot;notes changed\&quot;,\&quot;BD\&quot;,\&quot;pink\&quot;,\&quot;10\&quot;,\&quot;fw19/20\&quot;,\&quot;baldinini\&quot;,\&quot;franciacorta\&quot;,\&quot;http://abc-xxxx.com\&quot;,\&quot;http://abc-xxxx-2.com\&quot;,\&quot;\&quot;,&quot;,
+        &quot;2,\&quot;[micro-Category,Invalid field micro-Category value 'scarpe-e-borse-woman', brand,Invalid field brand value 'geox', storename,Invalid attribute with key 'storename' and value 'geox', village,Invalid attribute with key 'village' and value 'franciacorta_x']\&quot;,\&quot;D ASHEELY\&quot;,\&quot;D ASHEELY\&quot;,\&quot;99.0\&quot;,\&quot;EUR\&quot;,\&quot;geox\&quot;,\&quot;Stivaletto donna short.  02-16 10:50\&quot;,\&quot;Stivaletto donna short. IT 02-16 10:50\&quot;,\&quot;FR-D847AH000LTC9999-ex1\&quot;,\&quot;FR-8058279585188-ex1\&quot;,\&quot;3.0\&quot;,\&quot;woman\&quot;,\&quot;scarpe-e-borse-woman\&quot;,\&quot;\&quot;,\&quot;\&quot;,\&quot;100% Leather Goat Nubuk Care and cleaning: specific products in store\&quot;,\&quot;CAPRA NABUCATA \nCura e pulizia: prodotti specifici in Store\&quot;,\&quot;EU\&quot;,\&quot;black\&quot;,\&quot;36\&quot;,\&quot;fw19\&quot;,\&quot;geox\&quot;,\&quot;franciacorta_x\&quot;,\&quot;http://abc.com\&quot;,\&quot;\&quot;,\&quot;\&quot;,&quot;
+    ],
+    &quot;success&quot;: []
+}
+</code></pre></div></details> <h2 id="errors"><a href="#errors" class="header-anchor">#</a> Errors</h2> <p>for more info on error - <a href="/1.0.0/errors.html">Errors </a></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/1.0.0/import_product/" class="prev router-link-active">
+        Description
+      </a></span> <span class="next"><a href="/1.0.0/import_product/upload.html">
+        Upload
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.1955ec5a.js" defer></script><script src="/assets/js/2.6e2a4d54.js" defer></script><script src="/assets/js/46.90328c41.js" defer></script><script src="/assets/js/3.094ac905.js" defer></script>
+  </body>
+</html>
