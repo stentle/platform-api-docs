@@ -19,33 +19,28 @@ Content-Type:application/json
 ## URL Parameters
 | Parameters | Type | Description | Required | 
 | ------ | ------ | ------ | ------ | ------ |
-| attribute_id | String |id of the atribute to be updated | Yes |
-
+| attribute_id | String | Id of the attribute to be display | Yes |
 
 ## Response
 | Level1 | Level 2| Type | Description |
 | ------ | ------ | ------ | ------ | 
 | data ||Object| Response content|
-|| id | TODO | ------ | ------ |
-|| creationDate | TODO | ------ | ------ |
-|| tenantId | TODO | ------ | ------ |
-|| href | TODO | ------ | ------ |
-|| attributeCode | TODO | ------ | ------ |
-|| departments | TODO | ------ | ------ |
-|| key | TODO | ------ | ------ |
-|| name | TODO | ------ | ------ |
-|| active | TODO | ------ | ------ |
-|| attributeLocaleName | TODO | ------ | ------ |
-|| localeName | TODO | ------ | ------ |
-|| localeName | TODO | ------ | ------ |
-|| localeName | TODO | ------ | ------ |
-|| localeName | TODO | ------ | ------ |
-|| localeName | TODO | ------ | ------ |
-|| localeName | TODO | ------ | ------ |
-|| localeName | TODO | ------ | ------ |
-|| english | languageObject | ------ | ------ |
-|| ...... | languageObject | ------ | ------ |
-
+|| id | String | unique identification attribute id | 
+|| creationDate | Int | Creation Date| 
+|| updateDate | Int | Update Date | 
+|| tenantId | String | Tenant Id | 
+|| href | String |  | 
+|| attributeCode | String | name of attribute code |
+|| departments | String | Department | 
+|| key | String | | 
+|| name | String | | 
+|| active | Boolean | | 
+|| attributeLocaleName | String |  | 
+|| localeName | String |  |
+|| english | Object | Description in EN for name & attribute  | 
+|| italian | Object | Description in IT for name & attribute  | 
+|| russian | Object | Description in RU for name & attribute  | 
+|| french  | Object | Description in FR for name & attribute  | 
 
 ### Response Example
 ::: details Example
