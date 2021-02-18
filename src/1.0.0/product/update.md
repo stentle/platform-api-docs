@@ -84,8 +84,28 @@ Content-Type:application/json
 
 ## Response
 | Level1 | Level 2| Type | Description |
-| ------ | ------ | ------ | ------ | ------ |
-|TODO| ------ | ------ | ------ | ------ |
+| ------ | ------ | ------ | ------ |  ------ |
+| data ||Object| Response content|
+|| id | String| Unique identifier of product Id| 
+|| key | String| Todo | 
+|| type | String| todo| 
+|| gender | String| Gender| 
+|| active | Boolean| todo| 
+|| imageList | String| todo| 
+|| parentId | String| todo| 
+|| parentFeed | String| todo| 
+|| ranking | Intiger| todo| 
+|| localeName | String| todo| 
+|| english | String| todo| 
+|| italian | String| todo| 
+|| parentKey | String| todo| 
+|| declareVariants | Todo| todo| 
+|| declareAttributes | Todo| todo| 
+|| photoAttributes | Todo| todo| 
+|| taxes | Todo| todo| 
+|| products |Todo | todo| 
+|| sizeScaleCode | Todo| Todo| 
+|| department | String| Department belong| 
 
 ### Response Example
 ::: details Example
