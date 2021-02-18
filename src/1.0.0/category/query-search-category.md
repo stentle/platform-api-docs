@@ -23,10 +23,14 @@ Accept-Language:{{ACCEPT-LANGUAGE}}
 
 
 ## Response
-| Level1 | Level 2| Type | Description ||
-| ------ | ------ | ------ | ------ | ------ |
-| data | ------ | TODO | ------ | ------ |
-|| Todo | TODO | ------ | ------ |
+| Level1 | Level 2| Type | Description |
+| ------ | ------ | ------ | ------ | 
+| data ||Object| Response content|
+|| totalItems | Integer | Number of total Items| 
+|| startIndex | Integer | Index | 
+|| itemsPerPage | Integer | Number of items Per Page |
+|| currentItemCount | Integer | Number of current Items Counted  |
+|| items | Object | All items that the category contains |
 
 ### Response Example
 ::: details Example
