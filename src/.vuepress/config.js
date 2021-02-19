@@ -98,7 +98,7 @@ module.exports = {
               sidebarDepth: 1,
               children:[
                 '/1.0.0/attribute/',
-                //'/1.0.0/attribute/create',
+                '/1.0.0/attribute/create',
                 '/1.0.0/attribute/update',
                 //'/1.0.0/attribute/delete',
                 {

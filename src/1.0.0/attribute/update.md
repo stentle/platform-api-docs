@@ -44,18 +44,18 @@ Content-Type:application/json
 | Level1 | Level 2| Type | Description |
 | ------ | ------ | ------ | ------ | 
 | data ||Object| Response content|
-|| id | String | unique identification attribute id | 
+|| id | String | Unique identification attribute id | 
 || creationDate | Int | Creation Date| 
 || updateDate | Int | Update Date | 
 || tenantId | String | Tenant Id | 
-|| href | String |  | 
-|| attributeCode | String | name of attribute code |
+|| href | String | Url of attribute | 
+|| attributeCode | String | Name of attribute code |
 || departments | String | Department | 
-|| key | String | | 
-|| name | String | | 
-|| active | Boolean | | 
-|| attributeLocaleName | String |  | 
-|| localeName | String |  |
+|| key | String | Todo | 
+|| name | String | Todo | 
+|| active | Boolean | Attribute is avalable | 
+|| attributeLocaleName | String | Todo | 
+|| localeName | String | Todo |
 || english | Object | Description in EN for name & attribute  | 
 || italian | Object | Description in IT for name & attribute  | 
 || russian | Object | Description in RU for name & attribute  | 
