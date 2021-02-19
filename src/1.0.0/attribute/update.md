@@ -44,22 +44,22 @@ Content-Type:application/json
 | Level1 | Level 2| Type | Description |
 | ------ | ------ | ------ | ------ | 
 | data ||Object| Response content|
-|| id | ------ | String | Unique Identifier of the Object Attribute |
-|| creationDate | ------ | TODO |  |
-|| updateDate | ------ | TODO |  |
-|| tenantId | ------ | TODO |  |
-|| href | ------ | TODO | |
-|| attributeCode | ------ | TODO | |
-|| departments | ------ | TODO |  |
-|| key | ------ | TODO |  |
-|| name | ------ | TODO |  |
-|| active | ------ | TODO | |
-|| attributeLocaleName | ------ | TODO  | |
-|| localeName | ------ | TODO | |
-|| english | ------ | Language Object | Object of type Language |
-|| italian | ------ | Language Object | Object of type Language |
-|| russian | ------ | Language Object | Object of type Language |
-|| french | ------ | Language Object | Object of type Language |
+|| id | String | unique identification attribute id | 
+|| creationDate | Int | Creation Date| 
+|| updateDate | Int | Update Date | 
+|| tenantId | String | Tenant Id | 
+|| href | String |  | 
+|| attributeCode | String | name of attribute code |
+|| departments | String | Department | 
+|| key | String | | 
+|| name | String | | 
+|| active | Boolean | | 
+|| attributeLocaleName | String |  | 
+|| localeName | String |  |
+|| english | Object | Description in EN for name & attribute  | 
+|| italian | Object | Description in IT for name & attribute  | 
+|| russian | Object | Description in RU for name & attribute  | 
+|| french  | Object | Description in FR for name & attribute  | 
 
 
 ### Response Example
