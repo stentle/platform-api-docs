@@ -87,10 +87,18 @@ module.exports = {
               sidebarDepth: 1,
               children:[
                 '/1.0.0/product/',
-                /*'/1.0.0/product/create',*/
-                '/1.0.0/product/update'
-                /*'/1.0.0/product/delete',
-                '/1.0.0/product/query'*/
+                //'/1.0.0/product/create',
+                '/1.0.0/product/update',
+                //'/1.0.0/product/delete',
+                {
+                  title: 'Query',
+                  sidebarDepth: 1,
+                  children:[
+                    '/1.0.0/product/query',
+                    '/1.0.0/product/query-get-specific-product'
+                  ]
+                }
+                
               ]
             },
             {

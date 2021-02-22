@@ -11,7 +11,9 @@ Delete product endpoint
 
 ```
 Headers
-TODO
+X-Domain:{{X-DOMAIN}}
+Accept-Language:{{ACCEPT-LANGUAGE}}
+Content-Type:application/json
 ```
 
 ## URL Parameters
