@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Get Specific Product | Platform API Documentation</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="      ">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.6646c2fa.css" as="style"><link rel="preload" href="/assets/js/app.577eca5c.js" as="script"><link rel="preload" href="/assets/js/2.6e2a4d54.js" as="script"><link rel="preload" href="/assets/js/54.df3dec01.js" as="script"><link rel="preload" href="/assets/js/3.e9075b8c.js" as="script"><link rel="prefetch" href="/assets/js/10.67d49031.js"><link rel="prefetch" href="/assets/js/11.d6e39f3c.js"><link rel="prefetch" href="/assets/js/12.8ef8ccc5.js"><link rel="prefetch" href="/assets/js/13.f14b4052.js"><link rel="prefetch" href="/assets/js/14.ccb5a153.js"><link rel="prefetch" href="/assets/js/15.9e9df4d9.js"><link rel="prefetch" href="/assets/js/16.f760b5a6.js"><link rel="prefetch" href="/assets/js/17.465e0959.js"><link rel="prefetch" href="/assets/js/18.eb8f6417.js"><link rel="prefetch" href="/assets/js/19.64d0507c.js"><link rel="prefetch" href="/assets/js/20.f5aa3993.js"><link rel="prefetch" href="/assets/js/21.9067e378.js"><link rel="prefetch" href="/assets/js/22.e89a47d8.js"><link rel="prefetch" href="/assets/js/23.a49debad.js"><link rel="prefetch" href="/assets/js/24.c38196b1.js"><link rel="prefetch" href="/assets/js/25.ac5de205.js"><link rel="prefetch" href="/assets/js/26.ece6c74c.js"><link rel="prefetch" href="/assets/js/27.55ca0dbd.js"><link rel="prefetch" href="/assets/js/28.2e417a08.js"><link rel="prefetch" href="/assets/js/29.8c7542ab.js"><link rel="prefetch" href="/assets/js/30.766311a4.js"><link rel="prefetch" href="/assets/js/31.01f448b3.js"><link rel="prefetch" href="/assets/js/32.86d72c60.js"><link rel="prefetch" href="/assets/js/33.97294a65.js"><link rel="prefetch" href="/assets/js/34.819d0381.js"><link rel="prefetch" href="/assets/js/35.967a7b9d.js"><link rel="prefetch" href="/assets/js/36.4fa5712c.js"><link rel="prefetch" href="/assets/js/37.0e58b6a2.js"><link rel="prefetch" href="/assets/js/38.c29551cb.js"><link rel="prefetch" href="/assets/js/39.9237bdd7.js"><link rel="prefetch" href="/assets/js/4.7d348c81.js"><link rel="prefetch" href="/assets/js/40.af1f1e70.js"><link rel="prefetch" href="/assets/js/41.40221e95.js"><link rel="prefetch" href="/assets/js/42.0d6932ab.js"><link rel="prefetch" href="/assets/js/43.97215424.js"><link rel="prefetch" href="/assets/js/44.13bb204f.js"><link rel="prefetch" href="/assets/js/45.43dfa1cc.js"><link rel="prefetch" href="/assets/js/46.90328c41.js"><link rel="prefetch" href="/assets/js/47.94e37ce3.js"><link rel="prefetch" href="/assets/js/48.71eeb18d.js"><link rel="prefetch" href="/assets/js/49.ab75bb2a.js"><link rel="prefetch" href="/assets/js/5.5b800f59.js"><link rel="prefetch" href="/assets/js/50.f6c93013.js"><link rel="prefetch" href="/assets/js/51.2c3d6953.js"><link rel="prefetch" href="/assets/js/52.1290949f.js"><link rel="prefetch" href="/assets/js/53.b01dc483.js"><link rel="prefetch" href="/assets/js/55.df39e95b.js"><link rel="prefetch" href="/assets/js/56.41474b09.js"><link rel="prefetch" href="/assets/js/57.fcf6861d.js"><link rel="prefetch" href="/assets/js/58.3f3f99cf.js"><link rel="prefetch" href="/assets/js/59.c9d1c72d.js"><link rel="prefetch" href="/assets/js/6.c8b7a84a.js"><link rel="prefetch" href="/assets/js/60.3db7e2e0.js"><link rel="prefetch" href="/assets/js/61.8daf6e93.js"><link rel="prefetch" href="/assets/js/62.d8b1a288.js"><link rel="prefetch" href="/assets/js/63.7feecf98.js"><link rel="prefetch" href="/assets/js/64.60be12b6.js"><link rel="prefetch" href="/assets/js/65.357ee888.js"><link rel="prefetch" href="/assets/js/66.f69826bb.js"><link rel="prefetch" href="/assets/js/67.83b18383.js"><link rel="prefetch" href="/assets/js/68.8fabae25.js"><link rel="prefetch" href="/assets/js/69.5f755d8f.js"><link rel="prefetch" href="/assets/js/7.c15ad905.js"><link rel="prefetch" href="/assets/js/70.a7b819a7.js"><link rel="prefetch" href="/assets/js/71.fe544075.js"><link rel="prefetch" href="/assets/js/72.f6eaee5c.js"><link rel="prefetch" href="/assets/js/8.4c6234d7.js"><link rel="prefetch" href="/assets/js/9.8ff87b77.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.6646c2fa.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="https://stentle.com/wp-content/themes/stentle/dist/images/logo-stentle-az.png" alt="Platform API Documentation" class="logo"> <span class="site-name can-hide">Platform API Documentation</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/1.0.0/" class="nav-link router-link-active">
+  v1.0.0
+</a></div><div class="nav-item"><a href="https://stentle.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Stentle
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/1.0.0/" class="nav-link router-link-active">
+  v1.0.0
+</a></div><div class="nav-item"><a href="https://stentle.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Stentle
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>v1.0.0</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>Product</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/1.0.0/product/" aria-current="page" class="sidebar-link">Description</a></li><li><a href="/1.0.0/product/update.html" class="sidebar-link">Update</a></li><li><section class="sidebar-group collapsable is-sub-group depth-2"><p class="sidebar-heading open"><span>Query</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/1.0.0/product/query.html" class="sidebar-link">Description</a></li><li><a href="/1.0.0/product/query-get-specific-product.html" aria-current="page" class="active sidebar-link">Get Specific Product</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/1.0.0/product/query-get-specific-product.html#url" class="sidebar-link">URL</a></li><li class="sidebar-sub-header"><a href="/1.0.0/product/query-get-specific-product.html#headers" class="sidebar-link">Headers</a></li><li class="sidebar-sub-header"><a href="/1.0.0/product/query-get-specific-product.html#url-parameters" class="sidebar-link">URL Parameters</a></li><li class="sidebar-sub-header"><a href="/1.0.0/product/query-get-specific-product.html#response" class="sidebar-link">Response</a></li><li class="sidebar-sub-header"><a href="/1.0.0/product/query-get-specific-product.html#curl" class="sidebar-link">CURL</a></li><li class="sidebar-sub-header"><a href="/1.0.0/product/query-get-specific-product.html#errors" class="sidebar-link">Errors</a></li></ul></li></ul></section></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Attribute</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Ancillarie</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Category</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>EAN</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Import Product</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/1.0.0/errors.html" class="sidebar-link">Errors</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="get-specific-product"><a href="#get-specific-product" class="header-anchor">#</a> Get Specific Product</h1> <p>Select specific product with given ID</p> <h2 id="url"><a href="#url" class="header-anchor">#</a> URL</h2> <h3 id="http-verb"><a href="#http-verb" class="header-anchor">#</a> Http Verb <span class="badge tip" style="vertical-align:middle;" data-v-15b7b770>GET</span></h3> <div class="language- extra-class"><pre class="language-text"><code>{{URI}}/rest/picnik-rest/products/{id_p}
+</code></pre></div><h2 id="headers"><a href="#headers" class="header-anchor">#</a> Headers</h2> <div class="language- extra-class"><pre class="language-text"><code>X-Domain:{{X-DOMAIN}}
+Content-Type:application/json
+</code></pre></div><h2 id="url-parameters"><a href="#url-parameters" class="header-anchor">#</a> URL Parameters</h2> <table><thead><tr><th>Parameters</th> <th>Type</th> <th>Description</th> <th>Required</th></tr></thead> <tbody><tr><td>idp</td> <td>String</td> <td>unique identifier of product</td> <td>Yes</td></tr></tbody></table> <h2 id="response"><a href="#response" class="header-anchor">#</a> Response</h2> <table><thead><tr><th>Level1</th> <th>Level 2</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>data</td> <td></td> <td>Object</td> <td>Response content</td></tr> <tr><td></td> <td>id</td> <td>String</td> <td>Unique identifier of product Id</td></tr> <tr><td></td> <td>creationDate</td> <td>String</td> <td>Creation date</td></tr> <tr><td></td> <td>updateDate</td> <td>String</td> <td>Update date</td></tr> <tr><td></td> <td>tenantId</td> <td>Todo</td> <td>Todo</td></tr> <tr><td></td> <td>href</td> <td>Todo</td> <td>Todo</td></tr> <tr><td></td> <td>version</td> <td>Int</td> <td>Todo</td></tr> <tr><td></td> <td>name</td> <td>Todo</td> <td>Todo</td></tr> <tr><td></td> <td>descriptions</td> <td>Object</td> <td>Description in EN &amp; IT for locale &amp; value</td></tr> <tr><td></td> <td>erpCode</td> <td>Todo</td> <td>Todo</td></tr> <tr><td></td> <td>brand</td> <td>Object</td> <td>Todo</td></tr> <tr><td></td> <td>externalCode</td> <td>Todo</td> <td>Todo</td></tr> <tr><td></td> <td>externalParentCode</td> <td>Todo</td> <td>Todo</td></tr> <tr><td></td> <td>sku</td> <td>String</td> <td>Sku of product</td></tr> <tr><td></td> <td>articleId</td> <td>String</td> <td>Todo</td></tr> <tr><td></td> <td>customSkus</td> <td>Todo</td> <td>Todo</td></tr> <tr><td></td> <td>attributes</td> <td>Object</td> <td>Todo</td></tr> <tr><td></td> <td>published</td> <td>Boolean</td> <td>Todo</td></tr> <tr><td></td> <td>publicationDate</td> <td>Boolean</td> <td>Todo</td></tr> <tr><td></td> <td>...</td> <td>...</td> <td>data continue</td></tr> <tr><td></td> <td>department</td> <td>String</td> <td>Department belong</td></tr> <tr><td></td> <td>pricesComparison</td> <td>Todo</td> <td>Todo</td></tr></tbody></table> <h3 id="response-example"><a href="#response-example" class="header-anchor">#</a> Response Example</h3> <details class="custom-block details"><summary>Example</summary> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5f9ff98230c49e0001e08d6e&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;creationDate&quot;</span><span class="token operator">:</span> <span class="token number">1604319618787</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;updateDate&quot;</span><span class="token operator">:</span> <span class="token number">1604319619926</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;tenantId&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;href&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;descriptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;en&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;locale&quot;</span><span class="token operator">:</span> <span class="token string">&quot;en&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;HANDBAG DECORATED ON ALL 4 SIDES WITH APPLICATIONS AND DRAWINGS THAT SEE AS ​​THE PROTAGONISTS DOGS IN THE SPACE&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;it&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;locale&quot;</span><span class="token operator">:</span> <span class="token string">&quot;it&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;BORSA A MANO DECORATA SU TUTTI E 4 I LATI CON APPLICAZIONI E DISEGNI CHE VEDE COME PROTAGONISTI I CANI NELLO SPAZIO&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;erpCode&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;brand&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5f7ddc6129edfc7a1b53e82f&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;braccialini&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Braccialini&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;shortDescription&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;longDescription&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;departments&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token string">&quot;fashion&quot;</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;categories&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;externalCode&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;externalParentCode&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;sku&quot;</span><span class="token operator">:</span> <span class="token string">&quot;000000000314&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;articleId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;FR-B13261&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;customSkus&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;attributes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;published&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;publicationDate&quot;</span><span class="token operator">:</span> <span class="token number">1604404135179</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;productDescriptionCompleteness&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;threshold&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;photoGallery&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;images&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;755b20b3-5192-4a92-a81a-d0c4e024ea7c&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cover&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;imageURL&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://stentle-image.s3.amazonaws.com/landoffashion/B13261_1.jpg&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;filename&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;active&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;sizeType&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;tag&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;thumbnails&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;sequence&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;allImages&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;755b20b3-5192-4a92-a81a-d0c4e024ea7c&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cover&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;imageURL&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://stentle-image.s3.amazonaws.com/landoffashion/B13261_1.jpg&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;filename&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;active&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;sizeType&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;tag&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;videoGallery&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;documentArchive&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;stories&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;en&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;locale&quot;</span><span class="token operator">:</span> <span class="token string">&quot;en&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;it&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;locale&quot;</span><span class="token operator">:</span> <span class="token string">&quot;it&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;loverList&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;numberOfLovers&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;numberOfProductSaving&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;numberOfProductSharing&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;loved&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;saved&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;addedToCart&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;purchasable&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;hasCoverPhoto&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;sales&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;catalogList&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5607f05658162efefd532b28&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;creationDate&quot;</span><span class="token operator">:</span> <span class="token number">1613745614297</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;updateDate&quot;</span><span class="token operator">:</span> <span class="token number">1445683662336</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;tenantId&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;href&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;base&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;multiplier&quot;</span><span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;baseCatalog&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;countrySearch&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token string">&quot;IT&quot;</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;countries&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5139e686247e898c57138523&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;creationDate&quot;</span><span class="token operator">:</span> <span class="token number">1613745614298</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;updateDate&quot;</span><span class="token operator">:</span> <span class="token number">1613745614298</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;tenantId&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;href&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;euroZone&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;isoCode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;IT&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;iso3Code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ITA&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ITALY&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;localeName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Italy&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;region&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Europe&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;taxValue&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;allowed&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;printableName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Italy&quot;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;regions&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;currency&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;55f9a3535f15ead1260c34fe&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;creationDate&quot;</span><span class="token operator">:</span> <span class="token number">1613745614299</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;updateDate&quot;</span><span class="token operator">:</span> <span class="token number">1613745614299</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;tenantId&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;href&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;decimalDigit&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Euro&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;namePlural&quot;</span><span class="token operator">:</span> <span class="token string">&quot;euros&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;rounding&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;symbol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;€&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;uiCode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;242&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;isoNumber&quot;</span><span class="token operator">:</span> <span class="token string">&quot;978&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;symbolNative&quot;</span><span class="token operator">:</span> <span class="token string">&quot;€&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;taxValue&quot;</span><span class="token operator">:</span> <span class="token number">22.0</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;taxValues&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;productCatalogMultipliers&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;productCatalogPrices&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;productCatalogScheduledPrices&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;AUTHORIZED&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;slug&quot;</span><span class="token operator">:</span> <span class="token string">&quot;braccialini-woman-000000000314&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;customSlugs&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;statusHistory&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;DRAFT&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;date&quot;</span><span class="token operator">:</span> <span class="token number">1604319618787</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;AUTHORIZED&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;date&quot;</span><span class="token operator">:</span> <span class="token number">1604319619926</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;names&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;en&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;locale&quot;</span><span class="token operator">:</span> <span class="token string">&quot;en&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ALL ROUND BAG&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;it&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;locale&quot;</span><span class="token operator">:</span> <span class="token string">&quot;it&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;BORSA ALL ROUND&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;seller&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;numberOfComments&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;declareVariants&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token string">&quot;size&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;color&quot;</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;photoAttributes&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token string">&quot;color&quot;</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;manufacturerCode&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;warehouseArrayList&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;width&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;height&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;weight&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;depth&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;parentId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5f9ff98230c49e0001e08d6e&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;note&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;story&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;attributeVariants&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;bannerImage&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;mpn&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;unitPrice&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;unitQuantity&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;madeIn&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;taxes&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;groupedProductInfo&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;tagList&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;notes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;en&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;locale&quot;</span><span class="token operator">:</span> <span class="token string">&quot;en&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ECO-LEATHER / WET CLOTH&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;it&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;locale&quot;</span><span class="token operator">:</span> <span class="token string">&quot;it&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ECOPELLE / PANNO UMIDO&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;prices&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;sellingPrice&quot;</span><span class="token operator">:</span> <span class="token number">219.0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;sellingPriceNoTax&quot;</span><span class="token operator">:</span> <span class="token number">179.51</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;finalSellingPriceNoTax&quot;</span><span class="token operator">:</span> <span class="token number">179.51</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;acquisitionPrice&quot;</span><span class="token operator">:</span> <span class="token number">219.0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;acquisitionPriceNoTax&quot;</span><span class="token operator">:</span> <span class="token number">-1.0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;retailPrice&quot;</span><span class="token operator">:</span> <span class="token number">314.0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;retailPriceNoTax&quot;</span><span class="token operator">:</span> <span class="token number">257.38</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;overriddenFinalPrice&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;currencyCode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;currencySymbol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;€&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;discount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;30%&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;strikedSellingPrice&quot;</span><span class="token operator">:</span> <span class="token number">-1.0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;salesDiscount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;currency&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;55f9a3535f15ead1260c34fe&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;creationDate&quot;</span><span class="token operator">:</span> <span class="token number">1613745614314</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;updateDate&quot;</span><span class="token operator">:</span> <span class="token number">1613745614314</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;tenantId&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;href&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;decimalDigit&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Euro&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;namePlural&quot;</span><span class="token operator">:</span> <span class="token string">&quot;euros&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;rounding&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;symbol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;€&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;uiCode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;242&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;isoNumber&quot;</span><span class="token operator">:</span> <span class="token string">&quot;978&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;symbolNative&quot;</span><span class="token operator">:</span> <span class="token string">&quot;€&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;finalSellingPrice&quot;</span><span class="token operator">:</span> <span class="token number">219.0</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;ranking&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;availabilityTotal&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;hasVariants&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;errorList&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;attributeList&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5f9c547ab9d82100014680a6&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;creationDate&quot;</span><span class="token operator">:</span> <span class="token number">1604080762497</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;updateDate&quot;</span><span class="token operator">:</span> <span class="token number">1604080761949</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;tenantId&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;href&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;attributeCode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;season&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;departments&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token string">&quot;fashion&quot;</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fw19/20&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;active&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;attributeLocaleName&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;localeName&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;english&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Fall-Winter 2019/2020&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;italian&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Autunno-Inverno 2019/2020&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;russian&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;french&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5f9c547ab9d82100014680ab&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;creationDate&quot;</span><span class="token operator">:</span> <span class="token number">1604080762517</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;updateDate&quot;</span><span class="token operator">:</span> <span class="token number">1604080761951</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;tenantId&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;href&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;attributeCode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;storename&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;departments&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token string">&quot;fashion&quot;</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;braccialini&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;active&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;attributeLocaleName&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;localeName&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;english&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Braccialini&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token string">&quot;store&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;italian&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Braccialini&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token string">&quot;negozi&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;russian&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;french&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5f9c547ab9d82100014680b6&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;creationDate&quot;</span><span class="token operator">:</span> <span class="token number">1604080762561</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;updateDate&quot;</span><span class="token operator">:</span> <span class="token number">1604080761955</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;tenantId&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;href&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;attributeCode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;village&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;departments&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token string">&quot;fashion&quot;</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;franciacorta&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;active&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;attributeLocaleName&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;localeName&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;english&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Franciacorta&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;italian&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Franciacorta&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;russian&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;french&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;attributeGroupsView&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;variantsGroup&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;infoOtherCollections&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;productVariant&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;attributeDescription&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;microCategory&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5f9fed5930c49e0001e08bdc&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;scarpe-e-borse-woman&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;CHILD&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;gender&quot;</span><span class="token operator">:</span> <span class="token string">&quot;female&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;active&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;imageList&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;parentId&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;parentFeed&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;ranking&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;localeName&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;english&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;scarpe-e-borse&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Shoes and Bags&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;nav&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;italian&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;scarpe-e-borse&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Scarpe e Borse&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;nav&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;parentKey&quot;</span><span class="token operator">:</span> <span class="token string">&quot;woman&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;declareVariants&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;declareAttributes&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;photoAttributes&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;taxes&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;products&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;sizeScaleCode&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;department&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fashion&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;macroCategory&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5f9fed5930c49e0001e08bd6&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;woman&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ROOT&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;gender&quot;</span><span class="token operator">:</span> <span class="token string">&quot;female&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;active&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;imageList&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;parentId&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;parentFeed&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;ranking&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;localeName&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;english&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;woman&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Woman&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;nav&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;italian&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;donna&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Donna&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;nav&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;parentKey&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fashion&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;declareVariants&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;declareAttributes&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;photoAttributes&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;taxes&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;products&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;sizeScaleCode&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;department&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;department&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;pricesComparison&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></details> <h2 id="curl"><a href="#curl" class="header-anchor">#</a> CURL</h2> <p>CURL call example. Creating a category.</p> <div class="language- extra-class"><pre class="language-text"><code>curl --location --request GET 'http://localhost:8080/rest/picnik-rest/products/5f9ff98230c49e0001e08d6e' \
+--header 'Content-Type: application/json' \
+--header 'X-Domain: landoffashion' \
+--header 'Cookie: stentle=ME5iOUo3SmdZY3pCKzlHdTZXMlV4dz09OkhNMVRLaWQ0dVNWSm9PWTVNam1Xd0E9PQ'
+</code></pre></div><h3 id="curl-response-example"><a href="#curl-response-example" class="header-anchor">#</a> CURL Response Example</h3> <details class="custom-block details"><summary>Example</summary> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5f9ff98230c49e0001e08d6e&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;creationDate&quot;</span><span class="token operator">:</span> <span class="token number">1604319618787</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;updateDate&quot;</span><span class="token operator">:</span> <span class="token number">1604319619926</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;tenantId&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;href&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;descriptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;en&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;locale&quot;</span><span class="token operator">:</span> <span class="token string">&quot;en&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;HANDBAG DECORATED ON ALL 4 SIDES WITH APPLICATIONS AND DRAWINGS THAT SEE AS ​​THE PROTAGONISTS DOGS IN THE SPACE&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;it&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;locale&quot;</span><span class="token operator">:</span> <span class="token string">&quot;it&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;BORSA A MANO DECORATA SU TUTTI E 4 I LATI CON APPLICAZIONI E DISEGNI CHE VEDE COME PROTAGONISTI I CANI NELLO SPAZIO&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;erpCode&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;brand&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5f7ddc6129edfc7a1b53e82f&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;braccialini&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Braccialini&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;shortDescription&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;longDescription&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;departments&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token string">&quot;fashion&quot;</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;categories&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;externalCode&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;externalParentCode&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;sku&quot;</span><span class="token operator">:</span> <span class="token string">&quot;000000000314&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;articleId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;FR-B13261&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;customSkus&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;attributes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;published&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;publicationDate&quot;</span><span class="token operator">:</span> <span class="token number">1604404135179</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;productDescriptionCompleteness&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;threshold&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;photoGallery&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;images&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;755b20b3-5192-4a92-a81a-d0c4e024ea7c&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cover&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;imageURL&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://stentle-image.s3.amazonaws.com/landoffashion/B13261_1.jpg&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;filename&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;active&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;sizeType&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;tag&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;thumbnails&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;sequence&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;allImages&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;755b20b3-5192-4a92-a81a-d0c4e024ea7c&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cover&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;imageURL&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://stentle-image.s3.amazonaws.com/landoffashion/B13261_1.jpg&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;filename&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;active&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;sizeType&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;tag&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;videoGallery&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;documentArchive&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;stories&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;en&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;locale&quot;</span><span class="token operator">:</span> <span class="token string">&quot;en&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;it&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;locale&quot;</span><span class="token operator">:</span> <span class="token string">&quot;it&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;loverList&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;numberOfLovers&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;numberOfProductSaving&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;numberOfProductSharing&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;loved&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;saved&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;addedToCart&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;purchasable&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;hasCoverPhoto&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;sales&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;catalogList&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5607f05658162efefd532b28&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;creationDate&quot;</span><span class="token operator">:</span> <span class="token number">1613745614297</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;updateDate&quot;</span><span class="token operator">:</span> <span class="token number">1445683662336</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;tenantId&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;href&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;base&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;multiplier&quot;</span><span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;baseCatalog&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;countrySearch&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token string">&quot;IT&quot;</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;countries&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5139e686247e898c57138523&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;creationDate&quot;</span><span class="token operator">:</span> <span class="token number">1613745614298</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;updateDate&quot;</span><span class="token operator">:</span> <span class="token number">1613745614298</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;tenantId&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;href&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;euroZone&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;isoCode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;IT&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;iso3Code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ITA&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ITALY&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;localeName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Italy&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;region&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Europe&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;taxValue&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;allowed&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;printableName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Italy&quot;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;regions&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;currency&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;55f9a3535f15ead1260c34fe&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;creationDate&quot;</span><span class="token operator">:</span> <span class="token number">1613745614299</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;updateDate&quot;</span><span class="token operator">:</span> <span class="token number">1613745614299</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;tenantId&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;href&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;decimalDigit&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Euro&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;namePlural&quot;</span><span class="token operator">:</span> <span class="token string">&quot;euros&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;rounding&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;symbol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;€&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;uiCode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;242&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;isoNumber&quot;</span><span class="token operator">:</span> <span class="token string">&quot;978&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;symbolNative&quot;</span><span class="token operator">:</span> <span class="token string">&quot;€&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;taxValue&quot;</span><span class="token operator">:</span> <span class="token number">22.0</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;taxValues&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;productCatalogMultipliers&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;productCatalogPrices&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;productCatalogScheduledPrices&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;AUTHORIZED&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;slug&quot;</span><span class="token operator">:</span> <span class="token string">&quot;braccialini-woman-000000000314&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;customSlugs&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;statusHistory&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;DRAFT&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;date&quot;</span><span class="token operator">:</span> <span class="token number">1604319618787</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;AUTHORIZED&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;date&quot;</span><span class="token operator">:</span> <span class="token number">1604319619926</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;names&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;en&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;locale&quot;</span><span class="token operator">:</span> <span class="token string">&quot;en&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ALL ROUND BAG&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;it&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;locale&quot;</span><span class="token operator">:</span> <span class="token string">&quot;it&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;BORSA ALL ROUND&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;seller&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;numberOfComments&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;declareVariants&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token string">&quot;size&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;color&quot;</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;photoAttributes&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token string">&quot;color&quot;</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;manufacturerCode&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;warehouseArrayList&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;width&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;height&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;weight&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;depth&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;parentId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5f9ff98230c49e0001e08d6e&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;note&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;story&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;attributeVariants&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;bannerImage&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;mpn&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;unitPrice&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;unitQuantity&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;madeIn&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;taxes&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;groupedProductInfo&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;tagList&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;notes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;en&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;locale&quot;</span><span class="token operator">:</span> <span class="token string">&quot;en&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ECO-LEATHER / WET CLOTH&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;it&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;locale&quot;</span><span class="token operator">:</span> <span class="token string">&quot;it&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ECOPELLE / PANNO UMIDO&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;prices&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;sellingPrice&quot;</span><span class="token operator">:</span> <span class="token number">219.0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;sellingPriceNoTax&quot;</span><span class="token operator">:</span> <span class="token number">179.51</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;finalSellingPriceNoTax&quot;</span><span class="token operator">:</span> <span class="token number">179.51</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;acquisitionPrice&quot;</span><span class="token operator">:</span> <span class="token number">219.0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;acquisitionPriceNoTax&quot;</span><span class="token operator">:</span> <span class="token number">-1.0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;retailPrice&quot;</span><span class="token operator">:</span> <span class="token number">314.0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;retailPriceNoTax&quot;</span><span class="token operator">:</span> <span class="token number">257.38</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;overriddenFinalPrice&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;currencyCode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;currencySymbol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;€&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;discount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;30%&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;strikedSellingPrice&quot;</span><span class="token operator">:</span> <span class="token number">-1.0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;salesDiscount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;currency&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;55f9a3535f15ead1260c34fe&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;creationDate&quot;</span><span class="token operator">:</span> <span class="token number">1613745614314</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;updateDate&quot;</span><span class="token operator">:</span> <span class="token number">1613745614314</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;tenantId&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;href&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;decimalDigit&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Euro&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;namePlural&quot;</span><span class="token operator">:</span> <span class="token string">&quot;euros&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;rounding&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;symbol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;€&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;uiCode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;242&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;isoNumber&quot;</span><span class="token operator">:</span> <span class="token string">&quot;978&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;symbolNative&quot;</span><span class="token operator">:</span> <span class="token string">&quot;€&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;finalSellingPrice&quot;</span><span class="token operator">:</span> <span class="token number">219.0</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;ranking&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;availabilityTotal&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;hasVariants&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;errorList&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;attributeList&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5f9c547ab9d82100014680a6&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;creationDate&quot;</span><span class="token operator">:</span> <span class="token number">1604080762497</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;updateDate&quot;</span><span class="token operator">:</span> <span class="token number">1604080761949</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;tenantId&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;href&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;attributeCode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;season&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;departments&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token string">&quot;fashion&quot;</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fw19/20&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;active&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;attributeLocaleName&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;localeName&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;english&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Fall-Winter 2019/2020&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;italian&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Autunno-Inverno 2019/2020&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;russian&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;french&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5f9c547ab9d82100014680ab&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;creationDate&quot;</span><span class="token operator">:</span> <span class="token number">1604080762517</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;updateDate&quot;</span><span class="token operator">:</span> <span class="token number">1604080761951</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;tenantId&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;href&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;attributeCode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;storename&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;departments&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token string">&quot;fashion&quot;</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;braccialini&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;active&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;attributeLocaleName&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;localeName&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;english&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Braccialini&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token string">&quot;store&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;italian&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Braccialini&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token string">&quot;negozi&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;russian&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;french&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5f9c547ab9d82100014680b6&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;creationDate&quot;</span><span class="token operator">:</span> <span class="token number">1604080762561</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;updateDate&quot;</span><span class="token operator">:</span> <span class="token number">1604080761955</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;tenantId&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;href&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;attributeCode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;village&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;departments&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token string">&quot;fashion&quot;</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;franciacorta&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;active&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;attributeLocaleName&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;localeName&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;english&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Franciacorta&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;italian&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Franciacorta&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;russian&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;french&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;attribute&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;attributeGroupsView&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;variantsGroup&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;infoOtherCollections&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;productVariant&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;attributeDescription&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;microCategory&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5f9fed5930c49e0001e08bdc&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;scarpe-e-borse-woman&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;CHILD&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;gender&quot;</span><span class="token operator">:</span> <span class="token string">&quot;female&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;active&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;imageList&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;parentId&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;parentFeed&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;ranking&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;localeName&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;english&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;scarpe-e-borse&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Shoes and Bags&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;nav&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;italian&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;scarpe-e-borse&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Scarpe e Borse&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;nav&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;parentKey&quot;</span><span class="token operator">:</span> <span class="token string">&quot;woman&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;declareVariants&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;declareAttributes&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;photoAttributes&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;taxes&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;products&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;sizeScaleCode&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;department&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fashion&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;macroCategory&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5f9fed5930c49e0001e08bd6&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;woman&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ROOT&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;gender&quot;</span><span class="token operator">:</span> <span class="token string">&quot;female&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;active&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;imageList&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;parentId&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;parentFeed&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;ranking&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;localeName&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;english&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;woman&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Woman&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;nav&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;italian&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;donna&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Donna&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;nav&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;parentKey&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fashion&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;declareVariants&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;declareAttributes&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;photoAttributes&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;taxes&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;products&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;sizeScaleCode&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;department&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;department&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;pricesComparison&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></details> <h2 id="errors"><a href="#errors" class="header-anchor">#</a> Errors</h2> <ul><li>The resource was not found</li></ul> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;type&quot;: &quot;0&quot;,
+    &quot;title&quot;: &quot;Generic error&quot;,
+    &quot;status&quot;: 401,
+    &quot;detail&quot;: &quot;Unauthorized&quot;,
+    &quot;stackTrace&quot;: .....
+}
+</code></pre></div><p>for more info on error - <a href="/1.0.0/errors.html">Errors </a></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/1.0.0/product/query.html" class="prev">
+        Description
+      </a></span> <span class="next"><a href="/1.0.0/attribute/">
+        Description
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.577eca5c.js" defer></script><script src="/assets/js/2.6e2a4d54.js" defer></script><script src="/assets/js/54.df3dec01.js" defer></script><script src="/assets/js/3.e9075b8c.js" defer></script>
+  </body>
+</html>
