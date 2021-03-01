@@ -25,16 +25,16 @@ X-Domain:{{X-DOMAIN}}
 | Level1 | Level 2| Type | Description |
 | ------ | ------ | ------ | ------ | ------ |
 | data ||Object| Response content|
-||id|string| ancillary product Id|
-||name|String|name of product|
-||description|String|descritpoin|
-||cluster|String||
-||ranking|Intiger||
-||composable|boolean||
-||image|||
-||priceText|double||
-||isIncluded|boolean||
-||pricingRule|String||
+||id|string| Ancillary product Id|
+||name|String|Name of product|
+||description|String|Descritpoin|
+||cluster|String|*|
+||ranking|Intiger|Ranking of Product|
+||composable|boolean|*|
+||image|string| Images url|
+||priceText|double|Price|
+||isIncluded|boolean|*|
+||pricingRule|String|Price Rule|
 ||...|...|....|
 
 ... means that the response data continue and repeat himself

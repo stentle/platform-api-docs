@@ -25,8 +25,8 @@ X-Domain:{{X-DOMAIN}}
 | ------ | ------ | ------ | ------ | 
 | data ||Object| Response content|
 || id | String | id of the record | 
-|| path | TODO | ------ |
-|| filePath | TODO | ------ |
+|| path | String | path |
+|| filePath | String | file Path |
 || ftpPath | String | Path of the uploaded CSV (original) file in the FTP server |
 || errors | Object | Contains the errors of the uploaded csv. importErrors, parsingErrors |
 || status | String | The status of the uploaded file |

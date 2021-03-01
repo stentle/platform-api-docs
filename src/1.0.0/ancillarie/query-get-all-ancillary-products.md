@@ -20,30 +20,33 @@ X-Domain:{{X-DOMAIN}}
 | language | String | unique identifier of language, defaultValue = "it" | |
 
 ## Response
+
 | Level1 | Level 2| Type | Description |
 | ------ | ------ | ------ | ------ | ------ |
 | data ||Object| Response content|
-||id|string|An Id ancillary|
-||creationDate|date|date created|
-||updateDate|date|last time date was updated|
-||tenantId||Type|
-||href|string||
-||version|intiger||
-||name|String||
-||descriptions|Object| descriptions may be in EN and IT|
-||erpCode|Object||
-||brand|string||
-||externalCode|string||
-||externalParentCode|Object||
-||sku|Object||
-||articleId|||
-||customSkus|||
-||attributes|Object||
-||published|boolean||
-||publicationDate|||
-||...|...|...|
-||coverPhotoUrl|url||
-||...|...|...|
+||id|string| ancillary product Id|
+||creationDate|Date|Key|
+||updateDate|Date|Type|
+||tenantId|string| tenant Id of ancillary |
+||href|string|url|
+||version|long|version|
+||erpCode|string| Client ERP Code|
+||parentFeed|string|Parent Product Feed|
+||brand|Brand|Barand Object|
+||externalCode|string|External Code|
+||externalParentCode|string|External Parent Code|
+||sku|string|Product SKU|
+||customSkus|Map<string,string>| Custom SKU Collection|
+||published|boolean |Status of publishing|
+||publicationDate|Date|Date when publishing status is set to true|
+||productDescriptionCompleteness|boolean|Status about publishing comploeteness|
+||threshold|int|*|
+||photoGallery|PhotoGallery| Gallery of photos of the product|
+||videoGallery|VideoGallery|Gallery of videos of the product|
+||documentArchive|DocumentArchive|Documents related to the product|
+||...|...|....|
+||coverPhotoUrl|string|Url of the cover photo|
+||...|...|....|
 
 ... means that the response data continue and repeat himself
 

@@ -32,22 +32,22 @@ Content-Type:application/json
 ||key|string|Key|
 ||type|string|Type|
 ||gender|string|Gender|
-||active|bolean||
-||imageList|array||
-||parentId|string||
-||parentFeed|Object| Parent category|
-||ranking|number||
-||localeName|string||
-||english|Object||
-||italian|Object||
-||parentKey|string||
-||declareVariants|Array||
-||declareAttributes|string||
-||photoAttributes|string||
-||taxes|string||
-||products|string||
-||sizeScaleCode|string||
-||department|string||
+||active|bolean|Status Active of Category|
+||imageList|array|List of Images for the Category|
+||parentId|string|Parent Category Id|
+||parentFeed|string|Parent Category Feed|
+||ranking|number|Ranking of Cateogory|
+||localeName|string|Local Name of Category|
+||english|Object|Language Options of the Category in English|
+||italian|Object|Language Options of the Category in Italian|
+||parentKey|string|Parent Category Key|
+||declareVariants|Array| Parent Category Variants|
+||declareAttributes|string|*|
+||photoAttributes|string|Photo Collection of the Category|
+|| taxes | `Map<String, TaxGroup>`| Taxes of the category| 
+||products|Products|List of Products at the category|
+|| sizeScaleCode |SizeScaleCode | Object of type size scale code| 
+||department|string|Departments in which the category is active|
 
 ### Response Example
 ::: details Example

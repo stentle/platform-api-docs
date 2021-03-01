@@ -105,25 +105,27 @@ Content-Type:application/json
 ||id|string| ancillary product Id|
 ||creationDate|Date|Key|
 ||updateDate|Date|Type|
-||tenantId|string|todo|
-||href|string||
-||version|double||
-||erpCode|string||
-||parentFeed|string||
-||brand|||
-||externalCode|||
-||externalParentCode|||
-||sku|||
-||customSkus|||
-||published|Array||
-||publicationDate|||
-||productDescriptionCompleteness|||
-||threshold|||
-||photoGallery|Object||
-||videoGallery|string||
-||documentArchive|string||
+||tenantId|string| tenant Id of ancillary |
+||href|string|url|
+||version|long|version|
+||erpCode|string| Client ERP Code|
+||parentFeed|string|Parent Product Feed|
+||brand|Brand|Barand Object|
+||externalCode|string|External Code|
+||externalParentCode|string|External Parent Code|
+||sku|string|Product SKU|
+||customSkus|Map<string,string>| Custom SKU Collection|
+||published|boolean |Status of publishing|
+||publicationDate|Date|Date when publishing status is set to true|
+||productDescriptionCompleteness|boolean|Status about publishing comploeteness|
+||threshold|int|*|
+||photoGallery|PhotoGallery| Gallery of photos of the product|
+||videoGallery|VideoGallery|Gallery of videos of the product|
+||documentArchive|DocumentArchive|Documents related to the product|
 ||...|...|....|
-||coverPhotoUrl|||
+||coverPhotoUrl|string|Url of the cover photo|
+
+... means that the response data continue and repeat himself
 
 ### Response Example
 ::: details Example

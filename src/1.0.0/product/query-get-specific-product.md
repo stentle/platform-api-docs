@@ -28,24 +28,24 @@ Content-Type:application/json
 || id | String| Unique identifier of product Id| 
 || creationDate | String| Creation date | 
 || updateDate | String| Update date| 
-|| tenantId | Todo| Todo | 
-|| href | Todo| Todo | 
-|| version | Int | Todo | 
-|| name | Todo| Todo | 
+|| tenantId | string| Unique identifier of the Tennant | 
+|| href | string | Url of the product | 
+|| version | Int | Version of the product | 
+|| name | String   | Name of the product | 
 || descriptions | Object | Description in EN & IT for locale & value |
-|| erpCode | Todo| Todo | 
-|| brand | Object | Todo |
-|| externalCode | Todo| Todo | 
-|| externalParentCode | Todo| Todo | 
+|| erpCode | string| Code of the product in the Client ERP System | 
+|| brand | Brand | Brand of the product  |
+|| externalCode | String| An external code | 
+|| externalParentCode | String | An external Parent Code | 
 || sku | String | Sku of product | 
-|| articleId | String | Todo | 
-|| customSkus | Todo| Todo | 
-|| attributes | Object | Todo | 
-|| published | Boolean| Todo | 
-|| publicationDate | Boolean| Todo | 
+|| articleId | String | Id of the article | 
+|| customSkus | Map<String, String>| Customs SKU's for the product | 
+|| attributes | * | * | 
+|| published | Boolean| status of the publishing | 
+|| publicationDate | Date| Date when the status published is set to true | 
 || ... | ... | data continue | 
 || department | String| Department belong|  
-|| pricesComparison | Todo| Todo | 
+|| pricesComparison | AggregatedProductComparison| Product Price comparisons | 
 
 
 ### Response Example

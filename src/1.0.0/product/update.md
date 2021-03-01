@@ -87,24 +87,24 @@ Content-Type:application/json
 | ------ | ------ | ------ | ------ |  ------ |
 | data ||Object| Response content|
 || id | String| Unique identifier of product Id| 
-|| key | String| Todo | 
-|| type | String| todo| 
+|| key | String| Key product id | 
+|| type | String| type of product| 
 || gender | String| Gender| 
-|| active | Boolean| todo| 
-|| imageList | String| todo| 
-|| parentId | String| todo| 
-|| parentFeed | String| todo| 
-|| ranking | Intiger| todo| 
-|| localeName | String| todo| 
-|| english | String| todo| 
-|| italian | String| todo| 
-|| parentKey | String| todo| 
-|| declareVariants | Todo| todo| 
-|| declareAttributes | Todo| todo| 
-|| photoAttributes | Todo| todo| 
-|| taxes | Todo| todo| 
-|| products |Todo | todo| 
-|| sizeScaleCode | Todo| Todo| 
+|| active | Boolean| active product| 
+|| imageList | GalleryImage| gallery images of Product| 
+|| parentId | String| Product Parent ID| 
+|| parentFeed | String|Product Parent Feed| 
+|| ranking | Long| Ranking of product| 
+|| localeName | String| Name of the product | 
+|| english | String| Name of the product in English| 
+|| italian | String| Name of the product in Italian | 
+|| parentKey | String| The key of the product parent| 
+|| declareVariants | `Iterable<String>` | The variants connected to this product| 
+|| declareAttributes | *| *| 
+|| photoAttributes |`Iterable<String>`| Image Atributes of the product| 
+|| taxes | `Map<String, TaxGroup>`| Taxes of the product| 
+|| products |* | *| 
+|| sizeScaleCode |SizeScaleCode | Object of type size scale code| 
 || department | String| Department belong| 
 
 ### Response Example

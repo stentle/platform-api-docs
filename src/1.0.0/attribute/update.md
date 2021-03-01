@@ -51,11 +51,11 @@ Content-Type:application/json
 || href | String | Url of attribute | 
 || attributeCode | String | Name of attribute code |
 || departments | String | Department | 
-|| key | String | Todo | 
-|| name | String | Todo | 
+|| key | String | Key of Attribute | 
+|| name | String | Name of Attribute | 
 || active | Boolean | Attribute is avalable | 
-|| attributeLocaleName | String | Todo | 
-|| localeName | String | Todo |
+|| attributeLocaleName | String | Attriubte Local Name | 
+|| localeName | String | Attribute Local Name |
 || english | Object | Description in EN for name & attribute  | 
 || italian | Object | Description in IT for name & attribute  | 
 || russian | Object | Description in RU for name & attribute  | 

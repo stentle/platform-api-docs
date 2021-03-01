@@ -20,12 +20,12 @@ Content-Type: application/json
 | Parameters | Type | Description | Required | 
 | ------ | ------ | ------ | ------ | ------ |
 | id | String | unique parameter category ID | Yes |
-| key | String | TODO | Yes |
-| type | String | TODO| Yes |
-| gender | String | TODO | Yes |
-| active | Boolean | TODO | Yes |
-| imageList | Array | TODO ||
-| parentId | String | TODO ||
+| key | String |  Category Key | Yes |
+| type | String | Category Type| Yes |
+| gender | String | Category Gender | Yes |
+| active | Boolean | Category status is active | Yes |
+| imageList | Array | List of images of category ||
+| parentId | String | Category parent Id ||
 
 ### Payload Example
 ```
